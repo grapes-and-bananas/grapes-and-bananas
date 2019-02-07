@@ -3,17 +3,31 @@
     <link rel = "stylesheet" type = "text/css" href = "loginStyle.css">
   </head>
   <body>
-    <div class="loginForm">
+    <div class="nav">
       <p id="logo">TheatreNow</p>
+      <a href="login.html" class="link">login</a>
+      /
+      <a href="signup.html" class="link">signup</a>
+    </div>
+    <div class="loginForm">
       <form class="form">
-        <input type="text" class="input" value="email...">
+        <p class="text">Create an Account</p>
         <br>
-        I am an:
+        <input type="radio" name="organization" value="organization" checked> I am an Organization<br>
+        <input type="radio" name="organization" value="individual"> I am an Individual<br>
+        <p class="text">Email: </p>
         <br>
-        <input type="radio" name="organization" value="organization" checked> Organization<br>
-        <input type="radio" name="organization" value="individual"> Individual<br>
+        <input type="text" class="input">
         <br>
-        <input type="submit" value="Sign up!" class="btn">
+        <p class="text">Username: </p>
+        <br>
+        <input type="text" class="input">
+        <br>
+        <p class="text">Password: </p>
+        <br>
+        <input type="text" class="input">
+        <br>
+        <input type="submit" value="Sign Up!" class="btn">
       </form>
     </div>
   </body>
