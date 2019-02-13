@@ -1,7 +1,14 @@
-body{
+:root{
+  --background: #171A14;
+  --highlight: #FF9933;
+  --accent: #FFFEF5;
+  --hover: green;
+  }
+
+  body{
  	width: 100%;
  	height: auto;
-  	background-color: grey;
+  	background-color: var(--background);
   	background-image: url(image.png);
   	background-size: cover;
 	font-size: 1em;
@@ -15,18 +22,19 @@ body{
   position: relative;
   width: 100%;
   height: 15.5%;
-  background: black;
+  background: var(--highlight);
 }
 
 .home{
   position: absolute;
   text-decoration: none;
-  color: orange;
-  background-color: black;
+  color: var(--accent);
+  background-color: var(--highlight);
   margin-top: 2%;
   padding: 1%;
   font-size: 225%;
   font-weight: bold;
+
 }
 
 .main{
@@ -40,16 +48,17 @@ body{
   position: relative;
   width: 18%;
   height: 84.5%;
-  background: white;
+  background: var(--highlight);
   float: left;
   border-right: 1px solid black;
 }
 
 .link{
+  font-family: 'Times';
   display: block;
   padding: 7% 5% 7% 5%;
   text-decoration: none;
-  color: black;
+  color: var(--accent);
   font-weight: bold;
   font-size: 150%;
   border-bottom: 5px solid black;
@@ -57,7 +66,7 @@ body{
 
 .grid{
   display: inline-block;
-  background: white;
+  background: var(--background);
   width: 81.9%;
   height: 84.5%;
 }

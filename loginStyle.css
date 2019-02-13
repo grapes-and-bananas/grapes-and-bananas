@@ -78,7 +78,7 @@ padding-left: 10%;
 
 .form{
   display: block;
-  margin-top: 30%;
+  margin-top: 20%;
 	text-align: left;
 	border-radius: 10px;
   padding: 10%;
@@ -95,7 +95,7 @@ padding-left: 10%;
   height: 5%;
 	text-align: left;
 	padding: 10px;
-  color: var(--accent);
+  color: var(--background);
 }
 
 .btn{
