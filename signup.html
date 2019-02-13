@@ -4,29 +4,40 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 	</head>
   <body>
-    <div class="nav">
-      <p id="logo">TheatreNow</p>
-      <a href="login.html" class="link">login</a>
-      /
-      <a href="signup.html" class="link">signup</a>
-    </div>
-    <div class="loginForm">
-      <form class="form">
-        <h2>Create an Account</h2>
-        <br>
-        <input type="radio" name="organization" value="organization" checked> I am an Organization<br>
-        <input type="radio" name="organization" value="individual"> I am an Individual<br>
-        <br>
-        <input type="text" class="input" placeholder="Email...">
-        <br>
-        <br>
-        <input type="text" class="input" placeholder="Username...">
-        <br>
-        <br>
-        <input type="text" class="input" placeholder="Password...">
-        <br>
-        <input type="submit" value="Sign Up!" class="btn">
-      </form>
-    </div>
+    <div class="main">
+      <div class="nav">
+        <p id="logo">TheatreNow</p>
+        <div>
+          <p id="fill">Theatrical rights <br/> made easy.</p>
+          <p id="features">Apply for theatrical rights.
+                          <br/>
+                          <br/>
+                          Music, choreography, set, costume, lighting.
+                          <br/>
+                          <br/>
+                          Track revenue.
+          </p>
+        </div>
+        </div>
+      <div class="loginForm">
+        <form class="form">
+          <p class="text">Create an Account</p>
+          <br>
+          <input type="radio" name="organization" value="organization" checked><span> I am an Organization</span><br>
+          <input type="radio" name="organization" value="individual"><span> I am an Individual</span><br>
+          <br>
+          <input type="text" class="input" placeholder="Email...">
+          <br>
+          <br>
+          <input type="text" class="input" placeholder="Username...">
+          <br>
+          <br>
+          <input type="text" class="input" placeholder="Password...">
+          <br>
+          <br>
+          <input type="submit" value="Sign Up!" class="btn">
+        </form>
+      </div>
+  </div>
   </body>
 </html>

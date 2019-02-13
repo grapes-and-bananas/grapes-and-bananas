@@ -1,11 +1,19 @@
 :root{
-  --color: #FF9935;
+  /*
+  --background: #000000;
+  --highlight: #FF9933;
+  --accent: #FFFEF5;660701;
+  --hover: green; */
+  --background: #171A14;
+  --highlight: #FF9933;
+  --accent: #FFFEF5;
+  --hover: green;
 }
 
 body{
  	width: 100%;
  	height: auto;
-  	background-color: var(--color);
+  	background-color: var(--highlight);
 	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -31,12 +39,12 @@ body{
   	margin-left: 5%;
   	font-size: 300%;
   	text-align: left;
-  	color: white;
+  	color: var(--accent);
 	font-family: 'Rambla', sans-serif;
 }
 
 #fill{
-  color: white;
+  color: var(--accent);
 font-family: 'Times';
 font-weight: bold;
 font-size: 400%;
@@ -45,7 +53,7 @@ margin-left: 5%;
 }
 
 #features{
-  color: white;
+  color: var(--accent);
 font-family: 'Times';
 font-weight: bold;
 font-size: 150%;
@@ -61,7 +69,11 @@ padding-left: 10%;
   width: 50%;
   height: 100%;
   font-size: 100%;
-  background: black;
+  background: var(--background);
+}
+
+.loginForm span{
+  color: var(--accent);
 }
 
 .form{
@@ -83,17 +95,22 @@ padding-left: 10%;
   height: 5%;
 	text-align: left;
 	padding: 10px;
+  color: var(--accent);
 }
 
 .btn{
   text-decoration: none;
-  background: black;
-  color: white;
+  background: var(--background);
+  color: var(--highlight);
   margin: 0% 0% 5% 0%;
+  font-size: 125%;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid white;
 }
 
 .text{
-  color: white;
+  color: var(--accent);
 }
 
 .external{
@@ -102,9 +119,12 @@ padding-left: 10%;
 }
 
 .link{
-  background-color: var(--color);
-  color: white;
+  background-color: var(--highlight);
+  color: var(--accent);
+  text-decoration: none;
   font-weight: bold;
-  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   text-align: center;
+  border: none;
 }
