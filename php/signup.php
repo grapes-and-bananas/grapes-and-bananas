@@ -19,4 +19,8 @@ echo $email;
 echo $username;
 echo $password;
 echo $type;
+
+
+header("Location: https://theatrenow.azurewebsites.net/main/signup.html"); /* Redirect browser */
+exit();
 ?>
