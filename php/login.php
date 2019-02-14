@@ -20,6 +20,6 @@ $getResults= sqlsrv_query($conn, $tsql);
 
 sqlsrv_free_stmt($getResults);
 
-header("Location: https://theatrenow.azurewebsites.net/main/shows.html"); /* Redirect browser */
+header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
 exit();
 ?>
