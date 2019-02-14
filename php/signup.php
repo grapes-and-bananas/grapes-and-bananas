@@ -26,9 +26,12 @@ echo $type;
 echo "\n";
 
 $tsql = "INSERT INTO Users
-VALUES ($username, $email, $password, $type)";
+VALUES ('$username', '$email', '$password', '$type')";
 
 $getResults= sqlsrv_query($conn, $tsql);
+
+sqlsrv_free_stmt($getResults);
+
 header("Location: https://theatrenow.azurewebsites.net/main/signup.html"); /* Redirect browser */
 exit();
 ?>
