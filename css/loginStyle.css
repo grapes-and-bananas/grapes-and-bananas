@@ -1,19 +1,14 @@
 :root{
-  /*
-  --background: #000000;
-  --highlight: #FF9933;
-  --accent: #FFFEF5;660701;
-  --hover: green; */
-  --background: #171A14;
-  --highlight: #FF9933;
-  --accent: #FFFEF5;
-  --hover: green;
+  --background: #2B1718;
+  --highlight: #CD3E36;
+  --accent: #EAE1CF;
+  --hover: #FDA800;
 }
 
 body{
  	width: 100%;
  	height: auto;
-  	background-color: var(--highlight);
+  background-color: var(--highlight);
 	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -35,32 +30,32 @@ body{
 }
 
 #logo{
-  	margin-top: 5%;
-  	margin-left: 5%;
-  	font-size: 300%;
-  	text-align: left;
-  	color: var(--accent);
+	margin-top: 5%;
+	margin-left: 5%;
+	font-size: 300%;
+	text-align: left;
+	color: var(--accent);
 	font-family: 'Rambla', sans-serif;
 }
 
 #fill{
   color: var(--accent);
-font-family: 'Times';
-font-weight: bold;
-font-size: 400%;
-text-align: left;
-margin-left: 5%;
+  font-family: 'Times';
+  font-weight: bold;
+  font-size: 400%;
+  text-align: left;
+  margin-left: 5%;
 }
 
 #features{
   color: var(--accent);
-font-family: 'Times';
-font-weight: bold;
-font-size: 150%;
-text-align: left;
-margin-left: 5%;
-padding-top: 5%;
-padding-left: 10%;
+  font-family: 'Times';
+  font-weight: bold;
+  font-size: 150%;
+  text-align: left;
+  margin-left: 5%;
+  padding-top: 5%;
+  padding-left: 10%;
 
 }
 
@@ -99,14 +94,19 @@ padding-left: 10%;
 }
 
 .btn{
+  background-color: var(--highlight);
+  color: var(--accent);
   text-decoration: none;
-  background: var(--background);
-  color: var(--highlight);
-  margin: 0% 0% 5% 0%;
+  font-weight: bold;
+  margin: 5% 0% 0% 0%;
   font-size: 125%;
-  text-decoration: none;
+  text-align: center;
   border: none;
-  border-bottom: 1px solid white;
+}
+
+.btn:hover{
+  background: var(--accent);
+  color: var(--highlight);
 }
 
 .text{
@@ -119,12 +119,18 @@ padding-left: 10%;
 }
 
 .link{
-  background-color: var(--highlight);
-  color: var(--accent);
   text-decoration: none;
-  font-weight: bold;
-  padding-left: 2%;
-  padding-right: 2%;
-  text-align: center;
+  background: var(--background);
+  color: var(--highlight);
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 125%;
+  text-decoration: none;
   border: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.link:hover{
+  color: var(--accent);
+  border-bottom: 1px solid var(--highlight);
 }

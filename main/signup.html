@@ -49,8 +49,6 @@
         </div>
       <div class="loginForm">
         <form class="form" action="../php/signup.php" method="post" onsubmit="sendPhp()">
-          <input type="submit" value="Sign Up" class="btn">
-          <br>
           <input type="radio" name="type" value="organization" id="organization"><span> I am an Organization</span><br>
           <input type="radio" name="type" value="individual" id="individual"><span> I am an Individual</span><br>
           <br>
@@ -62,7 +60,7 @@
           <br>
           <input type="password" class="input" name="password" placeholder="Password" onkeyup="passwordChanged()" onchange="passwordChanged()">
           <br>
-          <br>
+          <input type="submit" value="Sign Up" class="btn">
         </form>
         <div class="external">
           <br/>

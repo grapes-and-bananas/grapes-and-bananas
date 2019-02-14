@@ -1,0 +1,71 @@
+:root{
+  --background: #2B1718;
+  --highlight: #CD3E36;
+  --accent: #EAE1CF;
+  --hover: #FDA800;
+  }
+
+  body{
+ 	width: 100%;
+ 	height: auto;
+	background-color: black;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.nav{
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: 10%;
+  background-color: var(--background);
+}
+
+.home{
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  height: 100%;
+  vertical-align: top;
+  background-color: var(--background);
+  text-align: center;
+}
+
+#logo{
+  color: var(--highlight);
+  width: 90%;
+  font-size: 140%;
+}
+
+.menu{
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  height: 100%;
+  vertical-align: top;
+  margin-left: 49%;
+  text-align: center;
+  padding-top: 2%;
+  color: var(--accent);
+}
+
+.link{
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.link:hover{
+  color: var(--accent);
+    border-bottom: 1px solid var(--highlight);
+}
+
+.grid{
+  display: block;
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: var(--background);
+}
