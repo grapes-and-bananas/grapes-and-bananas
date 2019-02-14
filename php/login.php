@@ -9,13 +9,12 @@ if($conn === false)
 {
     die(print_r(sqlsrv_errors(), true));
 }
-$email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
-$type = $_POST["type"];
 
-$tsql = "INSERT INTO Users
-VALUES ('$username', '$email', '$password', '$type')";
+$tsql = "SELECT userName FROM Users
+WHERE userName = '$username'
+AND password = '$password'";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
