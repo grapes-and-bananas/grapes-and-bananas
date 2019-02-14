@@ -15,12 +15,20 @@ $password = $_POST["password"];
 $type = $_POST["type"];
 
 echo "PHP CODE";
-echo $email;
+echo "\n";
 echo $username;
+echo "\n";
+echo $email;
+echo "\n";
 echo $password;
+echo "\n";
 echo $type;
+echo "\n";
 
+$tsql = "INSERT INTO Users
+VALUES ($username, $email, $password, $type)";
 
+$getResults= sqlsrv_query($conn, $tsql);
 header("Location: https://theatrenow.azurewebsites.net/main/signup.html"); /* Redirect browser */
 exit();
 ?>
