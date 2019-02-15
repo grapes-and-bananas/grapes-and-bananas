@@ -87,7 +87,7 @@ body{
 }
 
 .user a:hover {
-	color: var(--hover) !important;
+	color: var(--hover);
 }
 
 .user .dropdown {
@@ -97,7 +97,7 @@ body{
 }
 .user:hover {
 	z-index: 100;
-	background-color: #FDA800;
+	background-color: var(--hover);
 }
 .user ul {
   	list-style-type: none;
@@ -110,6 +110,7 @@ body{
 
 .user:hover li:hover {
 	background-color: var(--accent);
+
 }
 
 .content {
