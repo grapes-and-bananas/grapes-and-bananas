@@ -17,7 +17,7 @@ if($conn === false)
 }
 else{
 
-
+/*Incorporate bind_param or prepare for secure connections*/
 $tsql = "SELECT userName FROM Users
 WHERE userName = '$username'
 AND password = '$password'";
