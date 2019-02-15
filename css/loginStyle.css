@@ -1,6 +1,6 @@
 :root{
-  --background: #2B1718;
-  --highlight: #CD3E36;
+  --background: #CD3E36;
+  --highlight: #2B1718;
   --accent: #EAE1CF;
   --hover: #FDA800;
 }
@@ -29,14 +29,6 @@ body{
   float: left;
 }
 
-#logo{
-	margin-top: 5%;
-	margin-left: 5%;
-	font-size: 300%;
-	text-align: left;
-	color: var(--accent);
-	font-family: 'Rambla', sans-serif;
-}
 
 #fill{
   color: var(--accent);
@@ -47,17 +39,33 @@ body{
   margin-left: 5%;
 }
 
-#features{
+.features{
   color: var(--accent);
-  font-family: 'Times';
   font-weight: bold;
   font-size: 150%;
   text-align: left;
   margin-left: 5%;
   padding-top: 5%;
   padding-left: 10%;
-
 }
+
+.features p {
+	vertical-align: middle;
+}
+
+.features img {
+	vertical-align: middle;
+	width: 5%;
+	height: auto;
+	padding-right: 5px;
+}
+
+.logo{
+	margin-top: 5%;
+	margin-left: 5%;
+	text-align: left;
+}
+
 
 .loginForm{
   display: inline-block;
@@ -83,6 +91,7 @@ body{
   display: inline-block;
   margin: 5px;
   font-size: 150%;
+	
 }
 
 .input{
@@ -102,6 +111,7 @@ body{
   font-size: 125%;
   text-align: center;
   border: none;
+	padding: 10px;
 }
 
 .btn:hover{
@@ -128,9 +138,16 @@ body{
   text-decoration: none;
   border: none;
   border-bottom: 1px solid var(--accent);
+	padding: 1px;
+	font-weight: bold;
 }
 
 .link:hover{
   color: var(--accent);
   border-bottom: 1px solid var(--highlight);
+}
+
+img {
+	width: 50%;
+	height: auto;
 }
