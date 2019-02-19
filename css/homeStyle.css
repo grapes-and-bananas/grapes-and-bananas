@@ -35,7 +35,7 @@ footer {
 #topbar strong {
 	color: var(--background);
 	font-size: .8em;
-	padding-right: 8%;
+	padding-right: 8.5%;
 }
 #topbar strong:hover {
 	color: var(--background);
@@ -99,7 +99,7 @@ footer {
   	background-color: var(--background);
 	display: flex;
 	top: 0;
-	 z-index:1;
+	z-index:1;
 }
 .logo {
 	display: inline-block;
@@ -117,7 +117,7 @@ footer {
 }
 .menu{
 	position: absolute;
-	right: 8%;
+	right: 8.5%;
   	text-align: right;
   	color: var(--accent);
 	align-self: flex-end;
