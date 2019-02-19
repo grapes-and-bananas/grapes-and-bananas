@@ -5,26 +5,24 @@
   --hover: #FDA800;
   }
 
-body{
+body {
  	width: 100%;
  	height: auto;
- 	background-color: #fff;
+ 	background-color: #f7f7f7;
 	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
   	margin: 0;
 }
 
-
-
 #topbar {
-	background-color: var(--hover);
+	background-color: #F1f1f1;
 	display: block;
 	position: relative;
-	min-height: 4%;
+	min-height: 3%;
 	text-align: right;
 	padding-right: 1%;
 	vertical-align: middle;
-    line-height: 40px;
+    line-height: 30px;
 }
 #topbar strong {
 	color: var(--background);
@@ -32,7 +30,8 @@ body{
 
 }
 #topbar strong:hover {
-	color: var(--accent);
+	color: var(--background);
+	text-decoration: underline;
 	cursor: pointer;
 }
 
@@ -40,7 +39,7 @@ body{
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	background-color: #f1f1f1;
+	background-color: #F7F7F7;
 }
 #main p {
 	padding: 0% 5% 0% 5%;
@@ -48,17 +47,16 @@ body{
 
 #content {
   	display: inline-block;
-	background-color: #fff;
-  	width: 85%;
+  	width: 90%;
   	height: auto;
 	margin-top: 1%;
 	margin-bottom: 2%;
+	background-color: #f7f7f7;
 }
 #content h1 {
 	color: var(--background);
 	text-align: left;
 	font-family: 'Work Sans', sans-serif;
-
 }
 
 .underline{
@@ -67,6 +65,23 @@ body{
 	display: block;
 	margin-left: 1%;
 
+}\
+
+.show-dropdown {
+	overflow: hidden;
+	height: auto;
+	width: auto;
+}
+.show-dropdown select {
+   	background-color: #f7f7f7;
+	border:solid thin #EAE1CF;
+   	font-size: 15px;
+	font-weight: 550;
+  	height: auto;
+   	padding: 5px;
+   	width: auto;
+	color: var(--background);
+	border-radius: 5px;
 }
 
 .nav {
@@ -162,33 +177,46 @@ body{
 	background-color: var(--accent);
 }
  
-.fullwidth {
-	width: 100%;
-	position: relative;
-	box-shadow: 1px 1px 2px #999;
+.grid {
 	height: auto;
+	background-color: #f7f7f7;
+}
+.row {
+	width: 100%;
+		background-color: #f7f7f7;
+
+}
+.col {
 	padding: 1%;
-	background-color: #ffff;
+	margin: 1% .2% 1% .2%;
+	box-shadow: 1px 1px 2px #999;
+	background-color: #fff;
+
 }
 
-.box {
-	display: inline-block;
-	background-color: azure;
-	width: 30%;
-	text-align: center;
-	border-radius: 5px;
+.textbox {
+	border: none;
+	padding: 2%;
 	margin: 1%;
+	font: 1.2em;
+	height: 25%;
+	overflow: scroll;
+	text-align: left;
 }
-.box p {
-	display: inline-block;
-	padding: 50px;
-	vertical-align: middle;
+.textbox::-webkit-scrollbar {
+	width: .8em;
+	height: 0;
+}
+.textbox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(43,23,24,0.2);
+}
+.textbox::-webkit-scrollbar-thumb {
+  background-color: var(--hover);
 }
 
 .carousel {
-  display: flex;
-  overflow-x: auto;
-	left:0;
+  	display: flex;
+  	overflow-x: auto;
 }
 .carousel img {
 	width: 250px;
@@ -202,7 +230,7 @@ body{
 	transform: scale(1);
 }
 .carousel div {
-	flex-shrink: 0;
+	padding: .5%;
 	width: 280px;
 	height: 280px;
 }
