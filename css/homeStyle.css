@@ -15,6 +15,7 @@ body{
 }
 
 
+
 #topbar {
 	background-color: var(--hover);
 	display: block;
@@ -33,6 +34,39 @@ body{
 #topbar strong:hover {
 	color: var(--accent);
 	cursor: pointer;
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+#main p {
+	padding: 0% 5% 0% 5%;
+}
+
+#content {
+  	display: inline-block;
+	background-color: #fff;
+  	width: 85%;
+  	height: auto;
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+#content h1 {
+	color: var(--background);
+	text-align: left;
+	font-family: 'Work Sans', sans-serif;
+
+}
+
+.underline{
+	border-bottom: thin solid var(--accent);
+	width: auto;
+	display: block;
+	margin-left: 1%;
+
 }
 
 .nav {
@@ -127,26 +161,7 @@ body{
 .user:hover li:hover {
 	background-color: var(--accent);
 }
-
-.main {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	background-color: #f1f1f1;
-}
-.main p {
-	padding: 0% 5% 0% 5%;
-}
-
-.content {
-  	display: inline-block;
-	background-color: #fff;
-  	width: 85%;
-  	height: auto;
-	margin-top: 1%;
-	margin-bottom: 2%;
-}
-
+ 
 .fullwidth {
 	width: 100%;
 	position: relative;
@@ -173,6 +188,7 @@ body{
 .carousel {
   display: flex;
   overflow-x: auto;
+	left:0;
 }
 .carousel img {
 	width: 250px;
@@ -181,12 +197,21 @@ body{
 	box-shadow: 2px 2px 2px #999;
 }
 .carousel img:hover {
-	width: 280px;
+	width: 270px;
 	height: auto;
 	transform: scale(1);
 }
 .carousel div {
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
+	flex-shrink: 0;
+	width: 280px;
+	height: 280px;
+}
+.carousel::-webkit-scrollbar {
+	height: .8em;
+}
+.carousel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(43,23,24,0.2);
+}
+.carousel::-webkit-scrollbar-thumb {
+  background-color: var(--hover);
 }
