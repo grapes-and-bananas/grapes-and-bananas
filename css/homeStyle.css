@@ -20,14 +20,13 @@ body {
 	position: relative;
 	min-height: 3%;
 	text-align: right;
-	padding-right: 1%;
 	vertical-align: middle;
     line-height: 30px;
 }
 #topbar strong {
 	color: var(--background);
 	font-size: .8em;
-
+	padding-right: 8%;
 }
 #topbar strong:hover {
 	color: var(--background);
@@ -36,8 +35,6 @@ body {
 }
 
 #main {
-	width: 100%;
-	height: 100%;
 	text-align: center;
 	background-color: #F7F7F7;
 }
@@ -46,16 +43,16 @@ body {
 }
 
 #content {
-  	display: inline-block;
-  	width: 90%;
+  	width: 85%;
+	display: inline-block;
   	height: auto;
-	margin-top: 1%;
-	margin-bottom: 2%;
+	margin: 0;
 	background-color: #f7f7f7;
 }
 #content h1 {
 	color: var(--background);
 	text-align: left;
+	font-size: 2.2em;
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -65,7 +62,7 @@ body {
 	display: block;
 	margin-left: 1%;
 
-}\
+}
 
 .show-dropdown {
 	overflow: hidden;
@@ -99,7 +96,7 @@ body {
 	position: relative;
 	padding-top: 1%;
 	text-align: left;
-	left: 0;
+	left: 6%;
 	width: 50%;
 }
 .logo img {
@@ -110,7 +107,7 @@ body {
 }
 .menu{
 	position: absolute;
-	right: 1%;
+	right: 8%;
   	text-align: right;
   	color: var(--accent);
 	align-self: flex-end;
@@ -132,7 +129,7 @@ body {
 	position: absolute;
 	display: inline-block;
 	top: 0;
-	right: 1%;
+	right: 8%;
 	width: auto;
 	text-align: right;
 }
@@ -154,6 +151,7 @@ body {
 }
 .user a:hover {
 	color: var(--hover);
+	text-decoration: none;
 }
 
 .user .dropdown {
@@ -183,8 +181,7 @@ body {
 }
 .row {
 	width: 100%;
-		background-color: #f7f7f7;
-
+	background-color: #f7f7f7;
 }
 .col {
 	padding: 1%;
@@ -213,6 +210,36 @@ body {
 .textbox::-webkit-scrollbar-thumb {
   background-color: var(--hover);
 }
+.textbox h2 {
+	color: var(--background);
+	text-align: left;
+	font-size: 1.5em;
+	font-family: 'Work Sans', sans-serif;
+	margin-bottom: 0;
+}
+.textbox h3 {
+	color: #777;
+	margin-top: 0;
+	text-align: left;
+	font-size: .9em;
+	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+}
+.textbox p {
+	color: #111;
+	padding-left: 0 !important;
+	text-align: left;
+	font-size: .9em;
+	font-family: 'Open Sans', sans-serif;
+}
+.textbox  a {
+	color: #CA4036;
+}
+.textbox  a:hover {
+	color: #CA4036;
+	font-weight: bold;
+	text-decoration: none;
+}
 
 .carousel {
   	display: flex;
@@ -231,8 +258,8 @@ body {
 }
 .carousel div {
 	padding: .5%;
-	width: 280px;
-	height: 280px;
+	width: 290px;
+	height: 290px;
 }
 .carousel::-webkit-scrollbar {
 	height: .8em;
