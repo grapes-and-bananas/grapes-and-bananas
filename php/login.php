@@ -22,9 +22,11 @@ $tsql = "SELECT userName FROM Users
 WHERE userName = '$username'
 AND password = '$password'";
 
-$getResults= sqlsrv_query($conn, $tsql);
+$getResults = sqlsrv_query($conn, $tsql);
 
-echo $getResults;
+if( $getResults === false ) {
+     die( print_r( sqlsrv_errors(), true));
+}
 
 sqlsrv_free_stmt($getResults);
 
