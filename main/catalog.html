@@ -1,6 +1,32 @@
 <html>
   <head>
 	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script>
+		  jQuery(document).ready(function() {
+			  var tabs = $('.tabs');
+				var items = $('.tabs').find('a').length;
+				var selector = $(".tabs").find(".selector");
+				var activeItem = tabs.find('.active');
+				var activeWidth = activeItem.innerWidth();
+				$(".selector").css({
+				  "left": activeItem.position.left + "px", 
+				  "width": activeWidth + "px"
+				});
+
+				$(".tabs").on("click","a",function(e){
+				  e.preventDefault();
+				  $('.tabs a').removeClass("active");
+				  $(this).addClass("active");
+				  var activeWidth = $(this).innerWidth();
+				  var itemPos = $(this).position();
+				  $(".selector").css({
+					"left":itemPos.left + "px", 
+					"width": activeWidth + "px"
+				  });
+				});
+		  });
+	  </script>
     <link rel = "stylesheet" type = "text/css" href = "../css/homeStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
@@ -8,6 +34,7 @@
   </head>
 	
   <body>
+	  
 	 <div id="main">
 		<div class="nav">
 			<div class="logo"><img src="../images/TheatreNowLogo.png"></div>
@@ -35,14 +62,21 @@
 		</div>
 		<div id="content">
 			 <div class="grid">
+				 <div class="wrapper">
+							<nav class="tabs">
+								<div class="selector"></div>
+								<a href="#" class="active" onClick="displayTrending()">TRENDING</a>
+								<a href="#" onClick="displayPopular()">POPULAR</a>
+								<a href="#" onClick="displayNewest()">NEWEST</a>
+							</nav>
+						</div>
 			 	<div class="row">
+					
+					<br>
 				 	<div class="col">
-						<h1 class="trending" onClick="displayTrending()">TRENDING</h1>
-						<h1 class="popular" onClick="displayPopular()">POPULAR</h1>
-						<h1 class="newest" onClick="displayNewest()">NEWEST</h1>
+						
 						<div id="trending-container">
 							<div class="carousel">
-								
 								<div><a href="/"><img src="../images/phantom.jpg"></a></div>
 								<div><a href="/"><img src="../images/shrek.jpg"></a></div>
 								<div><a href="/"><img src="../images/tarzan.jpg"></a></div>
@@ -69,6 +103,7 @@
 								<div><a href="/"><img src="../images/meangirls.jpg"></a></div>
 								<div><a href="/"><img src="../images/hairspray.jpg"></a></div>
 								<div><a href="/"><img src="../images/hamilton.jpg"></a></div>	
+							</div>
 						</div>
 					</div>
 				 </div>
@@ -114,19 +149,28 @@
 	  
 	  	<script>
 			function displayTrending() {
-			  	document.getElementById("trending-container").style.display = "block";
+				document.getElementById("trending-container").style.display = "block";
+				document.getElementById("trending-container").style.opacity = 1;
 				document.getElementById("popular-container").style.display = "none";
+				document.getElementById("popular-container").style.opacity = 0;
 				document.getElementById("newest-container").style.display = "none";
+				document.getElementById("newest-container").style.opacity = 0;
 			}
 			function displayPopular() {
-			  	document.getElementById("popular-container").style.display = "block";
+				document.getElementById("popular-container").style.display = "block";
+				document.getElementById("popular-container").style.opacity = 1;
 				document.getElementById("trending-container").style.display = "none";
+				document.getElementById("trending-container").style.opacity = 0;
 				document.getElementById("newest-container").style.display = "none";
+				document.getElementById("newest-container").style.opacity = 0;
 			}
 			function displayNewest() {
-			  	document.getElementById("newest-container").style.display = "block";
+				document.getElementById("newest-container").style.display = "block";
+				document.getElementById("newest-container").style.opacity = 1;
 				document.getElementById("popular-container").style.display = "none";
+				document.getElementById("popular-container").style.opacity = 0;
 				document.getElementById("trending-container").style.display = "none";
+				document.getElementById("trending-container").style.opacity = 0;
 			}
 		</script>
 </body>
