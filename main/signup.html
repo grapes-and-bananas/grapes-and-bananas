@@ -5,7 +5,7 @@
 	</head>
   <body>
     <script>
-    var email;
+    /*var email;
     var username;
     var password;
     var type;
@@ -18,11 +18,12 @@
     function passwordChanged(){
       var password = document.getElementsByName('password')[0].value;
     };
-
+*/
     function validateForm(){
       var eml = document.forms["signup"]["email"].value;
       var ume = document.forms["signup"]["username"].value;
       var pwd = document.forms["signup"]["password"].value;
+      var typ = document.forms["signup"]["type"].value;
       if (eml == "") {
         alert("Please Enter an Email");
         return false;
@@ -44,7 +45,7 @@
       if (pwd < 8){
         alert("Please enter a password with minimum 8 characters")
       }
-
+      console.log(eml, ume, pwd, typ);
       else{
         return true;
       }
