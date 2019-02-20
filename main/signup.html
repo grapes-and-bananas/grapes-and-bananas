@@ -44,21 +44,22 @@
       var p = pwd.length;
       if (p < 8){
         alert("Please enter a password with minimum 8 characters")
+        return false;
       }
 
       }
 
-    function sendPhp(){
-      if(document.getElementById("organization").checked){
-        var type = (document.getElementById("organization").value)
-      }
-      else{
-        var type = (document.getElementById("individual").value)
-      }
-
-      return validateForm();
-
-    };
+    // function sendPhp(){
+    //   if(document.getElementById("organization").checked){
+    //     var type = (document.getElementById("organization").value)
+    //   }
+    //   else{
+    //     var type = (document.getElementById("individual").value)
+    //   }
+    //
+    //   return validateForm();
+    //
+    // };
     </script>
     <div class="main">
       <div class="nav">
@@ -67,7 +68,6 @@
           <p id="fill">Theatrical rights <br/> made easy.</p>
           <div class="features">
 			  <img src="../images/form.png"> Apply for theatrical rights.
-
                           <br/>
                           <br/>
               <img src="../images/theatre.png"> Music, choreography, set, costume, lighting.
@@ -78,7 +78,7 @@
         </div>
         </div>
       <div class="loginForm">
-        <form class="form" name="signup" action="../php/signup.php" method="post" onsubmit="return sendPhp()">
+        <form class="form" name="signup" action="../php/signup.php" method="post" onsubmit="return validateForm()">
           <input type="radio" name="type" value="organization" id="organization"><span> I am an Organization</span><br>
           <input type="radio" name="type" value="individual" id="individual"><span> I am an Individual</span><br>
           <br>
