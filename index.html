@@ -3,6 +3,21 @@
     <link rel = "stylesheet" type = "text/css" href = "./css/loginStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
   </head>
+  <script>
+    function validateForm() {
+      var ume = document.forms["login"]["username"].value;
+      var pwd = document.forms["login"]["password"].value;
+      if (ume == "") {
+        alert("Please Enter a Username");
+        return false;
+      }
+      if (pwd == "") {
+        alert("Please Enter a Password");
+        return false;
+      }
+
+    }
+  </script>
   <body>
     <div class="main">
       <div class="nav">
@@ -22,7 +37,7 @@
         </div>
       </div>
       <div class="loginForm">
-        <form class="form" action="../php/login.php" method="post">
+        <form class="form" name="login" action="../php/login.php" onsubmit="return validateForm()" method="post">
           <br>
           <input type="text" class="input" name="username" placeholder="Username/Email">
           <br><br>
