@@ -27,13 +27,16 @@ $getResults = sqlsrv_query($conn, $tsql);
 if( $getResults === false ) {
      die( print_r( sqlsrv_errors(), true));
 }
+else{
+  sqlsrv_free_stmt($getResults);
+  header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
+}
 
-sqlsrv_free_stmt($getResults);
 
 }
 } else {
 echo "User ID not specified or invalid.";
-header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
+header("Location: https://theatrenow.azurewebsites.net/main/login.html"); /* Redirect browser */
 exit();
 }
 ?>
