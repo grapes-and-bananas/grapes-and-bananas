@@ -11,16 +11,46 @@
     var type;
     function emailChanged(){
       var email = document.getElementsByName('email')[0].value;
-      //console.log(email);
     };
     function usernameChanged(){
       var username = document.getElementsByName('username')[0].value;
-      //console.log(username);
     };
     function passwordChanged(){
       var password = document.getElementsByName('password')[0].value;
-      //tempurachickenconsole.log(password);
     };
+
+    function validateForm(){
+      var eml = document.forms["signup"]["email"].value;
+      var ume = document.forms["signup"]["username"].value;
+      var pwd = document.forms["signup"]["password"].value;
+      if (eml == "") {
+        alert("Please Enter an Email");
+        return false;
+      }
+      if (ume == "") {
+        alert("Please Enter a Username");
+        return false;
+      }
+      if (pwd == "") {
+        alert("Please Enter a Password");
+        return false;
+      }
+      var e = eml.includes("@");
+      if (!= e){
+        alert("Please enter a valid email")
+        return false;
+      }
+      var p = pwd.length;
+      if (pwd < 8){
+        alert("Please enter a password with minimum 8 characters")
+      }
+
+      else{
+        return true;
+      }
+
+    }
+
     function sendPhp(){
       if(document.getElementById("organization").checked){
         var type = (document.getElementById("organization").value)
@@ -29,7 +59,8 @@
         var type = (document.getElementById("individual").value)
       }
 
-      console.log(email, username, password, type);
+      return validateForm();
+
     };
     </script>
     <div class="main">
@@ -50,7 +81,7 @@
         </div>
         </div>
       <div class="loginForm">
-        <form class="form" action="../php/signup.php" method="post" onsubmit="sendPhp()">
+        <form class="form" name="signup" action="../php/signup.php" method="post" onsubmit="return sendPhp()">
           <input type="radio" name="type" value="organization" id="organization"><span> I am an Organization</span><br>
           <input type="radio" name="type" value="individual" id="individual"><span> I am an Individual</span><br>
           <br>
@@ -61,6 +92,7 @@
           <br>
           <br>
           <input type="password" class="input" name="password" placeholder="Password" onkeyup="passwordChanged()" onchange="passwordChanged()">
+          8 characters minimum
           <br>
           <input type="submit" value="Sign Up" class="btn">
         </form>
