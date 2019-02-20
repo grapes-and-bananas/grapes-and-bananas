@@ -1,10 +1,133 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
-
-<body>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/homeStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+	
+  <body>
+	 <div id="main">
+		<div class="nav">
+			<div class="logo"><img src="../images/TheatreNowLogo.png"></div>
+			<div class="user">
+				 <p> username
+					<img src="https://www.mtec.or.th/wp-content/uploads/2018/02/chevron-down.png">
+					 &nbsp;
+				</p>
+				<ul class="dropdown">
+					<a href=""><li>Settings &nbsp;</li></a>
+					<a href=""><li>Log out &nbsp;</li></a>
+				</ul>
+			</div>
+			<div class="menu">
+				<a href="home.html" class="link">Home</a> | 
+				<a href="catalog.html" class="link"> Catalog</a> | 
+				<a href="myshows.html" class="link"> My Shows</a> | 
+				<a href="applications.html" class="link"> Applications </a> |
+				<a href="revenue.html" class="link"> Revenue </a> |
+				<a href="contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+		<div id="topbar">
+			<strong>Customize Dashboard</strong>
+		</div>
+		<div id="content">
+			 <div class="grid">
+			 	<div class="row">
+				 	<div class="col">
+						<h1 class="trending" onClick="displayTrending()">TRENDING</h1>
+						<h1 class="popular" onClick="displayPopular()">POPULAR</h1>
+						<h1 class="newest" onClick="displayNewest()">NEWEST</h1>
+						<div id="trending-container">
+							<div class="carousel">
+								
+								<div><a href="/"><img src="../images/phantom.jpg"></a></div>
+								<div><a href="/"><img src="../images/shrek.jpg"></a></div>
+								<div><a href="/"><img src="../images/tarzan.jpg"></a></div>
+								<div><a href="/"><img src="../images/tinseltown.jpg"></a></div>
+								<div><a href="/"><img src="../images/wicked.jpg"></a></div>
+							</div>
+						</div>
+						<div id="popular-container">
+							<div class="carousel">
+								<div><a href="/"><img src="../images/aladdin.jpg"></a></div>
+								<div><a href="/"><img src="../images/beauty.jpg"></a></div>
+								<div><a href="/"><img src="../images/cats.jpg"></a></div>
+								<div><a href="/"><img src="../images/frozen.jpg"></a></div>
+								<div><a href="/"><img src="../images/funhome.jpg"></a></div>
+								<div><a href="/"><img src="../images/gold.jpg"></a></div>
+								<div><a href="/"><img src="../images/grease.jpg"></a></div>
+							</div>
+						</div>
+						<div id="newest-container">
+							<div class="carousel">
+								<div><a href="/"><img src="../images/happydays.jpg"></a></div>
+								<div><a href="/"><img src="../images/intothewoods.jpg"></a></div>
+								<div><a href="/"><img src="../images/mamamia.jpg"></a></div>
+								<div><a href="/"><img src="../images/meangirls.jpg"></a></div>
+								<div><a href="/"><img src="../images/hairspray.jpg"></a></div>
+								<div><a href="/"><img src="../images/hamilton.jpg"></a></div>	
+						</div>
+					</div>
+				 </div>
+				 <div class="row">
+				 	<div class="col">
+						<h1 class="underline">ALL SHOWS</h1>
+						<div clas="row" class="right">
+							<select>
+								<option value="az">Al</option>
+								<option value="za">Z - A</option>
+								<option value="newest">Date Added </option>
+								<option value="oldest">Oldest</option>
+							</select>
+								FILTER LIST GRID SEARCH
+						</div>
+						<div class="row">
+							<div class="col-lg">
+								<div><a href="/"><img src="../images/aladdin.jpg">Aladdin</a></div>
+								<div><a href="/"><img src="../images/beauty.jpg">Beauty and the Beast</a></div>
+								<div><a href="/"><img src="../images/cats.jpg">Cats</a></div>
+								<div><a href="/"><img src="../images/frozen.jpg">Frozen</a></div>
+								<div><a href="/"><img src="../images/funhome.jpg">Fun Home</a></div>
+								<div><a href="/"><img src="../images/gold.jpg">Gold</a></div>
+								<div><a href="/"><img src="../images/grease.jpg">Grease</a></div>
+								<div><a href="/"><img src="../images/hairspray.jpg">Hairspray</a></div>
+								<div><a href="/"><img src="../images/hamilton.jpg">Hamilton</a></div>
+								<div><a href="/"><img src="../images/happydays.jpg">Happy Days</a></div>
+								<div><a href="/"><img src="../images/intothewoods.jpg">Into The Woods</a></div>
+								<div><a href="/"><img src="../images/mamamia.jpg">Mama Mia!</a></div>
+								<div><a href="/"><img src="../images/meangirls.jpg">Mean Girls</a></div>
+								<div><a href="/"><img src="../images/phantom.jpg">Phantom of the Opear</a></div>
+								<div><a href="/"><img src="../images/shrek.jpg">Shrek</a></div>
+								<div><a href="/"><img src="../images/tarzan.jpg">Tarzan</a></div>
+								<div><a href="/"><img src="../images/tinseltown.jpg">Tinseltown</a></div>
+								<div><a href="/"><img src="../images/wicked.jpg">Wicked</a></div>
+							</div>
+						</div>
+					</div>
+				 </div>
+			 </div>
+		 </div>
+	  </div>
+	  
+	  	<script>
+			function displayTrending() {
+			  	document.getElementById("trending-container").style.display = "block";
+				document.getElementById("popular-container").style.display = "none";
+				document.getElementById("newest-container").style.display = "none";
+			}
+			function displayPopular() {
+			  	document.getElementById("popular-container").style.display = "block";
+				document.getElementById("trending-container").style.display = "none";
+				document.getElementById("newest-container").style.display = "none";
+			}
+			function displayNewest() {
+			  	document.getElementById("newest-container").style.display = "block";
+				document.getElementById("popular-container").style.display = "none";
+				document.getElementById("trending-container").style.display = "none";
+			}
+		</script>
 </body>
 </html>
