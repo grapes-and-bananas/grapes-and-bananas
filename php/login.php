@@ -24,6 +24,8 @@ AND password = '$password'";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
+echo $getResults;
+
 sqlsrv_free_stmt($getResults);
 
 }
