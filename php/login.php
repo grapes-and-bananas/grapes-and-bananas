@@ -35,7 +35,7 @@ header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redi
 }
 } else {
 echo "User ID not specified or invalid.";
-header("Location: https://theatrenow.azurewebsites.net/main/index.html"); /* Redirect browser */
+header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
 exit();
 }
 ?>
