@@ -15,8 +15,10 @@
         alert("Please Enter a Password");
         return false;
       }
-      else{
-        return true;
+      var p = pwd.length;
+      if (p < 8){
+        alert("Please enter a password with minimum 8 characters")
+        return false;
       }
     }
   </script>
