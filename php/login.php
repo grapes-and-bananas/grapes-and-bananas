@@ -23,12 +23,12 @@ if((!empty($_POST["username"]))) {
     AND password = '$password'";
 
     $getResults = sqlsrv_query($conn, $tsql);
-
+    $rows = sqlsrv_has_rows($getResults);
     if( $getResults === false ) {
          die( print_r( sqlsrv_errors(), true));
     }
 
-    if(sqlsrv_has_rows($getResults) != 1){
+    if($rows != 1){
       echo "User ID not specified or invalid.";
       header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
     }else{
