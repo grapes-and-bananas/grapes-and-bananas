@@ -1,7 +1,8 @@
 <?php
 
-if (isset($_SESSION['user'])) {
-  /// your code here
+if (!isset($_SESSION['user'])) {
+  echo "User ID not specified or invalid.";
+  header("Location: https://theatrenow.azurewebsites.net/index.html");
 }
 ?>
 <!DOCTYPE html>
