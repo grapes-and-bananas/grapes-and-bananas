@@ -443,10 +443,11 @@ footer {
 }
 
 #message{
-  width: 100%;
+  width: 95%;
   height: 175px;
+  margin: 1%;
 }
 
 .btn{
-  margin-left: 45%;
+  margin-left: 47%;
 }
