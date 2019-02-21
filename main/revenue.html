@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    echo "User ID not specified or invalid.";
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+  }
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,7 +15,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
-	
+
   <body>
 	 <div id="main">
 		<div class="nav">
@@ -24,9 +31,9 @@
 				</ul>
 			</div>
 			<div class="menu">
-				<a href="home.html" class="link">Home</a> | 
-				<a href="catalog.html" class="link"> Catalog</a> | 
-				<a href="myshows.html" class="link"> My Shows</a> | 
+				<a href="home.html" class="link">Home</a> |
+				<a href="catalog.html" class="link"> Catalog</a> |
+				<a href="myshows.html" class="link"> My Shows</a> |
 				<a href="applications.html" class="link"> Applications </a> |
 				<a href="revenue.html" class="link active"> Revenue </a> |
 				<a href="contact.html" class="link"> Contact</a>

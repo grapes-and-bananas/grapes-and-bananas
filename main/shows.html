@@ -1,4 +1,10 @@
-<html>
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    echo "User ID not specified or invalid.";
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+  }
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
