@@ -2,7 +2,7 @@
   session_start();
   $_SESSION["user"]  = $user;
   echo $user;
-  if (!isset($_SESSION['user'])) {
+  if (!isset($_SESSION["user"])) {
     echo "User ID not specified or invalid.";
     header("Location: https://theatrenow.azurewebsites.net/index.html");
         exit();
