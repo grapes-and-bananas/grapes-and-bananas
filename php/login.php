@@ -1,4 +1,5 @@
 <?php
+session_start();
 /*Validate Username*/
 if((!empty($_POST["username"]))) {
   /*Gather connection and authentication data*/
