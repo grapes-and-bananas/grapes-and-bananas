@@ -39,7 +39,7 @@
 	  
 	 <div id="main">
 		<div class="nav">
-			<div class="logo"><img src="../images/TheatreNowLogo.png"></div>
+			<div class="logo"><img src="../images/TheatreNowLogo.png" alt="Theatre Now logo"></div>
 			<div class="user">
 				 <p> username
 					<img src="https://www.mtec.or.th/wp-content/uploads/2018/02/chevron-down.png">
@@ -152,27 +152,18 @@
 	  	<script>
 			function displayTrending() {
 				document.getElementById("trending-container").style.display = "block";
-				document.getElementById("trending-container").style.opacity = 1;
 				document.getElementById("popular-container").style.display = "none";
-				document.getElementById("popular-container").style.opacity = 0;
 				document.getElementById("newest-container").style.display = "none";
-				document.getElementById("newest-container").style.opacity = 0;
 			}
 			function displayPopular() {
 				document.getElementById("popular-container").style.display = "block";
-				document.getElementById("popular-container").style.opacity = 1;
 				document.getElementById("trending-container").style.display = "none";
-				document.getElementById("trending-container").style.opacity = 0;
 				document.getElementById("newest-container").style.display = "none";
-				document.getElementById("newest-container").style.opacity = 0;
 			}
 			function displayNewest() {
 				document.getElementById("newest-container").style.display = "block";
-				document.getElementById("newest-container").style.opacity = 1;
 				document.getElementById("popular-container").style.display = "none";
-				document.getElementById("popular-container").style.opacity = 0;
 				document.getElementById("trending-container").style.display = "none";
-				document.getElementById("trending-container").style.opacity = 0;
 			}
 		</script>
 </body>
