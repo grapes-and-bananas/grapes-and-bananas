@@ -28,8 +28,15 @@ if( $getResults == false ) {
      die( print_r( sqlsrv_errors(), true));
 }
 
+$count = num_rows($getResults);
+if($count == 1){
 sqlsrv_free_stmt($getResults);
 header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
+}else{
+  echo "User ID not specified or invalid.";
+  header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
+  exit();
+}
 
 
 }
