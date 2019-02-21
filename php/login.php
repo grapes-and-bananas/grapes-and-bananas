@@ -28,7 +28,7 @@ if( $getResults == false ) {
      die( print_r( sqlsrv_errors(), true));
 }
 
-$count = num_rows($getResults);
+$count = count($getResults);
 if($count == 1){
 sqlsrv_free_stmt($getResults);
 header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
