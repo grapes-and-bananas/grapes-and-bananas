@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+if (isset($_SESSION['user'])) {
+  /// your code here
+}
+?>
 <html>
   <head>
 	<meta charset="utf-8">
@@ -7,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-	
   <body>
 	 <div id="main">
 		<div class="nav">
@@ -23,9 +28,9 @@
 				</ul>
 			</div>
 			<div class="menu">
-				<a href="home.html" class="link active">Home</a> | 
-				<a href="catalog.html" class="link"> Catalog</a> | 
-				<a href="myshows.html" class="link"> My Shows</a> | 
+				<a href="home.html" class="link active">Home</a> |
+				<a href="catalog.html" class="link"> Catalog</a> |
+				<a href="myshows.html" class="link"> My Shows</a> |
 				<a href="applications.html" class="link"> Applications </a> |
 				<a href="revenue.html" class="link"> Revenue </a> |
 				<a href="contact.html" class="link"> Contact</a>
@@ -62,12 +67,12 @@
 							<h3>Author | Date | Time </h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque aliquam lobortis elit vel porta. Nullam dictum, justo a vehicula placerat, orci quam rutrum mauris, at facilisis magna est eu ipsum...<a href="/">view more</a>
 							</p>
-	
+
 							<h2>Title</h2>
 							<h3>Author | Date | Time </h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque aliquam lobortis elit vel porta. Nullam dictum, justo a vehicula placerat, orci quam rutrum mauris, at facilisis magna est eu ipsum. Nam id ligula id orci iaculis hendrerit vitae sit amet lacus.... <a href="/">view more</a>
 							</p>
-							
+
 							<h2>Title</h2>
 							<h3>Author | Date | Time </h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque aliquam lobortis elit vel porta. Nullam dictum, justo a vehicula placerat, orci quam rutrum mauris, at facilisis magna est eu ipsum. Nam id ligula id orci iaculis hendrerit vitae sit amet lacus.... <a href="/">view more</a>
@@ -106,8 +111,8 @@
 		 </div>
 	</div>
 
-	  
-		
+
+
 
 	</body>
 	<footer>
