@@ -1,45 +1,42 @@
 <?php
 /*Validate Username*/
 if((!empty($_POST["username"]))) {
-/*Gather connection and authentication data*/
-$serverName = "tcp:theatrenow.database.windows.net,1433";
-$connectionOptions = array("Database"=>"TheatreNow",
-                           "UID"=>"grapesandbananas",
-                           "PWD" => "Apples&Oranges");
-$username = $_POST["username"];
-$password = $_POST["password"];
+  /*Gather connection and authentication data*/
+  $serverName = "tcp:theatrenow.database.windows.net,1433";
+  $connectionOptions = array("Database"=>"TheatreNow",
+                             "UID"=>"grapesandbananas",
+                             "PWD" => "Apples&Oranges");
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
-/*Connect to server*/
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-if($conn === false)
-{
-    die(print_r(sqlsrv_errors(), true));
-}
-else{
+  /*Connect to server*/
+  $conn = sqlsrv_connect($serverName, $connectionOptions);
 
-/*Incorporate bind_param or prepare for secure connections*/
-$tsql = "SELECT userName FROM Users
-WHERE userName = '$username'
-AND password = '$password'";
+  if($conn === false)
+  {
+      die(print_r(sqlsrv_errors(), true));
+  }else{
 
-$getResults = sqlsrv_query($conn, $tsql);
+    /*Incorporate bind_param or prepare for secure connections*/
+    $tsql = "SELECT userName FROM Users
+    WHERE userName = '$username'
+    AND password = '$password'";
 
-if( $getResults === false ) {
-     die( print_r( sqlsrv_errors(), true));
-}
+    $getResults = sqlsrv_query($conn, $tsql);
 
-if(sqlsrv_has_rows($result) != 1){
-  echo "User ID not specified or invalid.";
-  header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
-  exit();
-}else{
-  sqlsrv_free_stmt($getResults);
-  header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
-}
+    if( $getResults === false ) {
+         die( print_r( sqlsrv_errors(), true));
+    }
 
-
-}
-} else {
+    if(sqlsrv_has_rows($getResults) != 1){
+      echo "User ID not specified or invalid.";
+      header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
+    }else{
+      sqlsrv_free_stmt($getResults);
+      header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
+    }
+  }
+}else {
 echo "User ID not specified or invalid.";
 header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
 exit();
