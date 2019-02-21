@@ -5,7 +5,7 @@
   	--hover: #FDA800;
 	--logo: #CA4036	;
   }
-html, body {
+html,body {
 	height: 100%;
 }
 body {
@@ -30,7 +30,7 @@ body {
 	background-color: #F1f1f1;
 	display: block;
 	position: relative;
-	min-height: 3%;
+	height: 30px;
 	text-align: right;
 	vertical-align: middle;
     line-height: 30px;
@@ -50,7 +50,8 @@ body {
 	text-align: center;
 	background-color: #F7F7F7;
 	padding-bottom: 2%;
-  flex: 1 0 auto;
+  	flex: 1 0 auto;
+
 
 }
 #main p {
@@ -125,7 +126,6 @@ body {
 .nav {
   	position: sticky;
   	width: 100%;
-  	height: 10%;
 	min-height: 100px;
   	background-color: var(--background);
 	display: flex;
@@ -294,15 +294,20 @@ body {
 	position: relative;
 	background-color:#257633;
 	color: var(--accent);
-	width: 250px;
-  	height: 250px;
+	width: 200px;
+  	height: 200px;
   	border-radius: 50%;
-	margin: 1%;
-	padding-top: 80px;
+	margin: 4%;
+	padding-top: 60px;
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
 	font-size: 1.2em;
+}
+.circle:hover {
+	opacity: .4;
+	transition: 1s;
+	cursor: pointer;
 }
 .circle .header {
 	font-size: 1.5em;
@@ -543,4 +548,42 @@ hr {
 	font-size: 1em !important;
 	font-weight: 500 !important;
 	padding: 5px 10px 8px 10px !important;
+}
+
+.graph{
+	display: table;
+	table-layout: fixed;   
+	width: 100%;
+	height: 400px;
+	text-align: center;
+	background-color: rgba(232,232,232,0.57);
+	box-shadow: 1px 1px 2px #999;
+}
+  
+.graph li{
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 400px;
+  }
+  
+.graph span {
+    margin:0 1em;
+    display: block;
+    background-color: #6CD878;
+    animation: draw 1s ease-in-out;
+}
+    
+.graph span:before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	display: block;
+	text-align: center;
+	content: attr(title);
+}
+
+@keyframes draw{
+  0%{height:0;} 
 }
