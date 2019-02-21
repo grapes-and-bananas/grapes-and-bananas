@@ -24,18 +24,17 @@ AND password = '$password'";
 
 $getResults = sqlsrv_query($conn, $tsql);
 
-if( $getResults == false ) {
+if( $getResults === false ) {
      die( print_r( sqlsrv_errors(), true));
 }
 
-$count = count($getResults);
-if($count == 1){
-sqlsrv_free_stmt($getResults);
-header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
-}else{
+if(sqlsrv_has_rows($result) != 1){
   echo "User ID not specified or invalid.";
   header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
   exit();
+}else{
+  sqlsrv_free_stmt($getResults);
+  header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
 }
 
 
