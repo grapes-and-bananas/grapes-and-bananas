@@ -14,6 +14,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/homeStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 
@@ -46,14 +47,19 @@
 				 <div class="col">
 					 <h1 class="underline">MY SHOWS</h1>
 					 <div clas="row" class="right">
-						 <select>
-							 <option value="az">Al</option>
-							 <option value="za">Z - A</option>
-							 <option value="newest">Date Added </option>
-							 <option value="oldest">Oldest</option>
-						 </select>
-							 FILTER LIST GRID SEARCH
-					 </div>
+							<select>
+								<option value="">Sort by:</option>
+								<option value="az">A - Z</option>
+								<option value="za">Z - A</option>
+								<option value="newest">Date Added: Newest</option>
+								<option value="oldest">Date Added: Oldest</option>
+								<option value="oldest">Oldest</option>
+							</select>
+ 							<button class="fas fa-filter filter"></button>
+ 							<button class="fas fa-list-ul filter"></button>
+							<button class="fas fa-th-large filter"></button>
+							<input type="search" id="search" placeholder="Search..">
+						</div>
 					 <br>
 					 <div class="row">
 						 <div class="col-md right">
@@ -88,6 +94,30 @@
 								Date acquired: 01-15-2019
 							 	<br>
 							 	Expires on: 06-15-2019
+							 	<br>
+							 Enamel pin dolor kitsch, literally qui 90's fingerstache occaecat brunch sunt man bun whatever franzen hoodie man braid. Authentic ut echo park in waistcoat subway tile culpa voluptate whatever sustainable street art magna. 
+						 </div>
+						 <div class="col-md center">
+							<br>
+							 <button class="btn-curtain">Revenue</button>
+								 <br><br>
+							<button class="btn-curtain">Show Resources</button>
+								 <br><br>
+							<button class="btn-curtain">My Content</button><br><br>
+						 </div>
+					 </div>
+					 
+					 <hr>
+					
+					 <div class="row">
+						 <div class="col-md right">
+							 <img src="../images/wicked.jpg" class="square">
+						 </div>
+						 <div class="col-md">
+							 <h1>Wicked</h1>
+								Date acquired: 12-10-2018
+							 	<br>
+							 	Expires on: 12-10-2019
 							 	<br>
 							 Enamel pin dolor kitsch, literally qui 90's fingerstache occaecat brunch sunt man bun whatever franzen hoodie man braid. Authentic ut echo park in waistcoat subway tile culpa voluptate whatever sustainable street art magna. 
 						 </div>
