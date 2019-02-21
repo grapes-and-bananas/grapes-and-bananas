@@ -1,6 +1,6 @@
 <?php
 /*Validate Username*/
-if((!empty($_POST["username"])) && (is_numeric($_POST["username"]))) {
+if((!empty($_POST["username"]))) {
 /*Gather connection and authentication data*/
 $serverName = "tcp:theatrenow.database.windows.net,1433";
 $connectionOptions = array("Database"=>"TheatreNow",
@@ -24,7 +24,7 @@ AND password = '$password'";
 
 $getResults = sqlsrv_query($conn, $tsql);
 
-if( $getResults === false ) {
+if( $getResults == false ) {
      die( print_r( sqlsrv_errors(), true));
 }
 
