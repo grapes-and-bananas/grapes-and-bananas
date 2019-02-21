@@ -233,7 +233,6 @@ footer {
 	margin: .5% .2% .5% .2%;
 	box-shadow: 1px 1px 2px #999;
 	background-color: #fff;
-	overflow: auto;
 	text-align: center;
 }
 
@@ -256,7 +255,7 @@ footer {
 }
 .col-lg img {
 	width: 180px;
-	height: 200px;
+	height: 180px;
 	box-shadow: 1px 1px 2px #999;
 }
 .col-lg div {
@@ -268,11 +267,7 @@ footer {
 	display: inline-block;
 }
 
-.grid .img {
-	padding-bottom: 10%;
-	padding-left: 10%;
-	background-color: #fff;
-}
+
 .left {
 	text-align: left !important;
 	display: inline;
@@ -297,37 +292,32 @@ footer {
 .circle .header {
 	font-size: 1.5em;
 	font-weight: bold;
-	text-align: center;
-	
+	text-align: center;	
 }
-.textbox {
-	border: none;
-	padding: 2%;
-	margin: 1%;
-	font: 1.2em;
-	max-height: 40%;
-	overflow: scroll;
-	text-align: left;
-	
+
+#updates {
+    box-shadow: none !important;
+	padding: 0;
+	margin:0;
 }
-.textbox::-webkit-scrollbar {
+#updates::-webkit-scrollbar {
 	width: .8em;
 	height: 0;
 }
-.textbox::-webkit-scrollbar-track {
+#updates::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgba(43,23,24,0.2);
 }
-.textbox::-webkit-scrollbar-thumb {
+#updates::-webkit-scrollbar-thumb {
   background-color: var(--logo);
 }
-.textbox h2 {
+#updates h2 {
 	color: var(--background);
 	text-align: left;
 	font-size: 1.5em;
 	font-family: 'Work Sans', sans-serif;
 	margin-bottom: 0;
 }
-.textbox h3 {
+#updates h3 {
 	color: #777;
 	margin-top: 0;
 	text-align: left;
@@ -335,17 +325,16 @@ footer {
 	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
 }
-.textbox p {
+#updates p {
 	color: #111;
-	padding-left: 0 !important;
 	text-align: left;
 	font-size: .9em;
 	font-family: 'Open Sans', sans-serif;
 }
-.textbox  a {
+#updates  a {
 	color: #CA4036;
 }
-.textbox  a:hover {
+#updates  a:hover {
 	color: #CA4036;
 	font-weight: bold;
 	text-decoration: none;
