@@ -145,21 +145,27 @@ footer {
 	bottom:0;
 
 }
-.menu{
+.menu {
 	position: absolute;
 	right: 8.5%;
   	text-align: right;
-  	color: var(--accent);
+  	color: #5F3234;
 	align-self: flex-end;
 	width: 50%;
 	padding-bottom: .5%;
 }
-.menu .link{
-  text-decoration: none;
-  color: var(--accent);
+.menu .link {
+	text-decoration: none;
+	color: var(--accent);
 }
-.link:hover{
-  	color: var(--accent);
+
+.menu .link.active {
+    border-bottom: 1px solid var(--hover);
+  	color: #FFF;
+}
+
+.menu .link:hover {
+  	color: #FFF;
     border-bottom: 1px solid var(--hover);
 }
 
@@ -172,8 +178,8 @@ footer {
 	text-align: right;
 }
 .user img {
-	height: 10%;
-		display: inline-block;
+	height: 15px;
+	display: inline-block;
 
 }
 .user p {
