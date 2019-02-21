@@ -14,6 +14,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/homeStyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 
@@ -40,24 +41,22 @@
 				<a href="contact.html" class="link"> Contact</a>
 			</div>
 		</div>
-		<div id="topbar">
-			<strong>Customize Dashboard</strong>
-		</div>
 
+	<div id="content">
 		<div class="row">
 		 <div class="col">
 			 <h1 class="underline">MY APPLICATIONS</h1>
 			 <div clas="row" class="right">
-				 <select>
-					 <option value="az">Al</option>
-					 <option value="za">Z - A</option>
-					 <option value="newest">Date Added </option>
-					 <option value="oldest">Oldest</option>
-				 </select>
-					 FILTER LIST GRID SEARCH
-			 </div>
+				<select>
+					<option value="">Status:</option>
+					<option value="pending">Pending</option>
+					<option value="rejected">Rejected</option>
+					<option value="review">Under Review</option>
+				</select>
+				<input type="search" id="search" placeholder="Search..">
+			</div>
 			 <div class="row">
-				 <div class="col-lg">
+				 <div class="col-md">
 					 <div><a href="/"><img src="../images/mamamia.jpg">Mama Mia!</a><p>Pending...</p></div>
 				 </div>
 			 </div>
@@ -65,14 +64,10 @@
 		</div>
 	</div>
 </div>
-</div>
 
 
 
-
-	  </div>
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer> 
 </body>
-	<footer>
-		Copyright &copy; 2019 TheatreNow
-	</footer>
+	
 </html>
