@@ -33,8 +33,6 @@ if((!empty($_POST["username"]))) {
       header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
     }else{
       sqlsrv_free_stmt($getResults);
-
-      session_start();
       // Store Session Data
       $_SESSION['user']= $username;
 
