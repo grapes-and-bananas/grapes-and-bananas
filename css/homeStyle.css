@@ -157,6 +157,7 @@ footer {
 .menu .link {
 	text-decoration: none;
 	color: var(--accent);
+		margin-left: 4.5%;
 }
 
 .menu .link.active {
