@@ -328,9 +328,14 @@ body {
 .white {
 	background-color: white;
 }
-.middle  { align-content: }
+.middle  {
+	align-content: middle;
+}
 
 .square {
+	display: inline-block;
+}
+.square img {
 	height: 250px;
 	width: 250px;
 }
