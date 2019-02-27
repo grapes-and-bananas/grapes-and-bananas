@@ -33,11 +33,10 @@ if((!empty($_POST["username"]))) {
       echo "User ID not specified or invalid.";
       header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
     }else{
-      sqlsrv_free_stmt($getResults);
       // Store Session Data
       $_SESSION['user']= $username;
-
       header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
+      sqlsrv_free_stmt($getResults);
     }
   }
 }else {
