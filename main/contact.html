@@ -20,6 +20,7 @@
       var nme = document.forms["contact"]["name"].value;
       var eml = document.forms["contact"]["email"].value;
       var msg = document.forms["contact"]["subject"].value;
+      console.log(msg);
 
       if (nme == "") {
         alert("Please Enter a Name");
@@ -66,7 +67,7 @@
 				<br />
 				<input type="text" class="input" name="email" placeholder="Email">
 				<br />
-				<textarea id="message" form="contact" name="subject" placeholder="Message.."></textarea>
+				<textarea  form="contact" name="subject" placeholder="Message.."></textarea>
 				<br />
 				<br />
 				<input type="submit" value="Send" class="btn">
