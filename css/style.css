@@ -469,20 +469,19 @@ hr {
 
 #search {
 	border: thin solid #888;
-	padding: 0px 0px 0px 5px;
+	padding: 0px 0px 0px 10px;
 	text-align: left;
 }
-#status {
+.variable {
 	font-size: 1.1em;
 	color: #222;
-	display: inline-block;
 	padding: 4%;
 }
-#status a {
+.variable a {
 	font-size: 1.5em;
 	color: #222;
 }
-#status a:hover {
+.variable a:hover {
 	text-decoration: none;
 	font-size: 1.5em;
 	font-weight: bolder;
