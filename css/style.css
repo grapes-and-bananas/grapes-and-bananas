@@ -334,6 +334,18 @@ body {
 
 .square {
 	display: inline-block;
+	height: 300px;
+}
+.square a {
+	text-decoration: none;
+	color: var(--logo);
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.square a:hover {
+	text-decoration: underline;
+	color: var(--logo);
+	text-decoration-color: var(--hover);
 }
 .square img {
 	height: 250px;
