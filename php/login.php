@@ -34,7 +34,7 @@ if((!empty($_POST["username"]))) {
       header("Location: https://theatrenow.azurewebsites.net/index.html"); /* Redirect browser */
     }else{
       // Store Session Data
-      $_SESSION['user']= $username;
+      $_SESSION['user']= $_POST["username"];
       header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
       sqlsrv_free_stmt($getResults);
     }
