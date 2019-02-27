@@ -439,7 +439,7 @@ hr {
   margin-top: 2%;
   margin-left: 10%;
   width: 80%;
-  border: 1px solid black;
+  border: thin solid #999;
   text-align: left;
 }
 .input{
@@ -447,13 +447,31 @@ hr {
   margin: 1%;
 }
 #message{
-  width: 95%;
-  height: 175px;
-  margin: 1%;
+	width: 95%;
+	height: 175px;
+	margin: 1%;
+	padding: 1%;
 }
 .btn{
-  margin-left: 47%;
+	margin-left: 45%;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.1em;
+	background-color: var(--logo);
+	padding: 10px 20px 10px 20px;
 }
+.btn:hover{
+	margin-left: 45%;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.1em;
+	background-color: var(--hover);
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
 
 .filter {
 	border: thin solid #888;
