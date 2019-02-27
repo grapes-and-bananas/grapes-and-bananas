@@ -1,8 +1,6 @@
 <?php
   session_start();
-  $_SESSION["user"]  = $user;
-  echo $user;
-  if (!isset($_SESSION["user"])) {
+  if (!isset($_SESSION['user'])) {
     echo "User ID not specified or invalid.";
     header("Location: https://theatrenow.azurewebsites.net/index.html");
         exit();
@@ -31,11 +29,11 @@
 				</ul>
 			</div>
 			<div class="menu">
-				<a href="home.html" class="link active">Home</a> 
-				<a href="catalog.html" class="link"> Catalog</a> 
-				<a href="myshows.html" class="link"> My Shows</a> 
-				<a href="applications.html" class="link"> Applications </a> 
-				<a href="revenue.html" class="link"> Revenue </a> 
+				<a href="home.html" class="link active">Home</a>
+				<a href="catalog.html" class="link"> Catalog</a>
+				<a href="myshows.html" class="link"> My Shows</a>
+				<a href="applications.html" class="link"> Applications </a>
+				<a href="revenue.html" class="link"> Revenue </a>
 				<a href="contact.html" class="link"> Contact</a>
 			</div>
 		</div>
@@ -71,11 +69,11 @@
 
 								<h2>Title</h2>
 								<h3>Author | Date | Time </h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. .... <a href="/">view more</a>  
-									
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. .... <a href="/">view more</a>
+
 								<h2>Title</h2>
 								<h3>Author | Date | Time </h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. .... <a href="/">view more</a> 
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare imperdiet quam, eget posuere nisl laoreet a. Ut quam sapien, tristique non commodo ut, fringilla nec tortor. Vestibulum scelerisque laoreet erat, ac consectetur ligula blandit eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. .... <a href="/">view more</a>
 								</p>
 							</div>
 						</div>
@@ -98,7 +96,7 @@
 				</div>
 			</div>
 
-	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer> 
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
 </body>
-	
+
 </html>
