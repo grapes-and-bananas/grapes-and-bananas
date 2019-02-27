@@ -25,6 +25,7 @@ body {
   	flex-shrink: 0;
 	order: 4;
 }
+
 #topbar {
 	background-color: #F1f1f1;
 	display: block;
@@ -53,10 +54,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px !important;
+	margin-bottom: 20px !important;
 }
+
 .row {
 	flex-direction: row;
-	background-color: #fff;
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
@@ -68,7 +70,6 @@ body {
 }
 .full {
 	width: 100%;
-	box-shadow: 1px 1px 2px #888;
 	padding-top: 10px;
 }
 .half {
@@ -79,11 +80,11 @@ body {
 	box-shadow: 1px 1px 2px #888;
 	margin-right: 1%;
 }
-.variable {
+.third {
 	width: 30%;
-	text-align: center;
-		
+	text-align: center;		
 }
+
 .updates {
 	padding: 5px 15px 5px 15px;
 }
@@ -127,6 +128,7 @@ body {
 	font-weight: bold;
 	text-decoration: none;
 }
+
 .revenue {
 	width: 49%;
 	background-color: #fff;
@@ -134,14 +136,13 @@ body {
 	margin-right: 1%;
 }
 
-h1 {
+.content h1 {
 	color: var(--background);
 	text-align: left;
 	font-size: 2em;
 	font-weight: 500;
 	font-family: 'Work Sans', sans-serif;
 }
-
 .content i {
 	border: solid var(--logo);
   	border-width: 0 4px 4px 0;
@@ -157,13 +158,6 @@ h1 {
 }
 .content .arrow {
   	-webkit-transform: rotate(135deg);
-}
-
-.underline{
-	border-bottom: thin solid var(--accent);
-	width: auto;
-	display: block;
-	margin-left: 1%;
 }
 
 .show-dropdown {
@@ -225,12 +219,10 @@ h1 {
 	margin-left: 4.5%;
 	font-size: 1.1em;
 }
-
 .menu .link.active {
     border-bottom: 1px solid var(--hover);
   	color: #FFF;
 }
-
 .menu .link:hover {
   	color: #FFF;
     border-bottom: 1px solid var(--hover);
@@ -325,6 +317,15 @@ h1 {
 .center {
 	text-align: center !important;
 }
+.underline{
+	border-bottom: thin solid var(--accent);
+	width: auto;
+	display: block;
+	margin-left: 1%;
+}
+.shadow {
+	box-shadow: 1px 1px 2px #888;
+}
 
 .circle {
 	position: relative;
@@ -366,7 +367,6 @@ button {
 	width: 200px;
 	padding: 2%;
 }
-
 .btn-curtain:hover, .btn-curtain:focus { 
 	border-color: var(--logo);
 	color: #fff;
@@ -390,11 +390,9 @@ hr {
 #trending-container {
 	display: block;
 }
-
 #popular-container {
 	display: none;
 }
-
 #newest-container {
 	display: none;
 }
@@ -415,7 +413,6 @@ hr {
 	border-radius: 50px;
 	position: relative;
 }
-
 .tabs a {
 	text-decoration: none;
 	color: #777;
@@ -426,11 +423,9 @@ hr {
 	z-index: 1;
 	transition-duration: 0.5s;
 }
-
 .tabs a.active{
 	color: #fff;
 }
-
 .tabs .selector{
   height: 100%;
   display: inline-block;
@@ -452,18 +447,15 @@ hr {
   border: 1px solid black;
   text-align: left;
 }
-
 .input{
   padding: 1%;
   margin: 1%;
 }
-
 #message{
   width: 95%;
   height: 175px;
   margin: 1%;
 }
-
 .btn{
   margin-left: 47%;
 }
@@ -473,7 +465,6 @@ hr {
 	padding: 3.5px;
 	width: auto;
 }
-
 .filter:hover {
 	border: thin solid #888;
 	padding: 3.5px;
@@ -486,7 +477,6 @@ hr {
 	padding: 0px 0px 0px 5px;
 	text-align: left;
 }
-
 #status {
 	font-size: 1.1em;
 	color: #222;
@@ -520,21 +510,18 @@ hr {
 	background-color: rgba(232,232,232,0.57);
 	box-shadow: 1px 1px 2px #999;
 }
-  
 .graph li{
     position: relative;
     display: table-cell;
     vertical-align: bottom;
     height: 400px;
   }
-  
 .graph span {
     margin:0 1em;
     display: block;
     background-color: #6CD878;
     animation: draw 1s ease-in-out;
-}
-    
+} 
 .graph span:before{
 	position: absolute;
 	left: 0;
