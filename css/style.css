@@ -281,6 +281,7 @@ body {
 .grid > div{
 	padding: 10px;
 	display: inline-block;
+	text-align: center;
 }
 .grid img {
 	width: 250px;
@@ -290,6 +291,9 @@ body {
 	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.5);
 }
 
+.app {
+	margin: 15px;
+}
 .curtain > div {
 	margin: 25px;
 }
@@ -445,28 +449,31 @@ hr {
 	border: thin solid #777;
 }
 
-.variable {
-	font-size: 1.1em;
-	color: #222;
-	padding: 4%;
-}
-.variable a {
-	font-size: 1.5em;
-	color: #222;
-}
-.variable a:hover {
-	text-decoration: none;
-	font-size: 1.5em;
-	font-weight: bolder;
-	color: #222;
+
+.label {
+	display: block;
+	margin-top: 5px;
+	border-radius: 10px;
+	font-size: 1em !important;
+	padding: 5px 0px 8px 0px !important;
 }
 
-.badge {
-	margin-top: 5px;
-	font-size: 1em !important;
-	font-weight: 500 !important;
-	padding: 5px 10px 8px 10px !important;
+.pending {
+	border: thick solid grey;
+	transition: 0.4s;
 }
+.pending:hover {
+	color: white;
+	background-color: grey;
+}
+.approved {
+	border: thick solid #347F43;
+}
+.denied {
+	border: thick solid var(--logo);
+}
+
+
 .graph{
 	display: table;
 	table-layout: fixed;   
