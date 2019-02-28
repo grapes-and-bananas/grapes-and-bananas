@@ -8,20 +8,20 @@ html,body {
 	height: 100%;
 }
 body {
- 	width: 100%;
- 	background-color: var(--background);
-	font-size: 1em;
-	font-family: 'Open Sans', sans-serif;
   	margin: 0;
+ 	width: 100%;
+	font-size: 1em;
+ 	background-color: var(--background);
+	font-family: 'Open Sans', sans-serif;
 }
 .footer {
 	width: 100%;
-	background-color: white;
 	color: black;
-	text-align: center;
-	padding-top: .5%;
   	flex-shrink: 0;
-	order: 4;
+	margin-top: -5px;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: white;
 }
 
 #main {
@@ -110,7 +110,6 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	background-color: var(--background);
-	border: thin solid black;
 }
 .row-half {
 	display: flex;
@@ -118,20 +117,19 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: var(--background);
-	border: thin solid black;
 }
 .col {
-	flex-direction: column;
 	display: flex;
+	flex-direction: column;
 	background-color: var(--background);
 }
 .full {
-	width: 100%;
+	width: 98%;
 	border: thin solid #F3F3F3;
 }
 .half {
 	width: 49.5%;
-	background-color: #fff;
+	background-color: white;
 	border: thin solid #F3F3F3;
 }
 .third {
@@ -158,7 +156,6 @@ body {
 	padding: .5%;
 	width: 290px;
 	height: 290px;
-	background-color: #fff;
 	background-color: white;
 }
 .carousel::-webkit-scrollbar {
@@ -225,20 +222,23 @@ body {
 }
 
 .show-dropdown {
-	overflow: hidden;
-	height: auto;
 	width: auto;
+	height: auto;
+	margin-top: 10px;
+	overflow: hidden;
 }
 .show-dropdown select {
-   	background-color: #f7f7f7;
-	border:solid thin #EAE1CF;
-   	font-size: 15px;
-	font-weight: 550;
+	width: auto;
   	height: auto;
    	padding: 5px;
-   	width: auto;
-	color: var(--background);
+	color: black;
+	color: black;
+	font-size: 15px;
+	font-weight: 550;
 	border-radius: 5px;
+	border: solid thin #EAE1CF;
+   	background-color: var(--background);
+
 }
 
 .left {
@@ -253,12 +253,10 @@ body {
 }
 .underline {
 	color: black;
-	display: block;
 	font-weight: 500;
 	font-size: 1.6em;
 	background-color: white;
-	padding: 10px 0px 10px 20px;
-	border-bottom: thin solid lightgrey;
+	padding: 10px 0px 3px 20px;
 }
 .shadow {
 	box-shadow: 1px 1px 1px 2px black;
@@ -268,6 +266,12 @@ body {
 }
 .middle  {
 	align-content: middle;
+}
+#border {
+	height: 0.1em;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #E5E5E5;
 }
 
 .square {
