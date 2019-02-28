@@ -104,13 +104,11 @@ body {
 	background-color: var(--background);
 }
 .full {
-	width: 98%;
-	border: thin solid #F3F3F3;
+	width: 98.5%;
 }
 .half {
 	width: 49.5%;
 	background-color: white;
-	border: thin solid #F3F3F3;
 }
 .third {
 	width: 30%;
@@ -149,8 +147,8 @@ body {
 }
 
 .updates {
-	margin: 10px 20px 10px 20px;
 	padding: 5px 5px 5px 5px;
+	margin: 10px 20px 10px 20px;
 }
 .updates::-webkit-scrollbar {
 	width: .8em;
@@ -246,8 +244,8 @@ body {
 .middle  {
 	align-content: middle;
 }
-#border {
-	height: 0.1em;
+.border {
+	height: 0.05em;
 	margin-left: 20px;
 	margin-right: 20px;
 	background-color: #E5E5E5;
