@@ -1,46 +1,31 @@
 <?php
   session_start();
-  if (!isset($_SESSION["user"])) {
-    echo "User ID not specified or invalid.";
+  if (!isset($_SESSION['user'])) {
     header("Location: https://theatrenow.azurewebsites.net/index.html");
         exit();
   }
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>TheatreNow - My Shows</title>
-		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	</head>
-
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  </head>
   <body>
-	 <div id="main">
 		<div class="nav">
-			<div class="logo"><img src="../images/TheatreNowLogo.png" alt="Theatre Now logo"></div>
-			<div class="user">
-				 <p> username
-					<img src="https://www.mtec.or.th/wp-content/uploads/2018/02/chevron-down.png">
-					 &nbsp;
-				</p>
-				<ul class="dropdown">
-					<a href=""><li>Settings &nbsp;</li></a>
-					<a href="../php/logout.php"><li>Log out &nbsp;</li></a>
-				</ul>
-			</div>
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
 			<div class="menu">
-				<a href="home.html" class="link">Home</a> 
-				<a href="catalog.html" class="link"> Catalog</a> 
-				<a href="myshows.html" class="link active"> My Shows</a> 
-				<a href="applications.html" class="link"> Applications </a> 
-				<a href="revenue.html" class="link"> Revenue </a> 
+				<a href="home.html" class="link">Home</a>
+				<a href="catalog.html" class="link"> Catalog</a>
+				<a href="myshows.html" class="link active"> My Shows</a>
+				<a href="applications.html" class="link"> Applications </a>
+				<a href="revenue.html" class="link"> Revenue </a>
 				<a href="contact.html" class="link"> Contact</a>
 			</div>
 		</div>
+	  
 	<div class="content shadow">
 		 <div class="full">
 			<h1 class="underline">MY SHOWS</h1>
