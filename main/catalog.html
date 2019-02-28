@@ -43,20 +43,21 @@
   </head>
 
   <body>
-		<div class="nav">
-			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
-			<div class="menu">
-				<a href="home.html" class="link">Home</a>
-				<a href="catalog.html" class="link active"> Catalog</a>
-				<a href="myshows.html" class="link"> My Shows</a>
-				<a href="applications.html" class="link"> Applications </a>
-				<a href="revenue.html" class="link"> Revenue </a>
-				<a href="contact.html" class="link"> Contact</a>
-			</div>
+	<div class="nav">
+		<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+		<div class="menu">
+			<a href="home.html" class="link">Home</a>
+			<a href="catalog.html" class="link active"> Catalog</a>
+			<a href="myshows.html" class="link"> My Shows</a>
+			<a href="applications.html" class="link"> Applications </a>
+			<a href="revenue.html" class="link"> Revenue </a>
+			<a href="contact.html" class="link"> Contact</a>
 		</div>
+	</div>
 
-		<div class="content shadow">
-			<div class="full">
+	<div class="content">
+		<div class="col">
+			<div class="full shadow">
 				<div class="wrapper center">
 					<nav class="tabs">
 						<div class="selector"></div>
@@ -100,46 +101,50 @@
 					</div>
 				</div>
 			</div>
-			<br>
-			<div class="full">
-				<h1 class="underline">ALL SHOWS</h1>
-				<div class="right">
-					<select>
-						<option value="">Sort by:</option>
-						<option value="az">A - Z</option>
-						<option value="za">Z - A</option>
-						<option value="newest">Date Added: Newest</option>
-						<option value="oldest">Date Added: Oldest</option>
-						<option value="oldest">Oldest</option>
-					</select>
-					<button class="fas fa-filter filter"></button>
-					<button class="fas fa-list-ul filter"></button>
-					<button class="fas fa-th-large filter"></button>
-					<input type="search" id="search" placeholder="Search..">
+			<div class="full shadow white">
+				<div class="row-half white">
+					<div class="underline">ALL SHOWS</div>
+					<div class="white bottom">
+						<select class="sort">
+							<option value="">Sort by:</option>
+							<option value="az">A - Z</option>
+							<option value="za">Z - A</option>
+							<option value="newest">Date Added: Newest</option>
+							<option value="oldest">Date Added: Oldest</option>
+							<option value="oldest">Oldest</option>
+						</select>
+						<button class="fas fa-filter filter"></button>
+						<button class="fas fa-list-ul filter"></button>
+						<button class="fas fa-th-large filter"></button>
+						<input type="search" class="search" placeholder="Search..">
+					</div>
 				</div>
-				<br>
-				<div class="center">
-					<div class="square"><a href="/"><img src="../images/aladdin.jpg"><br>Aladdin</a></div>
-					<div class="square"><a href="/"><img src="../images/beauty.jpg"><br>Beauty and the Beast</a></div>
-					<div class="square"><a href="/"><img src="../images/cats.jpg"><br>Cats</a></div>
-					<div class="square"><a href="/"><img src="../images/frozen.jpg"><br>Frozen</a></div>
-					<div class="square"><a href="/"><img src="../images/funhome.jpg"><br>Fun Home</a></div>
-					<div class="square"><a href="/"><img src="../images/gold.jpg"><br>Gold</a></div>
-					<div class="square"><a href="/"><img src="../images/grease.jpg"><br>Grease</a></div>
-					<div class="square"><a href="/"><img src="../images/hairspray.jpg"><br>Hairspray</a></div>
-					<div class="square"><a href="/"><img src="../images/hamilton.jpg"><br>Hamilton</a></div>
-					<div class="square"><a href="/"><img src="../images/happydays.jpg"><br>Happy Days</a></div>
-					<div class="square"><a href="/"><img src="../images/intothewoods.jpg"><br>Into The Woods</a></div>
-					<div class="square"><a href="/"><img src="../images/mamamia.jpg"><br>Mama Mia!</a></div>
-					<div class="square"><a href="/"><img src="../images/meangirls.jpg"><br>Mean Girls</a></div>
-					<div class="square"><a href="/"><img src="../images/phantom.jpg"><br>Phantom of the Opear</a></div>
-					<div class="square"><a href="/"><img src="../images/shrek.jpg"><br>Shrek</a></div>
-					<div class="square"><a href="/"><img src="../images/tarzan.jpg"><br>Tarzan</a></div>
-					<div class="square"><a href="/"><img src="../images/tinseltown.jpg"><br>Tinseltown</a></div>
-					<div class="square"><a href="/"><img src="../images/wicked.jpg"><br>Wicked</a></div>
+				<div class="center white">
+					<br>
+					<div class="grid">
+						<div><a href="/"><img src="../images/aladdin.jpg"><br>Aladdin</a></div>
+						<div><a href="/"><img src="../images/beauty.jpg"><br>Beauty and the Beast</a></div>
+						<div><a href="/"><img src="../images/cats.jpg"><br>Cats</a></div>
+						<div><a href="/"><img src="../images/frozen.jpg"><br>Frozen</a></div>
+						<div><a href="/"><img src="../images/funhome.jpg"><br>Fun Home</a></div>
+						<div><a href="/"><img src="../images/gold.jpg"><br>Gold</a></div>
+						<div><a href="/"><img src="../images/grease.jpg"><br>Grease</a></div>
+						<div><a href="/"><img src="../images/hairspray.jpg"><br>Hairspray</a></div>
+						<div><a href="/"><img src="../images/hamilton.jpg"><br>Hamilton</a></div>
+						<div><a href="/"><img src="../images/happydays.jpg"><br>Happy Days</a></div>
+						<div><a href="/"><img src="../images/intothewoods.jpg"><br>Into The Woods</a></div>
+						<div><a href="/"><img src="../images/mamamia.jpg"><br>Mama Mia!</a></div>
+						<div><a href="/"><img src="../images/meangirls.jpg"><br>Mean Girls</a></div>
+						<div><a href="/"><img src="../images/phantom.jpg"><br>Phantom of the Opear</a></div>
+						<div><a href="/"><img src="../images/shrek.jpg"><br>Shrek</a></div>
+						<div><a href="/"><img src="../images/tarzan.jpg"><br>Tarzan</a></div>
+						<div><a href="/"><img src="../images/tinseltown.jpg"><br>Tinseltown</a></div>
+						<div><a href="/"><img src="../images/wicked.jpg"><br>Wicked</a></div>
+					</div>
 				</div>
 			</div>
 		 </div>
+		</div>
 
 	
 
