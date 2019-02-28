@@ -8,13 +8,13 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+	</head>
+	<body>
 		<div class="nav">
 			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
 			<div class="menu">
@@ -27,40 +27,37 @@
 			</div>
 		</div>
 	  
-
-		<div class="content shadow">
-			 <h1 class="underline">MY APPLICATIONS</h1>
-			 <div class="right">
-				<select>
-					<option value="">Status:</option>
-					<option value="approved">Approved</option>
-					<option value="pending">Pending</option>
-					<option value="denied">Denied</option>
-					<option value="review">Under Review</option>
-				</select>
-				<input type="search" id="search" placeholder="Search..">
+		<div id="main">
+			<div class="content white shadow">
+				<div class="row">
+					<div class="underline">MY APPLICATIONS</div>
+					<div class="right">
+						<select class="sort">
+						<option value="">Status:</option>
+						<option value="approved">Approved</option>
+						<option value="pending">Pending</option>
+						<option value="denied">Denied</option>
+						<option value="review">Under Review</option>
+						</select>
+						<input type="search" class="search" placeholder="Search..">
+					</div>
+				</div>
+				<div class="row white center">
+					<div class="variable">
+						<a href="#"><img src="../images/mamamia.jpg" class="square"><br>Mama Mia!</a>
+						<a href="#" class="badge badge-secondary">Pending</a>
+					</div>
+					<div class="variable"> 
+						<a href="#"><img src="../images/hamilton.jpg" class="square"><br>Hamilton</a>
+						<a href="#" class="badge badge-success">Approved!</a>
+					</div>
+					<div class="variable">
+						<a href="#"><img src="../images/hairspray.jpg" class="square"><br>Hairspray</a>
+						<a href="#" class="badge badge-danger">Denied</a>
+					</div>
+				</div>
 			</div>
-			 <div class="row center">
-				 <div class="variable">
-					 <a href="/"><img src="../images/mamamia.jpg" class="square"><br>Mama Mia!</a>
-					 <br>
-					 <a href="#" class="badge badge-secondary">Pending</a>
-				 </div>
-					 
-				 <div class="variable"> 
-					 <a href="/"><img src="../images/hamilton.jpg" class="square"><br>Hamilton</a>
-					 <br>
-					 <a href="#" class="badge badge-success">Approved!</a>
-				 </div>
-					 
-				 <div class="variable">
-					 <a href="/"><img src="../images/hairspray.jpg" class="square"><br>Hairspray</a>
-					 <br>
-					 <a href="#" class="badge badge-danger">Denied</a>
-				 </div>
-				 </div>
-			 </div>
-
+		</div>
 
 
 

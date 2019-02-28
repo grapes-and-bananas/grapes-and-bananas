@@ -24,6 +24,7 @@ body {
 }
 
 #main {
+	margin-bottom: 50px;
 	background-color: var(--background);
 }
 .content {
@@ -289,23 +290,33 @@ body {
 	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.5);
 }
 
-.btn-curtain:hover, .btn-curtain:focus { 
-	border-color: var(--logo);
+.curtain > div {
+	margin: 25px;
+}
+.curtain button {
+	padding: 5px;
+	width: 200px;
+	color: black;
+	font-size: 1.2em;
+	font-weight: 500;
+	transition: 0.25s;
+ 	background-color: white;
+	font-family: 'Open Sans', sans-serif;
+	border: thin solid rgba(0,0,0,0.2);
+}
+.curtain button:hover, .curtain button:focus { 
 	color: #fff;
-	box-shadow: 
-	inset -100px 0 0 0 var(--logo),
-	inset 100px 0 0 0 var(--logo);
+	cursor: pointer;
+	border-color: var(--logo);
+	box-shadow: inset -100px 0 0 0 var(--logo), inset 100px 0 0 0 var(--logo);
 }
 
 hr {
+	width: 95%;
 	display: block;
 	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: auto;
-	margin-right: auto;
-	border-style: inset;
 	border-width: 1px;
-	width: 90%;
+	margin-bottom: 1em;
 }
 
 #trending-container {
