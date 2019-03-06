@@ -160,10 +160,10 @@ body {
 	text-decoration: none;
 }
 
-.revenue {
+.dashboard .revenue {
 	text-align: center;
 }
-.revenue img {
+.dashboard .revenue img {
 	width: 80%;
 	min-width: 450px;
 }
@@ -181,16 +181,15 @@ body {
  	width: 100%;
 	background-color: white;
 }
-.catalog .half {
-	flex: 1;
-	flex-grow: 2;
-	background-color: white;
-	padding: 25px 0px 0px 25px;
-}
 .catalog .title {
 	font-size: 1.8em;
 }
-
+.catalog .flex {
+	flex: 1;
+	flex-grow: 1;
+	background-color: white;
+	padding: 25px 15px 25px 25px;
+}
 
 
 .myshows {
@@ -219,22 +218,71 @@ body {
 	font-size: 1.8em;
 }
 
-.row {
+
+.applications {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	background-color: var(--background);
+	flex-wrap: wrap;
+	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
 }
-.col {
+.applications .full {
+ 	width: 100%;
+	padding-top: 15px;
+	padding-left: 40px;
+	background-color: white;
+}
+.applications .half {
+	flex: 1;
+	flex-grow: 2;
+	background-color: white;
+	padding: 25px 20px 0px 40px;
+}
+.applications .title {
+	font-size: 1.8em;
+}
+.applications .subheader {
+	font-size: 1.5em;
+}
+
+
+.revenue {
 	display: flex;
-	margin-top: 10px;
-	flex-direction: column;
-	background-color: var(--background);
+	flex-wrap: wrap;
+	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
 }
-.third {
-	flex-basis: 33%;
-	text-align: center;
+.revenue .full {
+ 	width: 100%;
+	padding-top: 15px;
+	padding-left: 40px;
+	background-color: white;
 }
+.revenue .half {
+	flex: 1;
+	flex-grow: 2;
+	background-color: white;
+	padding: 25px 20px 0px 40px;
+}
+.revenue .flex {
+	flex: 1;
+	flex-grow: 1;
+	background-color: white;
+	padding: 25px 25px 25px 25px;
+}
+.revenue .title {
+	font-size: 1.8em;
+}
+
+.revenue .subheader {
+	font-size: 1.5em;
+}
+.revenue a {
+	color: var(--logo);
+	text-decoration: none;
+}
+.revenue a:hover {
+	color: var(--logo);
+	text-decoration: underline;
+}
+
 
 .carousel {
   	display: flex;
