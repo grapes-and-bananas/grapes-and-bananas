@@ -23,7 +23,7 @@ $income = $_POST["income"];
 $comment = $_POST["comment"];
 $agree = $_POST["agree"];+
 
-$tsql = "INSERT INTO Contact
+$tsql = "INSERT INTO Application
 VALUES ('$name', '$email', '$phone', '$venue', '$seat', '$ticket', '$weeks', '$fqcy', '$revenue', '$income', '$comment')";
 
 $getResults= sqlsrv_query($conn, $tsql);
