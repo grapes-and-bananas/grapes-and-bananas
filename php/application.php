@@ -24,12 +24,12 @@ $comment = $_POST["comment"];
 $agree = $_POST["agree"];+
 
 $tsql = "INSERT INTO Contact
-VALUES ('$name', '$email', '$phone', '$venue', '$seat', '$ticket', '$weeks', '$fqcy', '$revenue', '$income', '$comment', '$agree')";
+VALUES ('$name', '$email', '$phone', '$venue', '$seat', '$ticket', '$weeks', '$fqcy', '$revenue', '$income', '$comment')";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
 sqlsrv_free_stmt($getResults);
 
-header("Location: https://theatrenow.azurewebsites.net/main/contact.html"); /* Redirect browser */
+header("Location: https://theatrenow.azurewebsites.net/main/home.html"); /* Redirect browser */
 exit();
 ?>
