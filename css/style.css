@@ -27,6 +27,54 @@ body {
 	margin-bottom: 50px;
 	background-color: var(--background);
 }
+.nav {
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+  	position: sticky;
+	min-height: 100px;
+  	background-color: white;
+}
+.logo {
+	left: 6%;
+	width: 50%;
+	padding-top: 1%;
+	text-align: left;
+	position: relative;
+	display: inline-block;
+}
+.logo img {
+	bottom: 0;
+	width: 40%;
+	height: auto;
+	padding-left: 2%;
+	min-width: 200px;
+	position: absolute;
+}
+.menu {
+	right: 7%;
+	width: 50%;
+	position: absolute;
+  	text-align: right;
+	align-self: flex-end;
+	padding-bottom: 10px;
+}
+.menu .link {
+	text-decoration: none;
+	color: grey;
+	margin-left: 4.5%;
+	font-size: 1.1em;
+}
+.menu .link.active {
+    border-bottom: 1px solid var(--logo);
+  	color: black;
+}
+.menu .link:hover {
+  	color: black;
+    border-bottom: 1px solid var(--logo);
+}
+
 .content {
  	width: 85%;
 	margin: auto;
@@ -44,7 +92,6 @@ body {
 	margin-bottom: 15px;
 	justify-content: space-between;
 }
-
 .dashboard .full {
 	flex: 0;
 	flex-grow: 1;
@@ -121,53 +168,31 @@ body {
 	min-width: 450px;
 }
 
-.nav {
-	top: 0;
-	z-index: 1;
-	width: 100%;
+
+
+.catalog {
 	display: flex;
-  	position: sticky;
-	min-height: 100px;
-  	background-color: white;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	justify-content: space-between;
+	box-shadow: 1px 1px 2px #888;
 }
-.logo {
-	left: 6%;
-	width: 50%;
-	padding-top: 1%;
-	text-align: left;
-	position: relative;
-	display: inline-block;
+.catalog .full {
+ 	width: 100%;
+	background-color: white;
 }
-.logo img {
-	bottom: 0;
-	width: 40%;
-	height: auto;
-	padding-left: 2%;
-	min-width: 200px;
-	position: absolute;
+.catalog .half {
+	flex: 1;
+	flex-grow: 2;
+	background-color: white;
+	padding: 25px 0px 0px 25px;
 }
-.menu {
-	right: 7%;
-	width: 50%;
-	position: absolute;
-  	text-align: right;
-	align-self: flex-end;
-	padding-bottom: 10px;
+.catalog .title {
+	font-size: 1.8em;
 }
-.menu .link {
-	text-decoration: none;
-	color: grey;
-	margin-left: 4.5%;
-	font-size: 1.1em;
-}
-.menu .link.active {
-    border-bottom: 1px solid var(--logo);
-  	color: black;
-}
-.menu .link:hover {
-  	color: black;
-    border-bottom: 1px solid var(--logo);
-}
+
+
+
 
 .row {
 	display: flex;
@@ -247,17 +272,10 @@ body {
 .right {
 	text-align: right !important;
 }
-
 .center {
 	text-align: center !important;
 }
-.underline {
-	color: black;
-	font-weight: 500;
-	font-size: 1.6em;
-	background-color: white;
-	padding: 10px 0px 3px 20px;
-}
+
 .shadow {
 	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
 }
