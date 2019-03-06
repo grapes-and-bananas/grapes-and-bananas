@@ -1,0 +1,65 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  </head>
+  <script>
+  </script>
+  <body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+				<a href="home.html" class="link">Home</a>
+				<a href="catalog.html" class="link"> Catalog</a>
+				<a href="myshows.html" class="link"> My Shows</a>
+				<a href="applications.html" class="link"> Applications </a>
+				<a href="revenue.html" class="link"> Revenue </a>
+				<a href="contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+
+	  <div id="main">
+		 <div class="content">
+          <div class="application_form">
+            <form class="form" name="application" action="../php/application.php" id="application" method="post">
+              Application to perform Emma
+              <br/>
+              <input type="text" class="input" name="name" placeholder="Name">
+              <input type="text" class="input" name="email" placeholder="Email address">
+              <br/>
+              <input type="text" class="input" name="phone" placeholder="Phone number">
+              <input type="text" class="input" name="venue" placeholder="Venue">
+              <br/>
+              <input type="text" class="input" name="seat" placeholder="Seating Capacity">
+              <input type="text" class="input" name="ticket" placeholder="Ticket Price(s)">
+              <br/>
+              <input type="text" class="input" name="weeks" placeholder="Number of weeks">
+              <input type="text" class="input" name="fqcy" placeholder="Performances per week">
+              <br/>
+              <input type="text" class="input" name="revenue" placeholder="Expected revenue">
+              <input type="text" class="input" name="income" placeholder="Average monthly income">
+              <br/>
+              <input type="text" class="input" name="comment" placeholder="Comments">
+              <br/>
+              <input type="radio" class="input" name="agree"><span> I agree to the terms and conditions for TheatreNow performances</span>
+              <br/>
+              <input type="submit" value="Submit application" class="btn">
+            </form>
+          </div>
+		  </div>
+	  </div>
+
+<footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>

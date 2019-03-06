@@ -28,7 +28,7 @@ body {
 	background-color: var(--background);
 }
 .content {
-  	width: 85%;
+  width: 85%;
 	margin: auto;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -124,12 +124,12 @@ h2 {
 }
 .third {
 	flex-basis: 33%;
-	text-align: center;		
+	text-align: center;
 }
 
 .carousel {
   	display: flex;
-	flex-basis: 100%;	
+	flex-basis: 100%;
   	overflow-x: auto;
 	background-color: white;
 }
@@ -319,7 +319,7 @@ h2 {
 	font-family: 'Open Sans', sans-serif;
 	border: thin solid rgba(0,0,0,0.2);
 }
-.curtain button:hover, .curtain button:focus { 
+.curtain button:hover, .curtain button:focus {
 	color: #fff;
 	cursor: pointer;
 	border-color: var(--logo);
@@ -487,7 +487,7 @@ hr {
 
 .graph {
 	display: table;
-	table-layout: fixed;   
+	table-layout: fixed;
 	width: 100%;
 	height: 400px;
 	text-align: center;
@@ -505,7 +505,7 @@ hr {
     display: block;
     background-color: #6CD878;
     animation: draw 1s ease-in-out;
-} 
+}
 .graph span:before{
 	position: absolute;
 	left: 0;
@@ -517,5 +517,9 @@ hr {
 }
 
 @keyframes draw{
-  0%{height:0;} 
+  0%{height:0;}
+}
+
+.application_form{
+
 }
