@@ -284,6 +284,25 @@ body {
 }
 
 
+.contact-container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 700px;
+	justify-content: space-around;
+	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
+}
+.contact-container .full {
+ 	width: 100%;
+	padding-top: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background-color: white;
+}
+.contact-container .title {
+	font-size: 1.8em;
+}
+
+
 .carousel {
   	display: flex;
 	flex-basis: 100%;
@@ -354,9 +373,7 @@ body {
 .white {
 	background-color: white;
 }
-.middle  {
-	align-content: middle;
-}
+
 .bottom {
 	padding: 10px 0px 3px 20px;
 }
@@ -486,14 +503,11 @@ hr {
 	transition-duration: 0.4s;
 }
 
-.contactForm {
-	width: 80%;
-	padding: 1%;
-	margin-top: 2%;
-	margin-left: 10%;
-
-	border: thin solid #999;
-	text-align: left;
+.contact-form {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 1%;
+	border: thin solid #DFDFDF;
 }
 .input {
 	padding: 1%;
