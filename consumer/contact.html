@@ -1,0 +1,77 @@
+<?php
+  session_start();
+  if (!isset($_SESSION["user"])) {
+    echo "User ID not specified or invalid.";
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  </head>
+  <script>
+    function validateForm() {
+      var nme = document.forms["contact"]["name"].value;
+      var eml = document.forms["contact"]["email"].value;
+      var msg = document.forms["contact"]["subject"].value;
+      console.log(msg);
+
+      if (nme == "") {
+        alert("Please Enter a Name");
+        return false;
+      }
+      if (eml == "") {
+        alert("Please Enter an Email");
+        return false;
+      }
+      if (msg == "") {
+        alert("Please Enter a Message");
+        return false;
+      }
+    }
+  </script>
+  <body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+        <a href="../consumer/home.html" class="link">Home</a>
+        <a href="../consumer/catalog.html" class="link active"> Catalog</a>
+        <a href="../consumer/cart.html" class="link"> Cart</a>
+        <a href="../consumer/contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="content">
+				<div class="contact-container">
+					<div class="full title">Contact</div>
+					<div class="full">
+						<div class="contact-form">
+							Have questions?
+							<form class="form" name="contact" action="../php/contact.php" onsubmit="return validateForm()" id="contact" method="post">
+							<input type="text" class="input" name="name" placeholder="Name">
+							<br />
+							<input type="text" class="input" name="email" placeholder="Email">
+							<br />
+							<input id="message" form="contact" name="subject" placeholder="Message..">
+							<br />
+							<br />
+							<input type="submit" value="Send" class="btn">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>

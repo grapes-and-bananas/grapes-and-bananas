@@ -1,0 +1,51 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  </head>
+  <body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+        <a href="../consumer/home.html" class="link">Home</a>
+  			<a href="../consumer/catalog.html" class="link active"> Catalog</a>
+  			<a href="../consumer/cart.html" class="link"> Cart</a>
+  			<a href="../consumer/contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+
+	  <div id="main">
+		 <div class="content">
+			 <div class="dashboard">
+				<div class="full title">MY SHOWS</div>
+				<div class="carousel">
+          <div><a href="../consumer/show.html"><img src="../images/funhome.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/happydays.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/gold.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/hamilton.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/intothewoods.jpg"></a></div>
+					<div><a href="../main/myshows.html"><img src="../images/frozen.jpg"></a></div>
+					<div><a href="../consumer/show.html"><img src="../images/grease.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/cats.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/beauty.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/hairspray.jpg"></a></div>
+          <div><a href="../consumer/show.html"><img src="../images/aladdin.jpg"></a></div>
+				 </div>
+			 </div>
+		</div>
+	  </div>
+
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>
