@@ -1,0 +1,69 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+  </head>
+  <body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+        <a href="../consumer/home.html" class="link">Home</a>
+  			<a href="../consumer/catalog.html" class="link active"> Catalog</a>
+  			<a href="../consumer/cart.html" class="link"> Cart</a>
+  			<a href="../consumer/contact.html" class="link"> Contact</a>			</div>
+		</div>
+
+	  <div id="main">
+		<div class="content">
+			<div class="revenue">
+				<div class="flex">
+					<a href="home.html">Back to Dashboard</a>
+				</div>
+				<div class="flex title center">Show</div>
+				<div class="flex right">
+					<select name="show">
+						<option value="aladdin">Aladdin</option>
+						<option value="beautyandthebeast">Beauty and the Beast</option>
+						<option value="cats">Cats</option>
+						<option value="frozen">Frozen</option>
+						<option value="funhome">Fun Home</option>
+						<option value="gold">Gold</option>
+					</select>
+				</div>
+			</div>
+			<div class="revenue">
+				<div class="flex center">
+					<h2>Wicked</h2>
+					<img src="https://images-na.ssl-images-amazon.com/images/I/41RSwlRdX1L.jpg" alt="Wicked poster">
+				</div>
+				<div class="flex center">
+					<br><br><br><br><br>
+					<p>Description: lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum
+          <br/>  <br/>
+          Price: $x.xx
+        <br/>  <br/>
+      </p>
+				</div>
+				<div class="flex center curtain">
+					<br><br><br><br><br>
+          <div><a href="../consumer/cart.html"><button>Add to Cart</button></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	  <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>
