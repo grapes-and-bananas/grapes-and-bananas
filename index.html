@@ -28,37 +28,38 @@
   </script>
   <body>
     <div class="main">
-      <div class="nav">
-        <div class="logo"><img src="images/TNL.png"></div>
-        <div>
-          <p id="fill">Theatrical rights <br/> made easy.</p>
-          <div class="features">
-			  <img src="images/form.png"> Apply for theatrical rights.
-
-                          <br/>
-                          <br/>
-              <img src="images/theatre.png"> Music, choreography, set, costume, lighting.
-                          <br/>
-                          <br/>
-              <img src="images/money.png"> Track revenue.
-          </div>
-        </div>
-      </div>
-      <div class="loginForm">
-        <form class="form" name="login" action="../php/login.php" onsubmit="return validateForm()" method="post">
-          <br>
-          <input type="text" class="input" name="username" placeholder="Username/Email">
-          <br><br>
-          <input type="password" class="input" name="password" placeholder="Password">
-          <br>
-          <input type="submit" value="Log in" class="btn">
-        </form>
-        <div class="external">
-          <br/>
-          <p class="text">Don't have an account?</p>
-          <a href="./main/signup.html" class="link">Sign up!</a>
-        </div>
-      </div>
-    </div>
+		<div class="container">
+        	<div>
+				<img src="images/TNL.png" class="logo">
+			</div>
+				<div class="features">
+				  <img src="images/form.png"> Apply for theatrical rights.
+							  <br/>
+							  <br/>
+				  <img src="images/theatre.png"> Music, choreography, set, costume, lighting.
+							  <br/>
+							  <br/>
+				  <img src="images/money.png"> Track revenue.
+				</div>
+        	</div>
+      	
+		<div class="container">
+     		<div class="loginForm">
+				<form class="form" name="login" action="../php/login.php" onsubmit="return validateForm()" method="post">
+				  <br>
+				  <input type="text" class="input" name="username" placeholder="Username/Email">
+				  <br><br>
+				  <input type="password" class="input" name="password" placeholder="Password">
+				  <br>
+				  <input type="submit" value="Log in" class="btn">
+				</form>
+				<div class="external">
+				  <br/>
+				  <p class="text">Don't have an account?</p>
+				  <a href="./main/signup.html" class="link">Sign up!</a>
+				</div>
+     		</div>
+    	</div>
+	  </div>
   </body>
 </html>
