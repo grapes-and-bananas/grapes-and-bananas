@@ -38,8 +38,18 @@ body {
 	background-color: var(--background);
 }
 
-h2 {
-	font-size: 1.5em;
+.title {
+	font-size: 1.8em;
+	font-weight: 500;
+}
+.back a {
+	color: var(--logo);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.back a:hover {
+	
 }
 .nav {
 	top: 0;
