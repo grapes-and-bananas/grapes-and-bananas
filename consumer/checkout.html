@@ -1,0 +1,98 @@
+<?php
+  session_start();
+  if (!isset($_SESSION["user"])) {
+    echo "User ID not specified or invalid.";
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+    exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+	</head>
+	<body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+        <a href="../consumer/home.html" class="link">Home</a>
+  			<a href="../consumer/catalog.html" class="link active"> Catalog</a>
+  			<a href="../consumer/cart.html" class="link"> Cart</a>
+  			<a href="../consumer/contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+
+		<div id="main">
+
+		<div class="content">
+      <div class="revenue">
+        <div class="flex center">
+      <div class="application_form">
+        <form class="form" name="application" action="../php/cart.php" id="application" method="post">
+          Personal Info
+          <br/>
+          <input type="text" class="input" name="name" placeholder="Name">
+          <input type="text" class="input" name="country" placeholder="Country">
+          <br/>
+          <input type="text" class="input" name="email" placeholder="Email address">
+          <br/>
+          Shipping Address
+          <br/>
+            <input type="radio" class="input" name="agree"><span>Shipping address is same as billing address</span>
+          <br/>
+          Billing Address
+          <br/>
+          <input type="text" class="input" name="streetaddress" placeholder="Street Address">
+          <input type="text" class="input" name="streetaddress0" placeholder="Street Address">
+          <br/>
+          <input type="text" class="input" name="streetaddress1" placeholder="Street Address 2">
+          <input type="text" class="input" name="streetaddress2" placeholder="Street Address 2">
+          <br/>
+          <input type="text" class="input" name="city0" placeholder="City">
+          <input type="text" class="input" name="city1" placeholder="City">
+          <br/>
+          <input type="text" class="input" name="zipcode0" placeholder="Zip Code">
+          <input type="text" class="input" name="zipcode1" placeholder="Zip Code">
+          <br/>
+          <input type="text" class="input" name="state0" placeholder="State">
+          <input type="text" class="input" name="state1" placeholder="State">
+          <br/>
+          Credit Card Info
+          <br/>
+          <input type="text" class="input" name="nameCard" placeholder="Name on Card">
+          <br/>
+          <input type="text" class="input" name="card" placeholder="Card Number">
+          <br/>
+          <input type="text" class="input" name="date" placeholder="Expiration Date">
+          <br/>
+          <input type="text" class="input" name="cvv" placeholder="CVV">
+          <br/>
+          <br/>
+          <br/>
+          <input type="submit" value="Purchase" class="btn">
+        </form>
+      </div>
+
+
+				</div>
+				<div class="flex center">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41RSwlRdX1L.jpg" alt="Wicked poster" style="width: 50%">
+          <br/>
+          Wicked
+          <br/>
+          Price: $19.99
+
+			</div>
+		</div>
+		</div>
+		</div>
+
+
+
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>
