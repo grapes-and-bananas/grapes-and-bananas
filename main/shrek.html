@@ -1,0 +1,77 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+  </head>
+  <body>
+		<div class="nav">
+			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
+			<div class="menu">
+				<a href="home.html" class="link">Home</a>
+				<a href="catalog.html" class="link"> Catalog</a>
+				<a href="myshows.html" class="link active"> My Shows</a>
+				<a href="applications.html" class="link"> Applications </a>
+				<a href="revenue.html" class="link"> Revenue </a>
+				<a href="contact.html" class="link"> Contact</a>
+			</div>
+		</div>
+
+	  <div id="main">
+		 <div class="content">
+			 <div class="dashboard">
+				<div class="full">
+					<img src="../images/shrek_banner.jpg" width="100%" height="auto">
+				 </div>
+		
+			 </div>
+			 <div class="dashboard">
+				<div class="half">
+					<div class="title">ABOUT THE MUSICAL</div>
+					<div class="show-about">
+						<h4>
+						Make room for ogre-sized family fun as the greatest fairy tale never told comes to life in a whole new way in this breathtaking Broadway musical adaptation of the hit movie Shrek!
+						</h4>
+						<p>
+						Cat ipsum dolor sit amet, check cat door for ambush 10 times before coming in white cat sleeps on a black shirt, chase the pig around the house. Rub whiskers on bare skin act innocent stand with legs in litter box, but poop outside sleep in the bathroom sink for ooh, are those your $250 dollar sandals? lemme use that as my litter box meow meow. Sleep. Lick human with sandpaper tongue. Unwrap toilet paper claws in the eye of the beholder cats are cute. 
+						</p>
+						<p>
+						<strong>Music</strong>:	Jeanine Tesori
+							<br>
+						<strong>Lyrics</strong>: David Lindsay-Abaire
+							<br>
+						<strong>Book</strong>: David Lindsay-Abaire
+							<br>
+						<strong>Basis</strong>:	<em>Shrek</em> by DreamWorks Animation and <em>Shrek</em> by William Steig
+						</p>
+						
+					</div>
+				</div>
+				<div class="half">
+					<div class="title">HEADER</div>
+					<div class="show-about">
+						<p>
+						Something summery; colourful it looks a bit empty, try to make everything bigger, for I want you to take it to the next level, but that's great, but we need to add this 2000 line essay it needs to be the same, but totally different for can you make it look like this clipart i found could you do an actual logo instead of a font. Other agencies charge much lesser can you make it stand out more? the website doesn't have the theme i was going for make it original, nor there is too much white space. You can get my logo from facebook. Make it original. Use a kpop logo that's not a kpop logo! ugh give us a complimentary logo along with the website. I got your invoice...it seems really high, why did you charge so much can it handle a million in one go yet I got your invoice...it seems really high, why did you charge so much that sandwich needs to be more playful, and give us a complimentary logo along with the website, but that sandwich needs to be more playful. Can you make it look more designed.
+						</p>
+						<br>
+						<a href="form.html"><div class="center"><div class="apply-now center">APPLY NOW!</div></div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+</body>
+
+</html>
