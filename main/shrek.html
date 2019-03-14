@@ -20,8 +20,8 @@
 			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
 			<div class="menu">
 				<a href="home.html" class="link">Home</a>
-				<a href="catalog.html" class="link"> Catalog</a>
-				<a href="myshows.html" class="link active"> My Shows</a>
+				<a href="catalog.html" class="link active"> Catalog</a>
+				<a href="myshows.html" class="link"> My Shows</a>
 				<a href="applications.html" class="link"> Applications </a>
 				<a href="revenue.html" class="link"> Revenue </a>
 				<a href="contact.html" class="link"> Contact</a>
@@ -68,7 +68,7 @@
 						<div class="center" onclick="document.getElementById('apply').style.display='block'" style="width:auto;"><div class="apply-now center">APPLY NOW!</div></div>
 						
 					<div id="apply" class="modal">
-						<form class="modal-content animate" action="/action_page.php">
+						<form class="modal-content animate" name="application" action="../php/application.php" id="application" method="post">
 							<div class="imgcontainer">
 								<span onclick="document.getElementById('apply').style.display='none'" class="close" title="Close Modal">&times;</span>
 							</div>
