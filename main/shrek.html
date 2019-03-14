@@ -7,13 +7,14 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
   <body>
 		<div class="nav">
 			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
@@ -64,12 +65,89 @@
 						Something summery; colourful it looks a bit empty, try to make everything bigger, for I want you to take it to the next level, but that's great, but we need to add this 2000 line essay it needs to be the same, but totally different for can you make it look like this clipart i found could you do an actual logo instead of a font. Other agencies charge much lesser can you make it stand out more? the website doesn't have the theme i was going for make it original, nor there is too much white space. You can get my logo from facebook. Make it original. Use a kpop logo that's not a kpop logo! ugh give us a complimentary logo along with the website. I got your invoice...it seems really high, why did you charge so much can it handle a million in one go yet I got your invoice...it seems really high, why did you charge so much that sandwich needs to be more playful, and give us a complimentary logo along with the website, but that sandwich needs to be more playful. Can you make it look more designed.
 						</p>
 						<br>
-						<a href="form.html"><div class="center"><div class="apply-now center">APPLY NOW!</div></div></a>
+						<div class="center" onclick="document.getElementById('apply').style.display='block'" style="width:auto;"><div class="apply-now center">APPLY NOW!</div></div>
+						
+					<div id="apply" class="modal">
+						<form class="modal-content animate" action="/action_page.php">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('apply').style.display='none'" class="close" title="Close Modal">&times;</span>
+							</div>
+							<div class="form-container">
+								<div><h2>Application for: Shrek the Musical</h2></div>
+							</div>
+					
+							
+							<div class="form-container">
+								<div class="half2">
+									Name: 
+									<br><input type="text" class="input" name="name"><br>
+									
+									Email: 
+									<br><input type="email" class="input" name="name" placeholder=""><br>
+
+									Phone Number: 
+									<br><input type="tel" class="input" name="phone" placeholder=""><br>
+
+									Venue/Theatre Name:
+									<br><input type="text" class="input" name="venue" placeholder=""><br>
+
+									Seating Capacity:
+									<br><input type="number" class="input" name="seat" placeholder="">	
+								</div>
+
+								<div class="half2">
+									Ticket Price: 
+									<br><input type="text" class="input" name="ticket" placeholder=""><br>
+									
+									Number of Weeks:
+									<br><input type="number" class="input" name="weeks" placeholder=""><br>
+									
+									Performances per Week:
+									<br><input type="number" class="input" name="fqcy" placeholder=""><br>
+
+									Expected Revenue:
+									<br><input type="text" class="input" name="revenue" placeholder=""><br>
+
+									Average Monthly Income:
+									<br><input type="text" class="input" name="income" placeholder=""><br>
+								</div>
+							</div>
+									
+
+							<div class="form-container">
+								<div class="full2">
+									Comments/Additional Information:
+									<br><input type="text" class="input" name="comment" placeholder="">
+								</div>
+							</div>
+							<div class="form-container">
+								<input type="checkbox" class="input" name="agree"><br>I agree to the terms and conditions for TheatreNow performance.
+							</div>
+								
+							<div class="form-container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('apply').style.display='none'" class="red-btn">Cancel</button>
+								<button type="submit" onclick="document.getElementById('apply').style.display='none'" class="red-btn">Submit!</button>
+							</div>
+						</form>
+
+						</div>	
 					</div>
 				</div>
 			</div>
 		</div>
 	  </div>
+
+
+
+<script>
+	var modal = document.getElementById('apply');
+
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
 
 	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
 </body>
