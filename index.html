@@ -1,65 +1,77 @@
 <?php
   session_start();
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel = "stylesheet" type = "text/css" href = "./css/loginStyle.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
-  </head>
-  <script>
-    function validateForm() {
-      var ume = document.forms["login"]["username"].value;
-      var pwd = document.forms["login"]["password"].value;
-      if (ume == "") {
-        alert("Please Enter a Username");
-        return false;
-      }
-      if (pwd == "") {
-        alert("Please Enter a Password");
-        return false;
-      }
-      var p = pwd.length;
-      if (p < 8){
-        alert("Please enter a password with minimum 8 characters")
-        return false;
-      }
-    }
-  </script>
-  <body>
-    <div class="main">
-		<div class="container">
-        	<div>
-				<img src="images/TNL.png" class="logo">
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel = "stylesheet" type = "text/css" href = "./css/loginStyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		</head>
+	
+	<script>
+		function validateForm() {
+		  var ume = document.forms["login"]["username"].value;
+		  var pwd = document.forms["login"]["password"].value;
+		  if (ume == "") {
+			alert("Please Enter a Username");
+			return false;
+		  }
+		  if (pwd == "") {
+			alert("Please Enter a Password");
+			return false;
+		  }
+		  var p = pwd.length;
+		  if (p < 8){
+			alert("Please enter a password with minimum 8 characters")
+			return false;
+		  }
+		}
+	</script>
+	
+	<body>
+		<div class="container h-100 w-100">
+			<div class="row">
+				<div class="col-lg mh-100">
+					<div class="logo">
+						<img src="images/TNL.png" >
+					</div>
+					<div class="features">
+						<img src="images/form.png"> Apply for theatrical rights.
+						<br/>
+						<br/>
+						<img src="images/theatre.png"> Music, choreography, set, costume, lighting.
+						<br/>
+						<br/>
+						<img src="images/money.png"> Track revenue.
+					</div>
+				</div>
+			
+				<div class="col-lg mh-100 logo-color">
+					<div class="external">
+						
+					</div>
+					<form class="form" name="login" action="../php/login.php" onsubmit="return validateForm()" method="post">
+						<br>
+						<input type="text" class="input" name="username" placeholder="Username/Email">
+						<br><br>
+						<input type="password" class="input" name="password" placeholder="Password">
+						<br>
+						<input type="submit" value="LOG IN" class="btn">
+					</form>
+					<div class="external">
+						<br/>
+						<p class="text">Don't have an account?</p>
+						<a href="./main/signup.html" class="link">Sign up!</a>
+					</div>
+				</div>
 			</div>
-				<div class="features">
-				  <img src="images/form.png"> Apply for theatrical rights.
-							  <br/>
-							  <br/>
-				  <img src="images/theatre.png"> Music, choreography, set, costume, lighting.
-							  <br/>
-							  <br/>
-				  <img src="images/money.png"> Track revenue.
-				</div>
-        	</div>
-      	
-		<div class="container">
-     		<div class="loginForm">
-				<form class="form" name="login" action="../php/login.php" onsubmit="return validateForm()" method="post">
-				  <br>
-				  <input type="text" class="input" name="username" placeholder="Username/Email">
-				  <br><br>
-				  <input type="password" class="input" name="password" placeholder="Password">
-				  <br>
-				  <input type="submit" value="Log in" class="btn">
-				</form>
-				<div class="external">
-				  <br/>
-				  <p class="text">Don't have an account?</p>
-				  <a href="./main/signup.html" class="link">Sign up!</a>
-				</div>
-     		</div>
-    	</div>
 	  </div>
-  </body>
+	  
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
 </html>

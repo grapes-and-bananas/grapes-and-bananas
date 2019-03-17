@@ -6,64 +6,67 @@
   }
 
 body {
-	margin: 0;
-	width: 100%;
-	height: auto;
+	min-width: 100%;
 	background-color: white;
 	font-family: 'Open Sans', sans-serif;
 }
 
-.main {
-	margin: 0;
-  	display: flex;
+body, html {
+	background: white;
+
 }
 
 .logo {
+	width: 50vw;
+	height: 35vh;
+	padding: 5%;
+}
+.logo img {
 	width: 50%;
-	height: auto;
-	padding: 20px 0px 0px 20px;
+	min-width: 400px;
 }
 .container {
-	flex: 1;
 	color: black;
-	flex-grow: 1;
-	display: flex;
-	font-family: 'Times';
-	font-weight: bold;
+	min-width: 100vw;
+	min-height: 100vh;
 	text-align: left;
-	flex-direction: column;
+	font-weight: bold;
+	font-family: 'Times';
+	
+}
+.col-lg {
+	width: 50%;
+	height: 100vh;
+	padding: 0 !important;
+}
+
+.logo-color {
+	background-color: var(--logo);
 }
 
 .features {
 	color: #222;
-	margin-left: 1%;
-	padding-top: 5%;
+	width: 100%;
+	height: 50vh;
+	font-size: 2em;
 	text-align: left;
-	font-size: 1.5em;
-	padding-left: 10%;
 	font-weight: bold;
-	vertical-align: middle;
+	padding-left: 10%;
 }
-
 .features img {
-	width: 35px;
+	width: 50px;
 	height: auto;
 	padding-right: 5px;
 	vertical-align: middle;
 }
 
 
-.loginForm {
-	width: 100%;
-	height: 100%;
-	font-size: 100%;
-	background-color: var(--logo);
-}
 
 .form {
+	height: 35vh;
+	width: 100%;
 	padding: 10%;
 	display: block;
-	margin-top: 20%;
 	text-align: left;
 	border-radius: 10px;
 }
@@ -75,52 +78,49 @@ body {
 }
 
 .input {
-	width: 60%;
-	height: 5%;
+	width: 70%;
+	min-height: 10%;
 	text-align: left;
 	padding: 10px;
 	color: var(--background);
+	border-radius: 5px;
 }
 
 .btn {
-	color: #222;
-	border: none;
+	color: #FFF !important;
+	font-family: Arial, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 	padding: 5px 10px 5px 10px;
-	font-size: 1.1em;
-	font-weight: bold;
+	font-size: 1.2em !important;
+	font-weight: 700 !important;
 	text-align: center;
 	margin: 3% 0% 0% 0%;
 	text-decoration: none;
 	border-radius: 5px;
-	background-color: white;
+	background-color: var(--hover) !important;
 }
 .btn:hover {
-  	background: var(--accent);
+  	background: var(--accent) !important;
   	color: var(--highlight);
 	cursor: pointer;
 }
 
 .external {
-  margin-top: -10%;
-  padding-left: 10%;
+	
+	width: 100%;
+	height: 25vh;
+	font-size: 1em;
+	color: #f4f4f4;
+	padding-left: 10%;
 }
 
-.link{
-  text-decoration: none;
-  background: var(--background);
-  color: var(--highlight);
-  padding-left: 1%;
-  padding-right: 1%;
-  font-size: 125%;
-  text-decoration: none;
-  border: none;
-  border-bottom: 1px solid var(--accent);
-	padding: 1px;
+.link {
+	font-size: 1.5em;
 	font-weight: bold;
+	color: var(--hover);
 }
 
 .link:hover{
-  color: var(--accent);
-  border-bottom: 1px solid var(--highlight);
+	color: var(--accent);
+	border-bottom: 1px solid var(--highlight);
 }
 
