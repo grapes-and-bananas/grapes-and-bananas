@@ -18,7 +18,7 @@ body, html {
 
 .logo {
 	width: 50vw;
-	height: 35vh;
+	height: 30vh;
 	padding: 5%;
 }
 .logo img {
@@ -47,7 +47,7 @@ body, html {
 .features {
 	color: #222;
 	width: 100%;
-	height: 50vh;
+	height: 45vh;
 	font-size: 2em;
 	text-align: left;
 	font-weight: bold;
@@ -77,6 +77,12 @@ body, html {
 	display: inline-block;
 }
 
+.form {
+	color: #f4f4f4;
+	height: 45vh;
+	padding-top: 40px !important;
+
+}
 .input {
 	width: 70%;
 	min-height: 10%;
@@ -88,7 +94,6 @@ body, html {
 
 .btn {
 	color: #FFF !important;
-	font-family: Arial, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 	padding: 5px 10px 5px 10px;
 	font-size: 1.2em !important;
 	font-weight: 700 !important;
@@ -97,20 +102,22 @@ body, html {
 	text-decoration: none;
 	border-radius: 5px;
 	background-color: var(--hover) !important;
+	font-family: Arial, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
 .btn:hover {
-  	background: var(--accent) !important;
-  	color: var(--highlight);
 	cursor: pointer;
+	color: var(--highlight);
+  	background: var(--accent) !important;
+	
 }
 
 .external {
-	
 	width: 100%;
 	height: 25vh;
 	font-size: 1em;
-	color: #f4f4f4;
 	padding-left: 10%;
+	color: #f4f4f4 !important;
+	padding-top: 0 !important;
 }
 
 .link {
@@ -124,3 +131,9 @@ body, html {
 	border-bottom: 1px solid var(--highlight);
 }
 
+span {
+	color: white;
+	font-size: 1.3em;
+	font-family: Arial, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+
+}
