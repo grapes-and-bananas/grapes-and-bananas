@@ -59,100 +59,6 @@ body {
 }
 
 
-.myshows {
-	display: flex;
-	flex-wrap: wrap;
-	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
-}
-.myshows .full {
- 	width: 100%;
-	background-color: white;
-}
-.myshows .half {
-	flex: 1;
-	flex-grow: 2;
-	background-color: white;
-	padding: 25px 20px 0px 40px;
-}
-.myshows .flex {
-	flex: 1;
-	flex-grow: 1;
-	min-width: 300px;
-	background-color: white;
-	padding: 25px 0px 25px 25px;
-}
-.myshows .title {
-	font-size: 1.8em;
-}
-
-
-.applications {
-	display: flex;
-	flex-wrap: wrap;
-	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
-}
-.applications .full {
- 	width: 100%;
-	padding-top: 15px;
-	padding-left: 40px;
-	background-color: white;
-}
-.applications .half {
-	flex: 1;
-	flex-grow: 2;
-	background-color: white;
-	padding: 25px 20px 0px 40px;
-}
-.applications .title {
-	font-size: 1.8em;
-}
-.applications .subheader {
-	font-size: 1.5em;
-}
-
-
-.revenue {
-	display: flex;
-	flex-wrap: wrap;
-	box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.1);
-}
-.revenue .full {
- 	width: 100%;
-	padding-top: 15px;
-	padding-left: 40px;
-	background-color: white;
-}
-.revenue .half {
-	flex: 1;
-	flex-grow: 2;
-	background-color: white;
-	padding: 25px 20px 0px 40px;
-}
-.revenue .flex {
-	flex: 1;
-	flex-grow: 1;
-	background-color: white;
-	padding: 25px 25px 25px 25px;
-}
-.revenue .title {
-	font-size: 1.8em;
-}
-.revenue .subheader {
-	font-size: 1.5em;
-}
-.revenue a {
-	color: var(--logo);
-	text-decoration: none;
-}
-.revenue a:hover {
-	color: var(--logo);
-	text-decoration: underline;
-}
-
-
-
-
-
 .carousel {
   	display: flex;
 	flex-basis: 100%;
@@ -274,13 +180,6 @@ body {
 	box-shadow: inset -100px 0 0 0 var(--logo), inset 100px 0 0 0 var(--logo);
 }
 
-hr {
-	width: 95%;
-	display: block;
-	margin-top: 1em;
-	border-width: 1px;
-	margin-bottom: 1em;
-}
 
 #trending-container {
 	display: block;
@@ -415,52 +314,6 @@ hr {
 	padding: 5px 0px 8px 0px !important;
 }
 
-.pending {
-	border: thick solid grey;
-	transition: 0.4s;
-}
-.pending:hover {
-	color: white;
-	background-color: grey;
-}
-.approved {
-	border: thick solid #347F43;
-}
-.denied {
-	border: thick solid var(--logo);
-}
-
-
-.graph {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	height: 400px;
-	text-align: center;
-	background-color: rgba(232,232,232,0.57);
-	box-shadow: 1px 1px 2px #999;
-}
-.graph li {
-    position: relative;
-    display: table-cell;
-    vertical-align: bottom;
-    height: 400px;
-  }
-.graph span {
-    margin:0 1em;
-    display: block;
-    background-color: #6CD878;
-    animation: draw 1s ease-in-out;
-}
-.graph span:before{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 100%;
-	display: block;
-	text-align: center;
-	content: attr(title);
-}
 
 
 .resources {
