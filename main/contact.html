@@ -10,9 +10,12 @@
 <html>
   <head>
 	<meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <script>
     function validateForm() {
@@ -36,37 +39,56 @@
     }
   </script>
   <body>
-		<div class="nav">
-			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
-			<div class="menu">
-				<a href="home.html" class="link">Home</a>
-				<a href="catalog.html" class="link"> Catalog</a>
-				<a href="myshows.html" class="link"> My Shows</a>
-				<a href="applications.html" class="link"> Applications </a>
-				<a href="revenue.html" class="link"> Revenue </a>
-				<a href="contact.html" class="link active"> Contact</a>
-			</div>
-		</div>
-	  
-		<div id="main">
-			<div class="content">
-				<div class="contact-container">
-					<div class="full title">Contact</div>
-					<div class="full">
-						<div class="contact-form">
-							Have questions?
-							<form class="form" name="contact" action="../php/contact.php" onsubmit="return validateForm()" id="contact" method="post">
-							<input type="text" class="input" name="name" placeholder="Name">
-							<br />
-							<input type="text" class="input" name="email" placeholder="Email">
-							<br />
-							<input id="message" form="contact" name="subject" placeholder="Message..">
-							<br />
-							<br />
-							<input type="submit" value="Send" class="red-btn">
-							</form>
-						</div>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  			<a class="navbar-brand" href="home.html"><img src="../images/TNL.png" class="logo" alt="Theatre Now Logo"></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavDropdown" aria-controls="NavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+			</button>
+			  <div class="collapse navbar-collapse" id="NavDropdown">
+				<ul class="navbar-nav ml-auto">
+				  <li class="nav-item">
+					<a class="nav-link" href="home.html">Home</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="catalog.html">Catalog</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Shows</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					  	<a class="dropdown-item" href="#">Shrek The Musical</a>
+					  	<a class="dropdown-item" href="#">Cats</a>
+						<div class="dropdown-divider"></div>
+					  	<a class="dropdown-item" href="#">View all</a>
 					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="applications.html">Applications</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="revenue.html">Revenue</a>
+				  </li>
+				  <li class="nav-item active">
+					<a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
+				  </li>
+				</ul>
+			  </div>
+		</nav>
+	  
+		<div class="container shadow">
+			<div class="title">Contact</div>
+			<div class="container-fluid">
+				<div class="contact-form">
+					Have questions?
+					<form class="form" name="contact" action="../php/contact.php" onsubmit="return validateForm()" id="contact" method="post">
+					<input type="text" class="input" name="name" placeholder="Name">
+					<br />
+					<input type="text" class="input" name="email" placeholder="Email">
+					<br />
+					<input id="message" form="contact" name="subject" placeholder="Message..">
+					<br />
+					<br />
+					<input type="submit" value="Send" class="red-btn">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -74,6 +96,9 @@
 
 
 	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
