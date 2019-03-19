@@ -38,11 +38,25 @@ body {
 	font-size: 2em;
 	font-weight: 600;
 }
-.subheader
+.subheader {
+	color: #222;
+	font-size: 1.5em;
+	font-weight: 500;
+	border-bottom: thin double #C3C3C3;
+}
 .row {
 	padding-top: 15px;
 }
 
+h1 a {
+	color: black;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: var(--logo);
+	text-decoration: none;
+}
 
 .carousel {
   	display: flex;
@@ -396,7 +410,7 @@ button:hover {
 	padding: 10px 10px 10px 10px;
 	background-color: var(--logo);
 }
-red-btn a {
+.red-btn a {
 	text-decoration: none;
 	color: white;
 }
