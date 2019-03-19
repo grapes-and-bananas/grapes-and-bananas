@@ -14,20 +14,11 @@ body {
  	background-color: var(--background);
 	font-family: 'Open Sans', sans-serif;
 }
-.footer {
-	width: 100vw;
-	color: black;
-	text-align: center;
-	background-color: white;
-}
 
 .back a {
 	color: var(--logo);
 	text-decoration: none;
 	font-weight: 600;
-}
-.back a:hover {
-
 }
 
 
