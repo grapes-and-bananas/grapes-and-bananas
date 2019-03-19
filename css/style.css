@@ -15,11 +15,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.back a {
-	color: var(--logo);
-	text-decoration: none;
-	font-weight: 600;
-}
 
 .logo {
 	width: 50%;
@@ -43,7 +38,7 @@ body {
 	font-size: 2em;
 	font-weight: 600;
 }
-
+.subheader
 .row {
 	padding-top: 15px;
 }
@@ -296,7 +291,6 @@ body {
 .resource-title {
 	width: 98%;
 	height: auto;
-	
 	background-color: #006699;
 }
 .resources h1 {
@@ -402,7 +396,7 @@ button:hover {
 	padding: 10px 10px 10px 10px;
 	background-color: var(--logo);
 }
-.red-btn a {
+red-btn a {
 	text-decoration: none;
 	color: white;
 }
