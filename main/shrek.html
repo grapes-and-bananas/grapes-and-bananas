@@ -9,79 +9,95 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
-		<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	</head>
   <body>
-		<div class="nav">
-			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
-			<div class="menu">
-				<a href="home.html" class="link">Home</a>
-				<a href="catalog.html" class="link active"> Catalog</a>
-				<a href="myshows.html" class="link"> My Shows</a>
-				<a href="applications.html" class="link"> Applications </a>
-				<a href="revenue.html" class="link"> Revenue </a>
-				<a href="contact.html" class="link"> Contact</a>
-			</div>
-		</div>
-
-	  <div id="main">
-		 <div class="content">
-			 <div class="dashboard">
-				<div class="full">
-					<img src="../images/shrek_banner.jpg" width="100%" height="auto">
-				 </div>
-		
-			 </div>
-			 <div class="dashboard">
-				<div class="half">
-					<div class="title">ABOUT THE MUSICAL</div>
-					<div class="show-about">
-						<h4>
-						Make room for ogre-sized family fun as the greatest fairy tale never told comes to life in a whole new way in this breathtaking Broadway musical adaptation of the hit movie Shrek!
-						</h4>
-						<p>
-						Cat ipsum dolor sit amet, check cat door for ambush 10 times before coming in white cat sleeps on a black shirt, chase the pig around the house. Rub whiskers on bare skin act innocent stand with legs in litter box, but poop outside sleep in the bathroom sink for ooh, are those your $250 dollar sandals? lemme use that as my litter box meow meow. Sleep. Lick human with sandpaper tongue. Unwrap toilet paper claws in the eye of the beholder cats are cute. 
-						</p>
-						<p>
-						<strong>Music</strong>:	Jeanine Tesori
-							<br>
-						<strong>Lyrics</strong>: David Lindsay-Abaire
-							<br>
-						<strong>Book</strong>: David Lindsay-Abaire
-							<br>
-						<strong>Basis</strong>:	<em>Shrek</em> by DreamWorks Animation and <em>Shrek</em> by William Steig
-						</p>
-						
-					</div>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="home.html"><img src="../images/TNL.png" class="logo" alt="Theatre Now Logo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavDropdown" aria-controls="NavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		  <div class="collapse navbar-collapse" id="NavDropdown">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="home.html">Home</a>
+			  </li>
+			  <li class="nav-item active">
+				<a class="nav-link" href="catalog.html">Catalog<span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Shows</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="../main/shrek2.html">Shrek The Musical</a>
+					<a class="dropdown-item" href="#">Cats</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">View all</a>
 				</div>
-				<div class="half">
-					<div class="title">HEADER</div>
-					<div class="show-about">
-						<p>
-						Something summery; colourful it looks a bit empty, try to make everything bigger, for I want you to take it to the next level, but that's great, but we need to add this 2000 line essay it needs to be the same, but totally different for can you make it look like this clipart i found could you do an actual logo instead of a font. Other agencies charge much lesser can you make it stand out more? the website doesn't have the theme i was going for make it original, nor there is too much white space. You can get my logo from facebook. Make it original. Use a kpop logo that's not a kpop logo! ugh give us a complimentary logo along with the website. I got your invoice...it seems really high, why did you charge so much can it handle a million in one go yet I got your invoice...it seems really high, why did you charge so much that sandwich needs to be more playful, and give us a complimentary logo along with the website, but that sandwich needs to be more playful. Can you make it look more designed.
-						</p>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="applications.html">Applications</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="revenue.html">Revenue</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="contact.html">Contact</a>
+			  </li>
+			</ul>
+		  </div>
+	</nav>
+	<div class="container">
+		 <div class="container-fluid">
+			<img src="../images/shrek_banner.jpg" width="100%" height="auto">
+		 </div>
+		 <div class="row">
+			<div class="col-lg" style="padding-left: 50px;">
+				<div class="title">Synopsis</div>
+				<div class="show-about">
+					<h4>
+					"Make room for ogre-sized family fun as the greatest fairy tale never told comes to life in a whole new way in this breathtaking Broadway musical adaptation of the hit movie Shrek!"
+					</h4>
+					<p>
+					Set in a mythical “once upon a time” sort of land, Shrek the Musical is the story of a hulking green ogre who, after being mocked and feared his entire life by anything that crosses his path, retreats to an ugly green swamp to exist in happy isolation. Suddenly, a gang of homeless fairy-tale characters (Pinocchio, Cinderella, the Three Pigs, you name it) raid his sanctuary, saying they’ve been evicted by the vertically challenged Lord Farquaad. So Shrek strikes a deal: I’ll get your homes back, if you give me my home back! But when Shrek and Farquaad meet, the Lord strikes a deal of his own: He’ll give the fairy-tale characters their homes back, if Shrek rescues Princess Fiona. Shrek obliges, yet finds something appealing–something strange and different–about this pretty princess. He likes her. A lot. But why does she always run off when the sun sets?
+					</p>
+				</div>
+			</div>
+			<div class="col-lg" style="padding-right: 50px;">
+				<div class="title">Details</div>
+				<div class="show-about">
+					<p>
+					Shrek The Musical is a musical with music by Jeanine Tesori and book and lyrics by David Lindsay-Abaire. It is based on the 2001 DreamWorks Animation's film Shrek and William Steig's 1990 book Shrek!. After a trial run in Seattle, the original Broadway production opened in December 2008 and closed after a run of over 12 months in January 2010. It was followed by a tour of the United States which opened in 2010, and a re-vamped West End production from June 2011 to February 2013. Since its debut, the musical's rights have been available for independent theaters overseas, who have chosen to stage their own versions.
+					</p>
+					<p>
+					<strong>Music</strong>:	Jeanine Tesori
 						<br>
-						<div class="center" onclick="document.getElementById('apply').style.display='block'" style="width:auto;"><div class="apply-now center">APPLY NOW!</div></div>
-						
-					<div id="apply" class="modal">
-						<form class="modal-content animate" name="application" action="../php/application.php" id="application" method="post">
-							<div class="imgcontainer">
-								<span onclick="document.getElementById('apply').style.display='none'" class="close" title="Close Modal">&times;</span>
-							</div>
-							<div class="form-container">
-								<div><h2>Application for: Shrek the Musical</h2></div>
-							</div>
-					
-							
-							<div class="form-container">
-								<div class="half2">
+					<strong>Lyrics</strong>: David Lindsay-Abaire
+						<br>
+					<strong>Book</strong>: David Lindsay-Abaire
+						<br>
+					<strong>Basis</strong>:	<em>Shrek</em> by DreamWorks Animation and <em>Shrek</em> by William Steig
+					</p>
+					<div class="center" onclick="document.getElementById('apply').style.display='block'" style="width:auto;"><div class="apply-now center">APPLY NOW!</div></div>
+
+				<div id="apply" class="modal">
+					<form class="modal-content animate" name="application" action="../php/application.php" id="application" method="post">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('apply').style.display='none'" class="close" title="Close Modal">&times;</span>
+						</div>
+						<div class="container-fluid">
+							<div><h2>Application for: Shrek the Musical</h2></div>
+						</div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-sm">
 									Name: 
 									<br><input type="text" class="input" name="name"><br>
-									
+
 									Email: 
 									<br><input type="email" class="input" name="name" placeholder=""><br>
 
@@ -95,13 +111,13 @@
 									<br><input type="number" class="input" name="seat" placeholder="">	
 								</div>
 
-								<div class="half2">
+								<div class="col-sm">
 									Ticket Price: 
 									<br><input type="text" class="input" name="ticket" placeholder=""><br>
-									
+
 									Number of Weeks:
 									<br><input type="number" class="input" name="weeks" placeholder=""><br>
-									
+
 									Performances per Week:
 									<br><input type="number" class="input" name="fqcy" placeholder=""><br>
 
@@ -112,30 +128,31 @@
 									<br><input type="text" class="input" name="income" placeholder=""><br>
 								</div>
 							</div>
-									
+						</div>
 
-							<div class="form-container">
-								<div class="full2">
-									Comments/Additional Information:
-									<br><input type="text" class="input" name="comment" placeholder="">
-								</div>
-							</div>
-							<div class="form-container">
-								<input type="checkbox" class="input" name="agree"><br>I agree to the terms and conditions for TheatreNow performance.
-							</div>
-								
-							<div class="form-container" style="background-color:#f1f1f1">
-								<button type="button" onclick="document.getElementById('apply').style.display='none'" class="red-btn">Cancel</button>
-								<button type="submit" onclick="document.getElementById('apply').style.display='none'" class="red-btn">Submit!</button>
-							</div>
-						</form>
 
-						</div>	
-					</div>
+						<div class="container-fluid">
+							Comments/Additional Information:
+							<br><input type="text" class="input" name="comment">
+						</div>
+						<div class="container-fluid">
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+							  <label class="form-check-label" for="inlineCheckbox1">I agree to TheatreNow's T&C.</label>
+							</div>
+						</div>
+
+						<div class="container-fluid" style="background-color:#f1f1f1">
+							<button type="" onclick="document.getElementById('apply').style.display='none'" class="red-btn"><a href="shrek.html">Submit!</a></button>
+							<button type="button" onclick="document.getElementById('apply').style.display='none'" class="grey-btn">Cancel</button>
+						</div>
+					</form>
+
+					</div>	
 				</div>
 			</div>
 		</div>
-	  </div>
+	</div>
 
 
 
@@ -149,7 +166,9 @@
 	}
 </script>
 
-	 <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
