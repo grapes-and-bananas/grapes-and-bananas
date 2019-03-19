@@ -7,73 +7,108 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
-  </head>
-  <body>
-		<div class="nav">
-			<div class="logo"><img src="../images/TNL.png" alt="Theatre Now Logo"></div>
-			<div class="menu">
-        <a href="../consumer/home.html" class="link">Home</a>
-  			<a href="../consumer/catalog.html" class="link active"> Catalog</a>
-  			<a href="../consumer/cart.html" class="link"> Cart</a>
-  			<a href="../consumer/contact.html" class="link"> Contact</a>			</div>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+			  var tabs = $('.tabs');
+				var items = $('.tabs').find('a').length;
+				var selector2 = $(".tabs").find(".selector2");
+				var activeItem = tabs.find('.active');
+				var activeWidth = activeItem.innerWidth();
+				$(".selector2").css({
+				  "left": activeItem.position.left + "px",
+				  "width": activeWidth + "px"
+				});
+
+				$(".tabs").on("click","a",function(e){
+				  e.preventDefault();
+				  $('.tabs a').removeClass("active");
+				  $(this).addClass("active");
+				  var activeWidth = $(this).innerWidth();
+				  var itemPos = $(this).position();
+				  $(".selector2").css({
+					"left":itemPos.left + "px",
+					"width": activeWidth + "px"
+				  });
+				});
+			});
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	</head>
+
+	<body style="background-color: #ECECEC">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: white">
+  			<a class="navbar-brand" href="home.html"><img src="../images/theBarclay_logo_2blues.jpg" class="logo" alt="Theatre Now Logo"></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavDropdown" aria-controls="NavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+			</button>
+			  <div class="collapse navbar-collapse" id="NavDropdown">
+				<ul class="navbar-nav ml-auto">
+				  <li class="nav-item">
+					<a class="nav-link" href="home.html">Home</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Shows
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					  	<a class="dropdown-item" href="#">Cats</a>
+						<a class="dropdown-item" href="#">Frozen Jr.</a>
+						<a class="dropdown-item" href="#">Hairspray</a>
+						<a class="dropdown-item" href="#">Hamilton</a>
+						<a class="dropdown-item" href="#">Mama Mia!</a>
+						<a class="dropdown-item" href="#">Phantom</a>
+						<a class="dropdown-item" href="show.html">Shrek</a>
+						<a class="dropdown-item" href="#">Wicked</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact</a>
+				  </li>
+					<li class="nav-item">
+					<a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+				  </li>
+				</ul>
+				  &nbsp;&nbsp;&nbsp;
+			  </div>
+		</nav>
+		
+		
+		
+	
+		<div class="container">
+			<div class="container-fluid" style="padding: 0 !important; margin: 0 !important">
+				<img src="../images/shrek-ban-ban.jpg" width="100%" height="auto" >		
+			</div>
+			<div class="row" style="background-color: white; margin: 1px">
+				<div class="col-md">
+					<div class="title">About the Show</div>
+					<br>
+					<p>
+					<em>"Make room for ogre-sized family fun as the greatest fairy tale never told comes to life in a whole new way in this breathtaking Broadway musical adaptation of the hit movie Shrek!"</em>
+					</p>
+					<p>
+					Set in a mythical “once upon a time” sort of land, Shrek the Musical is the story of a hulking green ogre who, after being mocked and feared his entire life by anything that crosses his path, retreats to an ugly green swamp to exist in happy isolation. Suddenly, a gang of homeless fairy-tale characters (Pinocchio, Cinderella, the Three Pigs, you name it) raid his sanctuary, saying they’ve been evicted by the vertically challenged Lord Farquaad. So Shrek strikes a deal: I’ll get your homes back, if you give me my home back! But when Shrek and Farquaad meet, the Lord strikes a deal of his own: He’ll give the fairy-tale characters their homes back, if Shrek rescues Princess Fiona. Shrek obliges, yet finds something appealing–something strange and different–about this pretty princess. He likes her. A lot. But why does she always run off when the sun sets?
+					</p>
+				</div>
+				<div class="col-md">
+					<div class="title">About the Stream</div>
+				</div>
+			
+			</div>
 		</div>
 
-	  <div id="main">
-		<div class="content">
-			<div class="revenue">
-				<div class="flex">
-					<a href="home.html">Back to Dashboard</a>
-				</div>
-				<div class="flex title center"></div>
-				<div class="flex right">
-					<select name="show">
-						<option value="aladdin">Aladdin</option>
-						<option value="beautyandthebeast">Beauty and the Beast</option>
-						<option value="cats">Cats</option>
-						<option value="frozen">Frozen</option>
-						<option value="funhome">Fun Home</option>
-						<option value="gold">Gold</option>
-					</select>
-				</div>
-			</div>
-			<div class="revenue">
-				<div class="flex center">
-					<h2>Wicked</h2>
-					<img src="https://images-na.ssl-images-amazon.com/images/I/41RSwlRdX1L.jpg" alt="Wicked poster">
-				</div>
-				<div class="flex center">
-					<br><br><br><br><br>
-          <p>
-            Date: March 12, 2019
-          <br/>  <br/>
-					About: lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum
-          <br/>  <br/>
-          Starring: person person person person
-          <br/><br/>
-          Music: Person
-          <br/><br/>
-          Creator: Person
-          <br/><br/>
-          Preview:
-          <br/><br/>
-          <img src="../images/beauty.jpg" style="width: 100px">
-        <br/>  <br/>
-      </p>
-      <div class="flex center curtain">
-        <div><a href="../consumer/cart.html"><button>Buy Now: $19.99</button></a></div>
-      </div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-
-	  <footer class="footer">Copyright &copy; 2019 TheatreNow</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
