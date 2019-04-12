@@ -1,0 +1,18 @@
+/* CSS Document */
+
+.col-lg-3 {
+	background-color: red;
+	margin: 10px;
+}
+
+.col-lg-8 {
+	background-color: azure;
+	margin: 10px;
+}
+
+
+.container {
+	margin-left: 50px;
+	background-color: blue;
+	
+}
