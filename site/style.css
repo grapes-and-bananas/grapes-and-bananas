@@ -28,24 +28,26 @@ html, body {
 .logo {
 	width: 350px;
 	height: auto;
-	padding-top: 5px;
 }
 
 .row {
 	height: 89%;
 }
 
-.col-lg-1 {
+.nav {
+	width: 10%;
 	padding-top: 15px;
-	text-align: center;
+	padding-left: 15px;
+	justify-content: center;
 	background-color: var(--background);
 }
 
-.col-lg-11 {
+.main {
+	width: 90%;
 	padding: 10px;
 	background-color: #FFF;
 }
-.col-lg-11 h1 {
+.main h1 {
 	color: var(--logo);
 }
 
