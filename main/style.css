@@ -109,6 +109,9 @@ html, body {
 .donation-meter {
 	width: 100px;
 	margin-left: 30px;
+	margin-right: 30px;
+	display: inline-block;
+	height: 500px;
 }
 .donation-meter .glass {
     width: 40px;
@@ -135,7 +138,7 @@ html, body {
 .donation-meter .goal {
     font-size: 30px;
 }
- .donation-meter .total {
+.donation-meter .total {
     font-size: 16px;
     position: absolute;
     right: 45px;
