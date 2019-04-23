@@ -106,3 +106,60 @@ html, body {
 }
 
 
+.donation-meter {
+	width: 100px;
+	margin-left: 30px;
+}
+.donation-meter .glass {
+    width: 40px;
+    padding: 5px;
+    height: 300px;
+    display: block;
+    position: relative;
+    margin: 0 35px 10px;
+    background: #EBEBEB;
+    border-radius: 100px 100px 0 0;
+  }
+.donation-meter .amount {
+	width: 40px;
+	bottom: 5px;
+	display: block;
+	position: absolute;
+	background: #f34e54;
+	border-radius: 100px;
+}
+.donation-meter strong {
+	display: block;
+	text-align: center;
+}
+.donation-meter .goal {
+    font-size: 30px;
+}
+ .donation-meter .total {
+    font-size: 16px;
+    position: absolute;
+    right: 45px;
+  }
+.bulb {
+	background: #f34e54;
+	border-radius: 100px;
+	display: block;
+	height: 80px;
+	margin: 0 35px 10px;
+	padding: 5px;
+	position: relative;
+	top: -20px;
+	right: 20px;
+	width: 80px;
+}
+.bulb .filler {
+	background: #f34e54;
+	border-radius: 100px 100px 0 0;
+	display: block;
+	height: 30px;
+	width: 40px;
+	position: relative;
+	top: -25px;
+	right: -15px;
+	z-index: 20;
+}
