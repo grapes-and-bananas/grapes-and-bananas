@@ -41,16 +41,6 @@ html, body {
 	justify-content: center;
 	background-color: var(--background);
 }
-
-.main {
-	width: 90%;
-	padding: 10px;
-	background-color: #FFF;
-}
-.main h1 {
-	color: var(--logo);
-}
-
 .nav-dot {
 	width: 130px;
     height: 130px;
@@ -75,6 +65,20 @@ html, body {
     background: var(--hover);
 	color: var(--background);
     padding: 35px 0px 0px 0px;
+}
+
+.main {
+	width: 90%;
+	padding: 10px;
+	background-color: #FFF;
+}
+.main h1 {
+	color: var(--logo);
+}
+
+.banner {
+	width: 100%;
+	height: auto;
 }
 
 .carousel {
