@@ -57,21 +57,22 @@ html, body {
 	font-size: 25px;
 	font-weight: bold;
 	line-height: 25px;
-    background: var(--accent);
 	border-radius: 65px;
 	text-align: center;
+	text-decoration: none;
 	color: var(--background);
     padding: 35px 5px 5px 5px;
+    background: var(--accent);
 }
-.nav-dot:hover{
+.nav-dot:hover {
 	width: 130px;
     height: 130px;
 	font-size: 26px;
 	font-weight: bold;
 	line-height: 25px;
-    background: var(--hover);
-	border-radius: 66px;
 	text-align: center;
+	border-radius: 66px;
+    background: var(--hover);
 	color: var(--background);
     padding: 35px 0px 0px 0px;
 }
