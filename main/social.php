@@ -87,52 +87,52 @@ if(!empty($_POST)) {
 					</ol>
 				</nav>
 				<form name="event" action="#" method="post">
-		<label for="event_name">Event Name: </label>
-		<input type="text" name="event_name" placeholder="420 Sesh" /><br />
+					<label for="event_name">Event Name: </label>
+					<input type="text" name="event_name" placeholder="420 Sesh" /><br />
 
-		<label for="event_name">Event Location: </label>
-		<input type="text" name="event_location" placeholder="Downtown Los Angeles" /><br />
+					<label for="event_name">Event Location: </label>
+					<input type="text" name="event_location" placeholder="Downtown Los Angeles" /><br />
 
-		<label for="event_name">Event Date: </label>
-		<input type="text" name="event_date" placeholder="4/20/2017" /><br />
+					<label for="event_name">Event Date: </label>
+					<input type="text" name="event_date" placeholder="4/20/2017" /><br />
 
-		<label for="event_name">Event Time: </label>
-		<input type="text" name="event_time" placeholder="7:30" /><br />
+					<label for="event_name">Event Time: </label>
+					<input type="text" name="event_time" placeholder="7:30" /><br />
 
-		<label for="event_name">Background Image (URL): </label>
-		<input type="text" name="event_url" placeholder="https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg" /><br />
+					<label for="event_name">Background Image (URL): </label>
+					<input type="text" name="event_url" placeholder="https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg" /><br />
 
-		<button type="submit">Submit</button>
-	</form>
+					<button type="submit">Submit</button>
+				</form>
 		
-	<div style="width:100%; max-width:1000px; height:1000px; max-height:1000px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;" id="instagram">
-	<div style="position: absolute; top:0; left:0; width:100%; height:1000px; overflow:hidden;">
-		<img src="<?php echo 'tmp/'.$imagename; ?>" style="width:auto; height:1000px;" />
-	</div>
-	<div style="width:50%; margin:0 auto; position:relative; height:1000px;">
-		<div style="width:100%; position:absolute; bottom:0; background-color:#F5CB5C;">
-			<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
-				<?php echo $name; ?>		
-			</h1>
-			<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
-				<i class="fa fa-map-marker"></i>
-				<?php echo $location; ?>
-			</span>
-			<div style="width:100%;">
-				<div style="float: left; width: 100%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
-					Starts:
+				<div style="width:100%; max-width:1000px; height:1000px; max-height:1000px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;" id="instagram">
+				<div style="position: absolute; top:0; left:0; width:100%; height:1000px; overflow:hidden;">
+					<img src="<?php echo 'tmp/'.$imagename; ?>" style="width:auto; height:1000px;" />
 				</div>
-				<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
-					<i class="fa fa-calendar-o" style="margin-right: 5px;"></i><?php echo $date; ?>
+				<div style="width:50%; margin:0 auto; position:relative; height:1000px;">
+					<div style="width:100%; position:absolute; bottom:0; background-color:#F5CB5C;">
+						<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
+							<?php echo $name; ?>		
+						</h1>
+						<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
+							<i class="fa fa-map-marker"></i>
+							<?php echo $location; ?>
+						</span>
+						<div style="width:100%;">
+							<div style="float: left; width: 100%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
+								Starts:
+							</div>
+							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
+								<i class="fa fa-calendar-o" style="margin-right: 5px;"></i><?php echo $date; ?>
+							</div>
+							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
+								<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
+							</div>
+
+						</div>
+					</div>
 				</div>
-				<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
-					<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
-				</div>
-				
 			</div>
-		</div>
-	</div>
-</div>
 			</div>
 		</div>
 	</div>
