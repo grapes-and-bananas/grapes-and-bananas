@@ -15,11 +15,11 @@
 	$name = "";
 	$location = "";
 	$date = "";
-	$url = "";
+	$url = "https://dhggywfvre0o8.cloudfront.net/app/uploads/2017/11/22153252/Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg";
 	$time = "";
 	$files = "";
 	$imagename= "";
-		$image = "";
+	$image = "";
 if(!empty($_POST)) {
 	// get vars
 	
@@ -128,9 +128,7 @@ if(!empty($_POST)) {
 				<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
 					<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
 				</div>
-				<div style="float: left; width: 100%; color: #444; font-size: 16px; line-height: 22px; margin-bottom: 15px; text-align: center;">
-					www.SeshSource.com
-				</div>
+				
 			</div>
 		</div>
 	</div>
