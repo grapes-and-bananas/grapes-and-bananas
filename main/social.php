@@ -105,7 +105,7 @@ if(!empty($_POST)) {
 					<button type="submit">Submit</button>
 				</form>
 		
-				<div style="width:500px; height:500px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;">
+				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;">
 				<div style="position: absolute; top:0; left:0; width:100%; height:1000px; overflow:hidden;">
 					<img src="<?php echo 'tmp/'.$imagename; ?>" style="width:auto; height:1000px;" />
 				</div>
