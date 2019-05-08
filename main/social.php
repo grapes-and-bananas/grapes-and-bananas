@@ -88,19 +88,19 @@ if(!empty($_POST)) {
 				</nav>
 				<form name="event" action="#" method="post">
 					<label for="event_name">Event Name: </label>
-					<input type="text" name="event_name" placeholder="420 Sesh" /><br />
+					<input type="text" name="event_name" placeholder="Event Name" /><br />
 
 					<label for="event_name">Event Location: </label>
-					<input type="text" name="event_location" placeholder="Downtown Los Angeles" /><br />
+					<input type="text" name="event_location" placeholder="Location" /><br />
 
 					<label for="event_name">Event Date: </label>
-					<input type="text" name="event_date" placeholder="4/20/2017" /><br />
+					<input type="text" name="event_date" placeholder="Date -- 05/11/2019" /><br />
 
 					<label for="event_name">Event Time: </label>
-					<input type="text" name="event_time" placeholder="7:30" /><br />
+					<input type="text" name="event_time" placeholder="Time -- 7:30 AM" /><br />
 
 					<label for="event_name">Background Image (URL): </label>
-					<input type="text" name="event_url" placeholder="https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg" /><br />
+					<input type="text" name="event_url" placeholder="Image URL..." /><br />
 
 					<button type="submit">Submit</button>
 				</form>
