@@ -18,7 +18,7 @@
 	$url = "https://dhggywfvre0o8.cloudfront.net/app/uploads/2017/11/22153252/Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg";
 	$time = "";
 	$files = "";
-	$imagename= "";
+	$imagename= "redsquare.jpg";
 	$image = "";
 if(!empty($_POST)) {
 	// get vars
