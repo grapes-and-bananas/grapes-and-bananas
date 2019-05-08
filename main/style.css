@@ -178,7 +178,6 @@ html, body {
 #my_file {
     display: none;
 }
-
 #get_file {
     background: #222;
     border: none;
@@ -187,4 +186,33 @@ html, body {
     margin: 10px;
     cursor: pointer;
 	color: white;
+}
+
+.generate {
+	
+}
+
+.generate input {
+	outline: none;
+	border: none;
+}
+
+.generate input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.generate input[type="number"]::-webkit-outer-spin-button,
+.generate input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.generate textarea {
+  outline: none;
+  border: none;
+}
+
+.generate textarea:focus, .generate input:focus {
+  border-color: transparent !important;
 }
