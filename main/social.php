@@ -42,8 +42,8 @@ if(!empty($_POST)) {
 	$date = $_POST['event_date'];
 	$url = $_POST['event_url'];
 	$time = $_POST['event_time'];
-	// delete all files in temp folder before uploading new one
-	$files = glob('./tmp/'); // get all file names
+
+	$files = glob('./tmp/'); 
 	foreach($files as $file){ // iterate files
 	  if(is_file($file))
 	    unlink($file); // delete file
@@ -117,7 +117,7 @@ if(!empty($_POST)) {
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
-				<div style="width:80%; margin:0 auto; position:relative; height:500px;">
+				<div style="width:80%; margin:0 auto; top:200; left:200; height:500px;">
 					<div style="width:100%; position:absolute; bottom:0; background-color:white;">
 						<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
