@@ -118,7 +118,7 @@ if(!empty($_POST)) {
 		
 				<div style="max-width:500px; max-height:500px; background-image:url('$url'); font-family: 'Montserrat'; position: relative;">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
-					<img src="<?php echo 'tmp/'.$imagename; ?>" style="width:500px; height:500px;" />
+					<img src="$url" style="width:500px; height:500px;" />
 				</div>
 				<div style="width:80%; margin:0 auto; position:relative; height:500px;">
 					<div style="width:100%; position:absolute; bottom:0; background-color:white;">
