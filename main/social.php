@@ -5,21 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>TheatreNow</title>
 	<link rel = "stylesheet" type = "text/css" href = "../main/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	
 </head>
 
 <body>
 	<?php
-// Check if submit
-	$name = "";
-	$location = "";
-	$date = "";
-	$url = "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png";
-	$time = "";
-	$files = "";
-	$imagename= "";
-	$image = "";
+		$name = "";
+		$location = "";
+		$date = "";
+		$url = "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png";
+		$time = "";
+		$files = "";
+		$imagename= "";
+		$image = "";
 if(!empty($_POST)) {
 	function getimg($url) {         
 	    $headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
@@ -118,7 +118,7 @@ if(!empty($_POST)) {
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
 				<div style="width:80%; margin:0 auto; height:500px; position: relative; top: 50%;">
-					<div style="width:100%; position:absolute; background-color:white; opacity: .5; top: 25%;">
+					<div style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
 						<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
 						</h1>
