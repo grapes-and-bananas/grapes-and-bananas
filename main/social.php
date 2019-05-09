@@ -80,7 +80,7 @@
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
-				<div style="width: 800px; background-color: blue; display: inline-block">
+				<div style="width: 600px; background-color: white; display: inline-block">
 				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative;">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
@@ -91,7 +91,7 @@
 							<?php echo $name; ?>		
 						</h1>
 						<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
-							<i class="fa fa-map-marker"></i>
+							<i class="fas fa-map-marker-alt"></i>
 							<?php echo $location; ?>
 						</span>
 						<div style="width:100%;">
@@ -99,10 +99,10 @@
 								
 							</div>
 							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
-								<i class="fa fa-calendar-o" style="margin-right: 5px;"></i><?php echo $date; ?>
+								<i class="far fa-calendar-alt" style="margin-right: 5px;"></i><?php echo $date; ?>
 							</div>
 							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
-								<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
+								<i class="far fa-clock" style="margin-right: 5px;"></i><?php echo $time; ?>
 							</div>
 
 						</div>
