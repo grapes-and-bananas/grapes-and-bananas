@@ -87,7 +87,7 @@
 				</div>
 				<div style="width:80%; margin:0 auto; height:500px; position: relative; top: 50%;">
 					<div style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
-						<h1 style="text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
+						<h1 style="text-align: center; font-size: 48px; line-height: 54px; color: #111; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
 						</h1>
 						<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
@@ -138,7 +138,7 @@
 						</li>
 						<br />
 
-						<li><button type="submit">Generate</button></li>
+						<li><button class="generate" type="submit">Generate</button></li>
 					</ul>
 				</form>
 		</div>
