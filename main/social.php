@@ -86,23 +86,35 @@ if(!empty($_POST)) {
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
-				<form name="event" action="#" method="post" class="generate">
-					<label for="event_name">Show Name: </label>
-					<input type="text" name="event_name" placeholder="" /><br />
+				<form name="event" action="#" method="post">
+					<ul class="generate">
+						<li>
+							<label for="event_name">Show Name: </label>
+							<input type="text" name="event_name" placeholder="" />
+						</li>
+						<br />
+						<li>
+							<label for="event_name">Location: </label>
+							<input type="text" name="event_location" placeholder="" />
+						</li>
+						<br />
+						<li>
+							<label for="event_name">Date: </label>
+							<input type="text" name="event_date" placeholder="05/11/2019" />
+						</li>
+						<br />
+						<li>
+							<label for="event_name">Time: </label>
+							<input type="text" name="event_time" placeholder="7:45PM" />
+						</li><br />
+						<li>
+							<label for="event_name">Background Image: </label>
+							<input type="text" name="event_url" placeholder="Enter image URL..." />
+						</li>
+						<br />
 
-					<label for="event_name">Location: </label>
-					<input type="text" name="event_location" placeholder="" /><br />
-
-					<label for="event_name">Date: </label>
-					<input type="text" name="event_date" placeholder="05/11/2019" /><br />
-
-					<label for="event_name">Time: </label>
-					<input type="text" name="event_time" placeholder="7:45PM" /><br />
-
-					<label for="event_name">Background Image: </label>
-					<input type="text" name="event_url" placeholder="Enter image URL..." /><br />
-
-					<button type="submit">Generate</button>
+						<li><button type="submit">Generate</button></li>
+					</ul>
 				</form>
 		
 				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;">
