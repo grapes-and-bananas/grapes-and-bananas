@@ -19,7 +19,6 @@
 	$time = "";
 	$files = "";
 	$imagename= "redsquare.jpg";
-	$image = "";
 if(!empty($_POST)) {
 	// get vars
 	
@@ -45,20 +44,6 @@ if(!empty($_POST)) {
 	$date = $_POST['event_date'];
 	$url = $_POST['event_url'];
 	$time = $_POST['event_time'];
-	// delete all files in temp folder before uploading new one
-	$files = glob('./tmp/'); // get all file names
-	foreach($files as $file){ // iterate files
-	  if(is_file($file))
-	    unlink($file); // delete file
-	}
-	$imagename= basename($url); // get file name
-	if(!file_exists('./tmp/'.$imagename)){ // check for existing file with same name, just in case
-		$image = getimg($url); // get image data to variable
-		file_put_contents('tmp/'.$imagename,$image); // make image in tmp folder
-	}
-	} else {
-	// HTML Input here
-	}
 ?>
 	
 	
