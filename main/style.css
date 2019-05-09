@@ -271,3 +271,8 @@ select{
 .generate .required{
 	color:red;
 }
+
+.generatedimg {
+	font-family: 'Changa One', cursive;
+	
+}
