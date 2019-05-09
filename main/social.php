@@ -117,7 +117,7 @@ if(!empty($_POST)) {
 					</ul>
 				</form>
 		
-				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo 'tmp/'.$imagename; ?>'); font-family: 'Montserrat'; position: relative;">
+				<div style="max-width:500px; max-height:500px; background-image:url('$url'); font-family: 'Montserrat'; position: relative;">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo 'tmp/'.$imagename; ?>" style="width:500px; height:500px;" />
 				</div>
