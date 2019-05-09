@@ -80,6 +80,36 @@
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
+				
+				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
+				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
+					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
+				</div>
+				<div style="width:80%; margin:0 auto; height:500px; position: relative; top: 50%;">
+					<div style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
+						<h1 style="text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
+							<?php echo $name; ?>		
+						</h1>
+						<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
+							<i class="fa fa-map-marker"></i>
+							<?php echo $location; ?>
+						</span>
+						<div style="width:100%;">
+							<div style="float: left; width: 100%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
+								
+							</div>
+							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
+								<i class="fa fa-calendar-o" style="margin-right: 5px;"></i><?php echo $date; ?>
+							</div>
+							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
+								<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				</div>
+				
 				<form name="event" action="#" method="post">
 					<ul class="generate">
 						<li>
@@ -110,34 +140,6 @@
 						<li><button type="submit">Generate</button></li>
 					</ul>
 				</form>
-				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
-				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
-					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
-				</div>
-				<div style="width:80%; margin:0 auto; height:500px; position: relative; top: 50%;">
-					<div style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
-						<h1 style="text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
-							<?php echo $name; ?>		
-						</h1>
-						<span style="float: left; width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
-							<i class="fa fa-map-marker"></i>
-							<?php echo $location; ?>
-						</span>
-						<div style="width:100%;">
-							<div style="float: left; width: 100%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
-								
-							</div>
-							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 15px; text-align: center;">
-								<i class="fa fa-calendar-o" style="margin-right: 5px;"></i><?php echo $date; ?>
-							</div>
-							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
-								<i class="fa fa-clock-o" style="margin-right: 5px;"></i><?php echo $time; ?>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				</div>
 		</div>
 	</div>
 	</div>
