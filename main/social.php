@@ -110,13 +110,13 @@
 						<li><button type="submit">Generate</button></li>
 					</ul>
 				</form>
-			<div style="display:inline-block;">
-				<div class="generatedimg" style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
+			<div style="display:inline-block; text-align: center;">
+				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
 				<div style="width:80%; margin:0 auto; height:500px; position: relative; top: 50%;">
-					<div class="generatedimg" style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
+					<div style="width:100%; position:absolute; background-color: rgba(255,255,255,.8); top: 25%;">
 						<h1 style="text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
 						</h1>
