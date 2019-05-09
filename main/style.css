@@ -188,60 +188,38 @@ html, body {
 	color: white;
 }
 
-.generate{
+.generate {
 	margin: 10px auto;
-	max-width: 400px;
-	padding: 20px 12px 10px 20px;
-	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	width: 300px;
+	padding: 10px 20px 10px 40px;
+	font: 14px;
+	border: thin solid #999;
+}
+.generate ul {
+	list-style-type:none;
 }
 .generate li {
 	padding: 0;
 	display: block;
 	list-style: none;
-	margin: 10px 0 0 0;
+	margin: 5px 0 0 0;
 }
 .generate label {
-	margin:0 0 3px 0;
+	margin: 0 0 1px 0;
 	padding:0px;
-	display:block;
+	display: block;
 	font-weight: bold;
 }
-.generate input[type=text], 
-.generate input[type=date],
-.generate input[type=datetime],
-.generate input[type=number],
-.generate input[type=search],
-.generate input[type=time],
-.generate input[type=url],
-.generate input[type=email],
-textarea, 
-select{
+.generate input[type=text], select{
 	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
-	padding: 7px;
-	margin:0px;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
+	border:1px solid #999;
+	padding: 5px;
+	margin: 0px;
 	outline: none;	
 }
-.generate input[type=text]:focus, 
-.generate input[type=date]:focus,
-.generate input[type=datetime]:focus,
-.generate input[type=number]:focus,
-.generate input[type=search]:focus,
-.generate input[type=time]:focus,
-.generate input[type=url]:focus,
-.generate input[type=email]:focus,
-.generate textarea:focus, 
-.generate select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
+.generate input[type=text]:focus,.generate select:focus{
+	box-shadow: 0 0 4px #444;
+	border: 1px solid #444;
 }
 .generate .field-divided{
 	width: 49%;
@@ -253,26 +231,14 @@ select{
 .generate .field-select{
 	width: 100%;
 }
-.generate .field-textarea{
-	height: 100px;
-}
-.generate input[type=submit], .form-style-1 input[type=button]{
-	background: #4B99AD;
+
+.generate input[type=submit], .generate input[type=button]{
+	background: #4B99AD!important;
 	padding: 8px 15px 8px 15px;
 	border: none;
 	color: #fff;
 }
-.generate input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+.generate input[type=submit]:hover, .generate input[type=button]:hover{
 	background: #4691A4;
 	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-}
-.generate .required{
-	color:red;
-}
-
-.generatedimg {
-	font-family: 'Changa One', cursive;
-	
 }
