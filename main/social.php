@@ -81,7 +81,7 @@
 					</ol>
 				</nav>
 				
-				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
+				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; display: inline-block;">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
