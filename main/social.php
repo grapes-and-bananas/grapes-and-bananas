@@ -110,7 +110,7 @@
 				</div>
 				</div>
 				
-				<form name="event" action="#" method="post">
+				<form name="event" action="#" method="post" style="display: inline-block;">
 					<ul class="generate">
 						<li>
 							<label for="event_name">Show Name: </label><br>
