@@ -104,11 +104,13 @@
 							<div style="float: left; width: 50%; color: #444; font-size: 24px; line-height: 32px; margin-bottom: 25px; text-align: center;">
 								<i class="far fa-clock" style="margin-right: 5px;"></i><?php echo $time; ?>
 							</div>
-
 						</div>
 					</div>
 				</div>
 				</div>
+					<div>
+					Come see our showing of #<?php echo $name; ?> at <?php echo $location; ?> on <?php echo $date; ?> at <?php echo $time; ?>. Tickets on sale now! Purchase yours at bit.ly/universityHS.
+					</div>
 				</div>
 				
 				<form name="event" action="#" method="post" style="display: inline-block;">
