@@ -113,12 +113,12 @@ if(!empty($_POST)) {
 					</ul>
 				</form>
 		
-				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); font-family: 'Montserrat'; position: relative;">
+				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); font-family: 'Montserrat'; position: relative; ">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
-				<div style="width:80%; margin:0 auto; height:500px;">
-					<div style="width:100%; position:absolute; top:200; left:200; background-color:red;">
+				<div style="width:80%; margin:0 auto; height:500px; vertical-align: middle;">
+					<div style="width:100%; background-color:red;">
 						<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
 						</h1>
