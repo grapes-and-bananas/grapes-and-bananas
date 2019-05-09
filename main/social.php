@@ -15,15 +15,12 @@
 	$name = "";
 	$location = "";
 	$date = "";
-	$url = "https://dhggywfvre0o8.cloudfront.net/app/uploads/2017/11/22153252/Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg";
+	$url = "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png";
 	$time = "";
 	$files = "";
-	$imagename= "redsquare.jpg";
+	$imagename= "";
 	$image = "";
 if(!empty($_POST)) {
-	// get vars
-	
-	// get image data as var from remote url
 	function getimg($url) {         
 	    $headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
 	    $headers[] = 'Connection: Keep-Alive';         
@@ -32,7 +29,7 @@ if(!empty($_POST)) {
 	    $process = curl_init($url);         
 	    curl_setopt($process, CURLOPT_HTTPHEADER, $headers);         
 	    curl_setopt($process, CURLOPT_HEADER, 0);         
-	    curl_setopt($process, CURLOPT_USERAGENT, $user_agent); //check here         
+	    curl_setopt($process, CURLOPT_USERAGENT, $user_agent);        
 	    curl_setopt($process, CURLOPT_TIMEOUT, 30);         
 	    curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);         
 	    curl_setopt($process, CURLOPT_FOLLOWLOCATION, 1);         
