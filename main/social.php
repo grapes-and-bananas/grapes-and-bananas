@@ -138,7 +138,7 @@
 						</li>
 						<br />
 
-						<li><button class="generate" type="submit">Generate</button></li>
+						<li><button class="btn btn-primary" type="submit">Generate</button></li>
 					</ul>
 				</form>
 		</div>
