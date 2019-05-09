@@ -108,8 +108,8 @@
 					</div>
 				</div>
 				</div>
-					<div style= "width: 100%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
-					Come see our showing of #<?php echo $name; ?> at <?php echo $location; ?> on <?php echo $date; ?> at <?php echo $time; ?>. Tickets on sale now! Purchase yours at bit.ly/universityHS.
+					<div style= "width: 80%; color: #222; font-size: 24px; line-height: 32px; padding-bottom: 15px; margin-bottom: 15px; text-align: center;">
+					Come see our showing of #<?php echo $name; ?> at <?php echo $location; ?> on <?php echo $date; ?> at <?php echo $time; ?>. Tickets on sale now! Purchase yours at <a href="bit.ly/universityHS">bit.ly/universityHS</a>.
 					</div>
 				</div>
 				
