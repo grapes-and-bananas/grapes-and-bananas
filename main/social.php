@@ -80,7 +80,7 @@
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
-				<form name="event" action="#" method="post" style="display:inline-block;">
+				<form name="event" action="#" method="post">
 					<ul class="generate">
 						<li>
 							<label for="event_name">Show Name: </label><br>
@@ -110,7 +110,6 @@
 						<li><button type="submit">Generate</button></li>
 					</ul>
 				</form>
-			<div style="display:inline-block; text-align: center;">
 				<div style="max-width:500px; max-height:500px; background-image:url('<?php echo $url; ?>'); position: relative; ">
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
@@ -139,7 +138,6 @@
 					</div>
 				</div>
 				</div>
-			</div>
 		</div>
 	</div>
 	</div>
