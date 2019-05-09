@@ -117,8 +117,8 @@ if(!empty($_POST)) {
 				<div style="position: absolute; top:0; left:0; width:500px; height:500px; overflow:hidden;">
 					<img src="<?php echo $url; ?>" style="width:500px; height:500px;" />
 				</div>
-				<div style="width:80%; margin:0 auto; top:200; left:200; height:500px;">
-					<div style="width:100%; position:absolute; bottom:0; background-color:white;">
+				<div style="width:80%; margin:0 auto; height:500px;">
+					<div style="width:100%; position:absolute; top:200; left:200; background-color:red;">
 						<h1 style="font-family: 'Montserrat'; text-align: center; font-size: 48px; line-height: 54px; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
 							<?php echo $name; ?>		
 						</h1>
