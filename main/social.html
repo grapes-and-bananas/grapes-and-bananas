@@ -13,7 +13,6 @@
 	<title>TheatreNow</title>
 	<link rel = "stylesheet" type = "text/css" href = "../main/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="../Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
 </head>
 
 <body>
@@ -43,31 +42,40 @@
 				</nav>
 			<div class="row">
 				<div class="col-3">
+					<form class="form" name="socialForm" onkeyup="return runSocialForm()" >
+						<br>
+						<input type="text" class="input" name="producer" placeholder="Producer">
+						<input type="text" class="input" name="title" placeholder="Title">
+						<br><br>
+						<input type="text" class="input" name="startdate" placeholder="Start Date">
+						<input type="text" class="input" name="enddate" placeholder="End Date">
+						<br><br>
+						<input type="text" class="input" name="price" placeholder="Ticket Price">
+						<input type="text" class="input" name="streamdate" placeholder="Stream Date">
+
+						<input type="submit" value="Clear Canvas" class="btn">
+						<a href="#" class="button" id="btn-download" download="social.png">Download Image</a>
+					</form>
 				</div>
 				<div class="col-6">
 					<div class="stuff">
 
-						<form class="form" name="socialForm" onkeyup="return runSocialForm()" >
-							<br>
-							<input type="text" class="input" name="producer" placeholder="Producer">
-							<br><br>
-							<input type="text" class="input" name="title" placeholder="Title">
-							<br>
-							<input type="submit" value="Clear Canvas" class="btn">
-							<a href="#" class="button" id="btn-download" download="social.png">Download Image</a>
-						</form>
-
-
 						<script>
-
 
 						function runSocialForm(){
 						var canvas = document.getElementById("myCanvas");
 						var ctx = canvas.getContext("2d");
 						ctx.font = "30px Arial";
 						ctx.fillText(document.forms["socialForm"]["producer"].value, 10, 50);
-						ctx.fillText(document.forms["socialForm"]["title"].value, 10, 100);
-
+						ctx.fillText("Presents", 10, 100);
+						ctx.fillText(document.forms["socialForm"]["title"].value, 10, 150);
+						ctx.fillText(document.forms["socialForm"]["startdate"].value, 10, 200);
+						ctx.fillText("to", 200, 200);
+						ctx.fillText(document.forms["socialForm"]["enddate"].value, 250, 200);
+						ctx.fillText("Ticket Price", 10, 300);
+						ctx.fillText(document.forms["socialForm"]["price"].value, 250, 300);
+						ctx.fillText("Stream Available", 10, 350);
+						ctx.fillText(document.forms["socialForm"]["streamdate"].value, 250, 350);
 
 					var canvas = document.getElementById("myCanvas");
 					var img    = canvas.toDataURL("../images/social/png");
