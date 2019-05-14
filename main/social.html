@@ -41,56 +41,56 @@
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
-				
-			<div style="display: inline-block;">
-				<form name="event" action="#" method="post" style="display: inline-block;">
-					<ul class="generate">
-						<li>
-							<label for="event_name">Show Name: </label><br>
-							<input type="text" name="event_name" placeholder="" />
-						</li>
-						<br>
-						<li>
-							<label for="event_name">Location: </label><br>
-							<input type="text" name="event_location" placeholder="" />
-						</li>
-						<br />
-						<li>
-							<label for="event_name">Date: </label><br>
-							<input type="text" name="event_date" placeholder="05/11/2019" />
-						</li>
-						<br />
-						<li>
-							<label for="event_name">Time: </label><br>
-							<input type="text" name="event_time" placeholder="7:45PM" />
-						</li><br />
-						<li>
-							<label for="event_name">Background Image: </label><br>
-							<input type="text" name="event_url" placeholder="Enter image URL..." />
-						</li>
-						<br />
+			<div class="row">
+				<div class="col-3">
+					<form name="event" action="#" method="post" style="display: inline-block;">
+						<ul class="generate">
+							<li>
+								<label for="show_name">Show Name: </label><br>
+								<input type="text" name="show_name" placeholder="" />
+							</li>
+							<br>
+							<li>
+								<label for="show_location">Location: </label><br>
+								<input type="text" name="show_location" placeholder="" />
+							</li>
+							<br />
+							<li>
+								<label for="show_date">Date: </label><br>
+								<input type="text" name="show_date" placeholder="05/11/2019" />
+							</li>
+							<br />
+							<li>
+								<label for="show_time">Time: </label><br>
+								<input type="text" name="show_time" placeholder="7:45PM" />
+							</li><br />
+							<li>
+								<label for="show_background">Background Image: </label><br>
+								<input type="text" name="show_background" placeholder="Enter image URL..." />
+							</li>
+							<br />
 
-						<li><button class="btn btn-primary" type="submit">Generate</button></li>
-					</ul>
-				</form>
+							<li><button class="btn btn-primary" type="submit">Generate</button></li>
+						</ul>
+					</form>
+				</div>	
+				<div class="col-6">
+					<svg width="500px" height="500px" style="background-color: #CDCDCD; display: inline-block;" id="post">
+						<filter id="image" x="0%" y="0%" width="100%" height="100%">
+							<image xlink:href="../images/placeholder.png"/>
+						</filter>
+					</svg>	
+					<script>
+						var s = Snap("#post");
+						var bg = s.rect(0,0, 500, 500);
+						bg.attr({
+							fill: "none",
+							stroke: "#555",
+							strokeWidth: 5
+						});
+					</script>
+				</div>	
 			</div>	
-			<div style="display: inline-block;">
-				<svg width="500px" height="500px" style="background-color: #CDCDCD; display: inline-block;" id="post">
-					<filter id="image" x="0%" y="0%" width="100%" height="100%">
-						<image xlink:href="../images/placeholder.png"/>
-					</filter>
-				</svg>	
-				<script>
-					var s = Snap("#post");
-					var bg = s.rect(0,0, 500, 500);
-					bg.attr({
-						fill: "none",
-						stroke: "#555",
-						strokeWidth: 5
-					});
-				</script>
-			</div>	
-			
 				
 				
 			</div>
