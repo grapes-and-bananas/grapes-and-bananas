@@ -70,24 +70,23 @@
 							</li>
 							<br />
 
-							<li><button class="btn btn-primary" type="submit">Generate</button></li>
+							<li><button class="btn btn-primary" type="submit" id="btn">Generate</button></li>
 						</ul>
 					</form>
 				</div>	
 				<div class="col-6">
-					<svg width="500px" height="500px" style="background-color: #CDCDCD; display: inline-block;" id="post">
-						<filter id="image" x="0%" y="0%" width="100%" height="100%">
-							<image xlink:href="../images/placeholder.png"/>
-						</filter>
+					<svg width="500px" height="500px" style="background-color: #000; display: inline-block;" id="post">
 					</svg>	
 					<script>
 						var s = Snap("#post");
-						var image = s.image("../images/placeholder.png", 0, 0, 500, 500);
-						bg.attr({
-							fill: "none",
-							stroke: "#555",
-							strokeWidth: 5
-						});
+						var pic = "../images/placeholder.png";
+						
+						
+						document.getElementById('btn').onclick = handleClick;
+
+						function handleClick() {
+							document.getElementById("post").style.backgroundColor="red";
+						}
 					</script>
 				</div>	
 			</div>	
