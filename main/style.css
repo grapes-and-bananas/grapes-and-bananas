@@ -242,3 +242,9 @@ html, body {
 	background: #4691A4;
 	box-shadow:none;
 }
+
+
+#post {
+	 -webkit-mask-image: url(../images/placeholder.png);
+	 mask-image: url(../images/placeholder.png);
+}
