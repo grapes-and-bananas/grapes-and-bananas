@@ -80,12 +80,17 @@
 					<script>
 						var s = Snap("#post");
 						var pic = "../images/placeholder.png";
-						
+						var background = s.image(pic, 0, 0, 500, 500);
+						background.attr({
+							stroke: "#555",
+							strokeWidth: 5,
+							id:"#backimg"
+						});
 						
 						document.getElementById('btn').onclick = handleClick;
 
 						function handleClick() {
-							document.getElementById("post").style.backgroundColor="red";
+							
 						}
 					</script>
 				</div>	
