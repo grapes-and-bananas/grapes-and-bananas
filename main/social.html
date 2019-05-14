@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>TheatreNow</title>
 	<link rel = "stylesheet" type = "text/css" href = "../main/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="../Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
 </head>
 
@@ -31,9 +31,9 @@
 				<a href="resources.html"><div class="nav-dot">Show Resources</div></a><br>
 				<a href="account.html"><div class="nav-dot">My Account</div></a>
 			</div>
-			
-			
-			
+
+
+
 			<div class="main">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
@@ -43,60 +43,49 @@
 				</nav>
 			<div class="row">
 				<div class="col-3">
-					<form name="event" action="#" method="post" style="display: inline-block;">
-						<ul class="generate">
-							<li>
-								<label for="show_name">Show Name: </label><br>
-								<input type="text" name="show_name" placeholder="" />
-							</li>
-							<br>
-							<li>
-								<label for="show_location">Location: </label><br>
-								<input type="text" name="show_location" placeholder="" />
-							</li>
-							<br />
-							<li>
-								<label for="show_date">Date: </label><br>
-								<input type="text" name="show_date" placeholder="05/11/2019" />
-							</li>
-							<br />
-							<li>
-								<label for="show_time">Time: </label><br>
-								<input type="text" name="show_time" placeholder="7:45PM" />
-							</li><br />
-							<li>
-								<label for="show_background">Background Image: </label><br>
-								<input type="text" name="show_background" placeholder="Enter image URL..." />
-							</li>
-							<br />
-
-							<li><button class="btn btn-primary" type="submit" id="btn">Generate</button></li>
-						</ul>
-					</form>
-				</div>	
+				</div>
 				<div class="col-6">
-					<svg width="500px" height="500px" style="background-color: #000; display: inline-block;" id="post">
-					</svg>	
-					<script>
-						var s = Snap("#post");
-						var pic = "../images/placeholder.png";
-						var background = s.image(pic, 0, 0, 500, 500);
-						background.attr({
-							stroke: "#555",
-							strokeWidth: 5,
-							id:"#backimg"
-						});
-						
-						document.getElementById('btn').onclick = handleClick;
+					<div class="stuff">
 
-						function handleClick() {
-							
-						}
-					</script>
-				</div>	
-			</div>	
-				
-				
+						<form class="form" name="socialForm" onkeyup="return runSocialForm()" >
+							<br>
+							<input type="text" class="input" name="producer" placeholder="Producer">
+							<br><br>
+							<input type="text" class="input" name="title" placeholder="Title">
+							<br>
+							<input type="submit" value="Clear Canvas" class="btn">
+							<a href="#" class="button" id="btn-download" download="social.png">Download Image</a>
+						</form>
+
+
+						<script>
+
+
+						function runSocialForm(){
+						var canvas = document.getElementById("myCanvas");
+						var ctx = canvas.getContext("2d");
+						ctx.font = "30px Arial";
+						ctx.fillText(document.forms["socialForm"]["producer"].value, 10, 50);
+						ctx.fillText(document.forms["socialForm"]["title"].value, 10, 100);
+
+
+					var canvas = document.getElementById("myCanvas");
+					var img    = canvas.toDataURL("../images/social/png");
+					//document.write('<img src="'+img+'"/>');
+					var button = document.getElementById('btn-download');
+					button.addEventListener('click', function (e) {
+							var cnvs = document.getElementById("myCanvas");
+							var dataURL = cnvs.toDataURL(img);
+							button.href = dataURL;
+					});
+				}
+						</script>
+						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+				</div>
+			</div>
+
+
 			</div>
 		</div>
 	</div>
