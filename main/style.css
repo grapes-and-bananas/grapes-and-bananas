@@ -182,8 +182,19 @@ html, body {
 	background-color: #D4D4D4;
 	font-weight: 500;
 }
-#form input[type=text] {
-	padding: 5px 0px 5px 10px;
-	border-radius: 1px;
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+	color: #fff;
+    border: none;
+    cursor: pointer;
+	font-weight: 500;
+    padding: 8px 15px;
+	border-radius: 10px;
+    display: inline-block;
+	background-color: #006dcc;
 }
 
