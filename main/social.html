@@ -42,7 +42,7 @@
 				</nav>
 			<div class="row">
 				<div class="col-3">
-					<form class="form" name="socialForm" onkeyup="return runSocialForm()" >
+					<form class="form" name="socialForm" onSubmit="return runSocialForm()" >
 						<br>
 						<input type="text" class="input" name="producer" placeholder="Producer">
 						<input type="text" class="input" name="title" placeholder="Title">
@@ -52,8 +52,11 @@
 						<br><br>
 						<input type="text" class="input" name="price" placeholder="Ticket Price">
 						<input type="text" class="input" name="streamdate" placeholder="Stream Date">
-
-						<input type="submit" value="Clear Canvas" class="btn">
+						<br><br>
+						<input type="submit" value="Preview" class="btn">
+						<br><br>
+						<a href="#" class="button" id="btn-clear" >Clear Image</a>
+						<br><br>
 						<a href="#" class="button" id="btn-download" download="social.png">Download Image</a>
 					</form>
 				</div>
@@ -62,20 +65,27 @@
 
 						<script>
 
+
 						function runSocialForm(){
 						var canvas = document.getElementById("myCanvas");
+
 						var ctx = canvas.getContext("2d");
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						ctx.textAlign = "center";
 						ctx.font = "30px Arial";
-						ctx.fillText(document.forms["socialForm"]["producer"].value, 10, 50);
-						ctx.fillText("Presents", 10, 100);
-						ctx.fillText(document.forms["socialForm"]["title"].value, 10, 150);
-						ctx.fillText(document.forms["socialForm"]["startdate"].value, 10, 200);
-						ctx.fillText("to", 200, 200);
-						ctx.fillText(document.forms["socialForm"]["enddate"].value, 250, 200);
-						ctx.fillText("Ticket Price", 10, 300);
-						ctx.fillText(document.forms["socialForm"]["price"].value, 250, 300);
-						ctx.fillText("Stream Available", 10, 350);
-						ctx.fillText(document.forms["socialForm"]["streamdate"].value, 250, 350);
+						ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
+						ctx.font = "15px Arial";
+						ctx.fillText("Presents", canvas.width/2, 100);
+						ctx.font = "100px Arial";
+						ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
+						ctx.font = "30px Arial";
+						ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
+						ctx.fillText("to", canvas.width/2, 300);
+						ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
+						ctx.fillText("Ticket Price", canvas.width/5, 350);
+						ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
+						ctx.fillText("Stream Available", canvas.width/4, 400);
+						ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
 
 					var canvas = document.getElementById("myCanvas");
 					var img    = canvas.toDataURL("../images/social/png");
@@ -86,6 +96,12 @@
 							var dataURL = cnvs.toDataURL(img);
 							button.href = dataURL;
 					});
+					var button = document.getElementById('btn-clear');
+					button.addEventListener('click', function (e) {
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+					});
+					return false;
 				}
 						</script>
 						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
