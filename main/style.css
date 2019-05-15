@@ -176,8 +176,13 @@ html, body {
 }
 
 #btn-download, #btn-clear {
-	color: #999;
+	color: #fff;
 }
 #preview {
-	
+	background-color: #D4D4D4;
+	font-weight: 500;
+}
+#form input[type=text] {
+	padding: 5px 0px 5px 10px;
+	border-radius: 1px;
 }

@@ -41,71 +41,70 @@
 						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
 					</ol>
 				</nav>
-			<div class="row">
-				<div class="col-3">
-					<form class="form" name="socialForm" onSubmit="return runSocialForm()" >
-						<br>
-						<input type="text" class="input" name="producer" placeholder="Producer">
-						<input type="text" class="input" name="title" placeholder="Show Title">
-						<br><br>
-						<input type="text" class="input" name="startdate" placeholder="Start Date">
-						<input type="text" class="input" name="enddate" placeholder="End Date">
-						<br><br>
-						<input type="text" class="input" name="price" placeholder="Ticket Price">
-						<input type="text" class="input" name="streamdate" placeholder="Stream Date">
-						<br><br>
-						<input type="submit" value="Preview" class="btn btn-primary" id="preview">
-						<a href="#" class="btn" id="btn-clear"><i class="fas fa-trash fa-2x"></i></a>
-						<a href="#" class="btn" id="btn-download" download="social.png"><i class="fas fa-download fa-2x"></i></a>
-					</form>
-				</div>
-				<div class="col-6">
-					<div class="stuff">
-						<script>
-							function runSocialForm(){
-								var canvas = document.getElementById("myCanvas");
-								var ctx = canvas.getContext("2d");
-								ctx.clearRect(0, 0, canvas.width, canvas.height);
-								ctx.textAlign = "center";
-								ctx.font = "30px Arial";
-								ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
-								ctx.font = "15px Arial";
-								ctx.fillText("Presents", canvas.width/2, 100);
-								ctx.font = "100px Arial";
-								ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
-								ctx.font = "30px Arial";
-								ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
-								ctx.fillText("to", canvas.width/2, 300);
-								ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
-								ctx.fillText("Ticket Price", canvas.width/5, 350);
-								ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
-								ctx.fillText("Stream Available", canvas.width/4, 400);
-								ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
-
-								var canvas = document.getElementById("myCanvas");
-								var img    = canvas.toDataURL("../images/social/png");
-								//document.write('<img src="'+img+'"/>');
-								var button = document.getElementById('btn-download');
-								button.addEventListener('click', function (e) {
-									var cnvs = document.getElementById("myCanvas");
-									var dataURL = cnvs.toDataURL(img);
-									button.href = dataURL;
-								});
-								var button = document.getElementById('btn-clear');
-								button.addEventListener('click', function (e) {
+				<div class="row">
+					<div class="col-3">
+						<form class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
+							<br>
+							<input type="text" class="input" name="producer" placeholder="Producer">
+							<input type="text" class="input" name="title" placeholder="Show Title">
+							<br><br>
+							<input type="text" class="input" name="startdate" placeholder="Start Date">
+							<input type="text" class="input" name="enddate" placeholder="End Date">
+							<br><br>
+							<input type="text" class="input" name="price" placeholder="Ticket Price">
+							<input type="text" class="input" name="streamdate" placeholder="Stream Date">
+							<br><br>
+							<input type="submit" value="Preview" class="btn btn-default" id="preview">
+							<a href="#" class="btn btn-danger" id="btn-clear"><i class="fas fa-trash fa-1x"></i></a>
+							<a href="#" class="btn btn-primary" id="btn-download" download="social.png"><i class="fas fa-download fa-1x"></i></a>
+						</form>
+					</div>
+					<div class="col-6">
+						<div class="stuff">
+							<script>
+								function runSocialForm(){
+									var canvas = document.getElementById("myCanvas");
+									var ctx = canvas.getContext("2d");
 									ctx.clearRect(0, 0, canvas.width, canvas.height);
-								});
-								return false;
-							}
-						</script>
-						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+									ctx.textAlign = "center";
+									ctx.font = "30px Arial";
+									ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
+									ctx.font = "15px Arial";
+									ctx.fillText("Presents", canvas.width/2, 100);
+									ctx.font = "100px Arial";
+									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
+									ctx.font = "30px Arial";
+									ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
+									ctx.fillText("to", canvas.width/2, 300);
+									ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
+									ctx.fillText("Ticket Price", canvas.width/5, 350);
+									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
+									ctx.fillText("Stream Available", canvas.width/4, 400);
+									ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
 
+									var canvas = document.getElementById("myCanvas");
+									var img    = canvas.toDataURL("../images/social/png");
+									//document.write('<img src="'+img+'"/>');
+									var button = document.getElementById('btn-download');
+									button.addEventListener('click', function (e) {
+										var cnvs = document.getElementById("myCanvas");
+										var dataURL = cnvs.toDataURL(img);
+										button.href = dataURL;
+									});
+									var button = document.getElementById('btn-clear');
+									button.addEventListener('click', function (e) {
+										ctx.clearRect(0, 0, canvas.width, canvas.height);
+									});
+									return false;
+								}
+							</script>
+							<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+					</div>
 				</div>
-			</div>
-
-
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 </html>
