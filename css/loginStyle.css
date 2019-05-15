@@ -32,7 +32,6 @@ body, html {
 	text-align: left;
 	font-weight: bold;
 	font-family: 'Rubik', sans-serif;
-	
 }
 .col-lg {
 	width: 50%;
@@ -44,6 +43,11 @@ body, html {
 	background-color: var(--logo);
 }
 
+i {
+	color: var(--hover);
+	width: 50px;
+	text-align: center;
+}
 .features {
 	color: #222;
 	width: 100%;
