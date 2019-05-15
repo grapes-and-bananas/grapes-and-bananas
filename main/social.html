@@ -45,25 +45,41 @@
 					<div class="col-3">
 						<form class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
 							<br>
+              <b>Producer:</b>
 							<input type="text" class="input" name="producer" placeholder="Producer">
+              <br>
+              Presents
+              <br>
+              <b>Title:</b>
 							<input type="text" class="input" name="title" placeholder="Show Title">
 							<br><br>
-							<input type="text" class="input" name="startdate" placeholder="Start Date">
-							<input type="text" class="input" name="enddate" placeholder="End Date">
+  						<b>Start Date:</b>
+            	<input type="text" class="input" name="startdate" placeholder="Start Date">
+							<br>
+              to
+              <br>
+              <b>End Date:</b>
+              <input type="text" class="input" name="enddate" placeholder="End Date">
 							<br><br>
-							<input type="text" class="input" name="price" placeholder="Ticket Price">
-							<input type="text" class="input" name="streamdate" placeholder="Stream Date">
+							<b>Ticket Price:</b>
+              <input type="text" class="input" name="price" placeholder="Ticket Price">
+              <br>
+              Stream Available
+              <br>
+              <b>Stream Date:</b>
+              <input type="text" class="input" name="streamdate" placeholder="Stream Date">
 							<br><br>
 							<input type="submit" value="Preview" class="btn btn-default" id="preview">
-							<a href="#" class="btn btn-danger" id="btn-clear"><i class="fas fa-trash fa-1x"></i></a>
-							<a href="#" class="btn btn-primary" id="btn-download" download="social.png"><i class="fas fa-download fa-1x"></i></a>
+							<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
+							<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button>
 						</form>
 					</div>
 					<div class="col-6">
 						<div class="stuff">
 							<script>
+
 								function runSocialForm(){
-									var canvas = document.getElementById("myCanvas");
+                  var canvas = document.getElementById("myCanvas");
 									var ctx = canvas.getContext("2d");
 									ctx.clearRect(0, 0, canvas.width, canvas.height);
 									ctx.textAlign = "center";
@@ -81,23 +97,28 @@
 									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
 									ctx.fillText("Stream Available", canvas.width/4, 400);
 									ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
+                  return false;
+                }
 
-									var canvas = document.getElementById("myCanvas");
-									var img    = canvas.toDataURL("../images/social/png");
-									//document.write('<img src="'+img+'"/>');
-									var button = document.getElementById('btn-download');
-									button.addEventListener('click', function (e) {
-										var cnvs = document.getElementById("myCanvas");
-										var dataURL = cnvs.toDataURL(img);
-										button.href = dataURL;
-									});
-									var button = document.getElementById('btn-clear');
-									button.addEventListener('click', function (e) {
-										ctx.clearRect(0, 0, canvas.width, canvas.height);
-									});
-									return false;
-								}
+
+                function downloadCanvas(){
+                  var canvas = document.getElementById('myCanvas');
+                  img = canvas.toDataURL('social/png');
+                  var link = document.createElement('a');
+                  link.download = "social.png";
+                  link.href= img;
+                  link.click();
+                }
+
+                //Clearing Doesn't Work **********************************************************************
+                function clearCanvas(){
+                  var canvas = document.getElementById("myCanvas");
+                  var ctx = canvas.getContext("2d");
+                  ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+
 							</script>
+
 							<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 
 					</div>
