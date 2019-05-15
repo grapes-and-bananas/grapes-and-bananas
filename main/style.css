@@ -175,76 +175,9 @@ html, body {
 	text-align: center;
 }
 
-#my_file {
-    display: none;
+#btn-download, #btn-clear {
+	color: #999;
 }
-#get_file {
-    background: #222;
-    border: none;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-	color: white;
-}
-
-.generate {
-	margin: 10px auto;
-	width: 300px;
-	padding: 10px 20px 10px 40px;
-	font: 14px;
-	border: thin solid #999;
-}
-.generate ul {
-	list-style-type:none;
-}
-.generate li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 5px 0 0 0;
-}
-.generate label {
-	margin:0 0 1px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-.generate input[type=text], select{
-	box-sizing: border-box;
-	border:1px solid #999;
-	padding: 5px;
-	margin: 0px;
-	outline: none;	
-}
-.generate input[type=text]:focus,.generate select:focus{
-	box-shadow: 0 0 4px #444;
-	border: 1px solid #444;
-}
-.generate .field-divided{
-	width: 49%;
-}
-
-.generate .field-long{
-	width: 100%;
-}
-.generate .field-select{
-	width: 100%;
-}
-
-.generate input[type=submit], .generate input[type=button]{
-	background: #4B99AD!important;
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
-}
-.generate input[type=submit]:hover, .generate input[type=button]:hover{
-	background: #4691A4;
-	box-shadow:none;
-}
-
-
-#post {
-	 -webkit-mask-image: url(../images/placeholder.png);
-	 mask-image: url(../images/placeholder.png);
+#preview {
+	
 }
