@@ -89,8 +89,8 @@
 				<div class="external">
 				</div>
 				<form class="form" name="signup" action="../php/signup.php" method="post" onsubmit="return validateForm()">
-					<input type="radio" name="type" value="organization" id="organization" checked><span> I am an Organization</span><br>
-					<input type="radio" name="type" value="individual" id="individual"><span> I am an Individual</span><br>
+					<input type="text" class="input" name="organization" placeholder="Organization Name">
+					<br>
 					<br>
 					<input type="text" class="input" name="email" placeholder="Email">
 					<br>
@@ -99,7 +99,7 @@
 					<br>
 					<br>
 					<input type="password" class="input" name="password" placeholder="Password">
-					&nbsp; * 8 characters minimum
+					&nbsp; *8 characters min
 					<br>
 					<input type="submit" value="Sign Up" class="btn">
 				</form>
