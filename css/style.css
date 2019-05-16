@@ -268,27 +268,31 @@ input[type="file"] {
 }
 
 .btn-group {
+	border-radius: 5px;
 	width: 500px;
-	background-color: #BBBBBB;
+	background-color: #ECEAEA;
 }
 .btn-group button { 
-  color: white; 
-  padding: 10px 24px; 
-  cursor: pointer; 
-  float: left; 
-  background-color: #BBBBBB;
+  padding: 12px 25px;
 }
 
-.btn-group button:not(:last-child) {
-  border-right: none; 
+.btn-group a {
+	color: black;
 }
-
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
+.btn-group a:hover {
+	color: black;
+	text-decoration: none;
 }
-
+.btn-group .active {
+	color: white;
+	background-color: #6A6A6A;
+}
+.btn-group .active a {
+	color: white;
+}
 .btn-group button:hover {
-  background-color: #3e8e41;
+  background-color: #6A6A6A;
+}
+.btn-group button:hover a {
+	color: white;
 }

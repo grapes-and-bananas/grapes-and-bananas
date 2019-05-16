@@ -38,41 +38,36 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="home.html">Dashboard</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Social Media</li>
+						<li class="breadcrumb-item"><a href="social.html">Social Media</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Ticket Sale Announcement</li>
 					</ol>
 				</nav>
 				<div class="row">
-					<div class="col-3">
-            <b>Tickets on Sale Announcement</b>
-						<form class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
-							<br>
-              <b>Producer:</b>
-							<input type="text" class="input" name="producer" placeholder="Producer">
-              <br>
-              Presents
-              <br>
-              <b>Title:</b>
-							<input type="text" class="input" name="title" placeholder="Show Title">
-							<br><br>
-  						Tickets are now on sale!
-							<br><br>
-              <input type="text" class="input" name="price" placeholder="Ticket Price">
-							<br><br>
-							<input type="submit" value="Preview" class="btn btn-default" id="preview">
-							<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
-							<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button>
-						</form>
+					<div class="col-4">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default"><a href="./show.html">Show Announcement</a></button>
+							<button type="button" class="btn btn-default active"><a href="./tickets.html">Tickets on Sale Announcement</a></button>
+							<button type="button" class="btn btn-default"><a href="./merchsocial.html">Merchandise Announcement</a></button>
+						</div>
+						<div class="social-form">
+							<div class="social-form-heading">Merchanise Announcement</div>
+							<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
+								<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
+
+								<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
+
+								<label for="price"><span>Ticket Price</span><input type="text" class="input-field" name="price" value="" /></label>
+
+								<label><span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
+								<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
+								<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
+							</form>
+						</div>
 					</div>
 					<div class="col-6">
-						<div class="stuff">
-              <a href="./show.html">Show Announcement</a>
-              <a href="./tickets.html">Tickets on Sale Announcement</a>
-              <a href="./merchsocial.html">Merchandise Announcement</a>
-
-							<script>
-
-								function runSocialForm(){
-                  var canvas = document.getElementById("myCanvas");
+						<script>
+							function runSocialForm(){
+								var canvas = document.getElementById("myCanvas");
 									var ctx = canvas.getContext("2d");
 									ctx.clearRect(0, 0, canvas.width, canvas.height);
 									ctx.textAlign = "center";
@@ -83,37 +78,30 @@
 									ctx.font = "100px Arial";
 									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
 									ctx.font = "30px Arial";
-                  ctx.fillText("Tickets are now on Sale!", canvas.width/2, 300);
+								ctx.fillText("Tickets are now on Sale!", canvas.width/2, 300);
 									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
-                  return false;
-                }
-
-
-                function downloadCanvas(){
-                  var canvas = document.getElementById('myCanvas');
-                  img = canvas.toDataURL('social/png');
-                  var link = document.createElement('a');
-                  link.download = "social.png";
-                  link.href= img;
-                  link.click();
-                }
-
-                //Clearing Doesn't Work **********************************************************************
-                function clearCanvas(){
-                  var canvas = document.getElementById("myCanvas");
-                  var ctx = canvas.getContext("2d");
-                  ctx.clearRect(0, 0, canvas.width, canvas.height);
-                }
-
-							</script>
-
-							<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
-
+								return false;
+							}
+							function downloadCanvas(){
+								var canvas = document.getElementById('myCanvas');
+								img = canvas.toDataURL('social/png');
+								var link = document.createElement('a');
+								link.download = "social.png";
+								link.href= img;
+								link.click();
+							}
+							//Clearing Doesn't Work **********************************************************************
+							function clearCanvas(){
+								var canvas = document.getElementById("myCanvas");
+								var ctx = canvas.getContext("2d");
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+							}
+						</script>
+						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
