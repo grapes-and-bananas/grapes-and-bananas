@@ -178,6 +178,7 @@ html, body {
 	color: #fff;
 }
 #preview {
+	color: black;
 	font-weight: 500;
 	background-color: #D4D4D4;
 }
@@ -227,3 +228,67 @@ input[type="file"] {
 	padding-right: 15px;
 }
 
+.social-form {
+	max-width: 500px;
+	padding: 20px 12px 10px 20px;
+}
+.social-form-heading{
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 16px;
+	padding-bottom: 3px;
+}
+.social-form label {
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.social-form label > span{
+	float: left;
+	width: 100px;
+	padding-top: 8px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+.social-form input.input-field, .social-form .select-field{
+	width: 50%;	
+}
+.social-form input.input-field,
+.social-form .select-field {
+	box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 2px;
+	padding: 7px;
+	outline: none;
+}
+.social-form .input-field:focus,  
+.social-form .select-field:focus{
+	border: 1px solid #67B1FF;
+}
+
+.btn-group {
+	width: 500px;
+	background-color: #BBBBBB;
+}
+.btn-group button { 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+  background-color: #BBBBBB;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; 
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: #3e8e41;
+}

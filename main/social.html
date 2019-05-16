@@ -43,94 +43,15 @@
 				</nav>
 				<div class="row">
 					<div class="col-3">
-            <b>Show Announcement</b>
-						<form class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
-							<br>
-              <b>Producer:</b>
-							<input type="text" class="input" name="producer" placeholder="Producer">
-              <br>
-              Presents
-              <br>
-              <b>Title:</b>
-							<input type="text" class="input" name="title" placeholder="Show Title">
-							<br><br>
-  						<b>Start Date:</b>
-            	<input type="text" class="input" name="startdate" placeholder="Start Date">
-							<br>
-              to
-              <br>
-              <b>End Date:</b>
-              <input type="text" class="input" name="enddate" placeholder="End Date">
-							<br><br>
-							<b>Ticket Price:</b>
-              <input type="text" class="input" name="price" placeholder="Ticket Price">
-              <br>
-              Stream Available
-              <br>
-              <b>Stream Date:</b>
-              <input type="text" class="input" name="streamdate" placeholder="Stream Date">
-							<br><br>
-							<input type="submit" value="Preview" class="btn btn-default" id="preview">
-							<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
-							<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button>
-						</form>
-					</div>
-					<div class="col-6">
-						<div class="stuff">
-              <a href="./social.html">Show Announcement</a>
-              <a href="./tickets.html">Tickets on Sale Announcement</a>
-              <a href="./merchsocial.html">Merchandise Announcement</a>
-
-							<script>
-
-								function runSocialForm(){
-                  var canvas = document.getElementById("myCanvas");
-									var ctx = canvas.getContext("2d");
-									ctx.clearRect(0, 0, canvas.width, canvas.height);
-									ctx.textAlign = "center";
-									ctx.font = "30px Arial";
-									ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
-									ctx.font = "15px Arial";
-									ctx.fillText("Presents", canvas.width/2, 100);
-									ctx.font = "100px Arial";
-									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
-									ctx.font = "30px Arial";
-									ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
-									ctx.fillText("to", canvas.width/2, 300);
-									ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
-									ctx.fillText("Ticket Price", canvas.width/5, 350);
-									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
-									ctx.fillText("Stream Available", canvas.width/4, 400);
-									ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
-                  return false;
-                }
-
-
-                function downloadCanvas(){
-                  var canvas = document.getElementById('myCanvas');
-                  img = canvas.toDataURL('social/png');
-                  var link = document.createElement('a');
-                  link.download = "social.png";
-                  link.href= img;
-                  link.click();
-                }
-
-                //Clearing Doesn't Work **********************************************************************
-                function clearCanvas(){
-                  var canvas = document.getElementById("myCanvas");
-                  var ctx = canvas.getContext("2d");
-                  ctx.clearRect(0, 0, canvas.width, canvas.height);
-                }
-
-							</script>
-
-							<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
-
+            			Social Media Dashboard / Landing Page
+						<br><br>
+						<a href="./show.html">Show Announcement</a><br><br>
+						<a href="./tickets.html">Tickets on Sale Announcement</a><br><br>
+						<a href="./merchsocial.html">Merchandise Announcement</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>

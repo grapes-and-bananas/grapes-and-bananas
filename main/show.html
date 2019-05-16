@@ -1,0 +1,129 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['user'])) {
+    header("Location: https://theatrenow.azurewebsites.net/index.html");
+        exit();
+  }
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>TheatreNow</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="nav-row">
+			<div class="col-12">
+				<img class="logo" src="../images/uhs_logo.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="nav">
+				<a href="social.html"><div class="nav-dot">Social Media</div></a><br>
+				<a href="streams.html"><div class="nav-dot">Upload Stream</div></a><br>
+				<a href="revenue.html"><div class="nav-dot">Revenue</div></a><br>
+				<a href="resources.html"><div class="nav-dot">Show Resources</div></a><br>
+				<a href="account.html"><div class="nav-dot">My Account</div></a>
+			</div>
+
+			<div class="main">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="home.html">Dashboard</a></li>
+						<li class="breadcrumb-item"><a href="home.html">Social Media</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Show Announcement</li>
+					</ol>
+				</nav>
+				<div class="row">
+					<div class="col-4">
+						<div class="btn-group">
+								<button class=""><a href="./show.html">Show Announcement</a></button>
+								<button class=""><a href="./tickets.html">Tickets on Sale Announcement</a></button>
+								<button class=""><a href="./merchsocial.html">Merchandise Announcement</a></button>
+							</div>
+						<div class="social-form">
+							<div class="social-form-heading">Show Announcement</div>
+								<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
+									<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
+
+									<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
+
+									<label for="startdate"><span>Start Date</span><input type="text" class="input-field" name="startdate" value="" /></label>
+
+									<label for="enddate"><span>End Date</span><input type="text" class="input-field" name="enddate" value="" /></label>
+
+									<label for="price"><span>Ticket Price</span><input type="text" class="input-field" name="price" value="" /></label>
+
+									<label for="streamdate"><span>Stream Available On</span><input type="text" class="input-field" name="streamdate" value="" /></label>
+
+
+									<label><span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
+									<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
+									<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
+								</form>
+							</div>
+						</div>
+					<div class="col-6">
+						<div class="stuff">
+							
+						
+						
+						
+
+						<script>
+							function runSocialForm(){
+								var canvas = document.getElementById("myCanvas");
+								var ctx = canvas.getContext("2d");
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+								ctx.textAlign = "center";
+								ctx.font = "30px Arial";
+								ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
+								ctx.font = "15px Arial";
+								ctx.fillText("Presents", canvas.width/2, 100);
+								ctx.font = "100px Arial";
+								ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
+								ctx.font = "30px Arial";
+								ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
+								ctx.fillText("to", canvas.width/2, 300);
+								ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
+								ctx.fillText("Ticket Price", canvas.width/5, 350);
+								ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
+								ctx.fillText("Stream Available", canvas.width/4, 400);
+								ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
+								return false;
+							}
+
+
+							function downloadCanvas(){
+								var canvas = document.getElementById('myCanvas');
+								img = canvas.toDataURL('social/png');
+								var link = document.createElement('a');
+								link.download = "social.png";
+								link.href= img;
+								link.click();
+							}
+
+							//Clearing Doesn't Work **********************************************************************
+							function clearCanvas(){
+								var canvas = document.getElementById("myCanvas");
+								var ctx = canvas.getContext("2d");
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+							}
+
+						</script>
+						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
