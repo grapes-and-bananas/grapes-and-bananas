@@ -54,21 +54,9 @@
               <b>Title:</b>
 							<input type="text" class="input" name="title" placeholder="Show Title">
 							<br><br>
-  						<b>Start Date:</b>
-            	<input type="text" class="input" name="startdate" placeholder="Start Date">
-							<br>
-              to
-              <br>
-              <b>End Date:</b>
-              <input type="text" class="input" name="enddate" placeholder="End Date">
+  						Tickets are now on sale!
 							<br><br>
-							<b>Ticket Price:</b>
               <input type="text" class="input" name="price" placeholder="Ticket Price">
-              <br>
-              Stream Available
-              <br>
-              <b>Stream Date:</b>
-              <input type="text" class="input" name="streamdate" placeholder="Stream Date">
 							<br><br>
 							<input type="submit" value="Preview" class="btn btn-default" id="preview">
 							<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
@@ -95,13 +83,8 @@
 									ctx.font = "100px Arial";
 									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
 									ctx.font = "30px Arial";
-									ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
-									ctx.fillText("to", canvas.width/2, 300);
-									ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
-									ctx.fillText("Ticket Price", canvas.width/5, 350);
+                  ctx.fillText("Tickets are now on Sale!", canvas.width/2, 300);
 									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
-									ctx.fillText("Stream Available", canvas.width/4, 400);
-									ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
                   return false;
                 }
 
