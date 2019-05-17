@@ -18,22 +18,30 @@
 
 <body>
 	<div class="container-fluid">
-		<div class="nav-row">
-			<div class="col-12">
-				<a href="https://theatrenow.azurewebsites.net/main/home.html"><img class="logo" src="../../images/uhs_logo.png"></a>
+		<nav class="navbar navbar-expand-md">
+			<ul class="navbar-nav mr-auto">
+				<a href="../../main/home.html"><img src="../../images/uhs_logo.png" class="logo"></a>
+			</ul>
+			<div class="menu navbar-nav ml-auto">
+			  <div class="close-menu">
+				<i class="fas fa-times fa-2x" style=""></i>
+			  </div>
+			  <ul>
+				<li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+				<li class="nav-item"><a href="#">My Shows</a></li>
+				<li class="nav-item"><a href="#">Show Resources</a></li>
+				<li class="nav-item"><a href="#">Revenue</a></li>
+				<li class="nav-item"><a href="#">Social Media</a></li>
+				<li class="nav-item"><a href="#">My Account</a></li>
+			  </ul>
 			</div>
-		</div>
+			<div style="text-align: right; padding-top: 50px;">
+			  <i class="fas fa-bars hamburger fa-3x"></i>
+			</div>
+		</nav>
+		
+			
 		<div class="row">
-			<div class="nav">
-				<a href="../social.html"><div class="nav-dot">Social Media</div></a><br>
-				<a href="../streams.html"><div class="nav-dot">Upload Stream</div></a><br>
-				<a href="../revenue.html"><div class="nav-dot">Revenue</div></a><br>
-				<a href="../resources.html"><div class="nav-dot">Show Resources</div></a><br>
-				<a href="../account.html"><div class="nav-dot">My Account</div></a>
-			</div>
-			
-			
-			
 			<div class="main">	
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
@@ -42,29 +50,15 @@
 						<li class="breadcrumb-item active" aria-current="page">Emma</li>
 					</ol>
 				</nav>
+				
 				<img class="banner" src="../../images/emma-banner.jpg">
 				<br><br>
 				<h2>Revenue</h2>
-				<br>
-				<div class="row">
-					<div class="donation-meter">
-						<strong>Goal</strong>
-						<strong class="goal">$5,000</strong>
-						<span class="glass">
-							<strong class="total" style="bottom: 2%">$100</strong>
-						</span>
-						<div class="bulb">
-							<span class="filler"></span>
-						</div>
-					</div>
-
-
-					<img src="../../images/thermo-placeholder2.jpg" height="50%">
-					<img src="../../images/thermo-placeholder3.jpg" height="50%">
-				</div>
-				
 			</div>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+	</script>
+	<script src="../../js/menu.js"></script>
 </body>
 </html>
