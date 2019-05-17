@@ -197,56 +197,54 @@ input[type="file"] {
 	color: white;
 }
 
-.menu {
-  top: 0;
-  width: 200px;
-  height: 100%;
-  right: -200px;
-  position: fixed;
-  background-color: #fff;
-  transition: all ease 0.5s;
-  box-shadow: 2px 0 6px #ABABAB;
+.resources {
+	min-width: 450px;
+	padding: 0px 0px 0px 5px;
+	margin: 0px 0px 0px 20px;
+}
+.resource-title {
+	width: 98%;
+	height: auto;
+	background-color: #006699;
+}
+.resources h1 {
+	font-size: 1.5em;
+	padding: 15px 0px 15px 15px;
+	color: #F4F4F4;
+}
+.resources a {
+	font-size: 1.2em;
+	padding: 0 0 10 0;
+	color: #111;
+}
+.resource-container {
+	padding: 10px 0px 10px 10px;
+	color: #F4F4F4;
 }
 
-.close-menu {
-	float: left;
-	color: black; 
-	cursor: pointer;
-	min-height: 30px;
-	padding-top: 20px;
-	padding-left: 15px;
-}
 
-.close-menu:hover {
-	color: #808080;
-}
 
-.menu ul {
-  padding-left: 0;
-  margin-top: 50px;
+#script {
+	height: auto;
+	width: 98%;
+	background-color: #EFEFEF;
+	display: none;
 }
-
-.menu li {
-  list-style: none;
-  text-decoration-style: none;
-  padding: 20px 0px 20px 20px;
+#lighting {
+	height: auto;
+	width: 98%;
+	background-color: #EFEFEF;
+	display: none;
 }
-
-.menu li a {
-  color: black;
-  font-size: 18px;
-  text-decoration: none;
+#set {
+	height: auto;
+	width: 98%;
+	background-color: #EFEFEF;
+	display: none;
 }
-
-.menu li:hover {
-  background-color: #C7C7C7;
-  cursor: pointer;
-}
-
-.hamburger {
-	color: white;
-	cursor: pointer;
-}
-.hamburger:hover {
-	color: #E5E5E5;
+#sound {
+	height: auto;
+	width: 98%;
+	background-color: #EFEFEF;
+	display: none;
 }
