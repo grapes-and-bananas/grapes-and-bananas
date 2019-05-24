@@ -40,6 +40,35 @@
 			chart.draw(data, options);
 		  }
 		</script>
+		<script type="text/javascript">
+		  google.charts.load('current', {'packages':['bar']});
+		  google.charts.setOnLoadCallback(drawChart);
+
+		  function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+			  ['Show', 'Tickets', 'Uploaded Content', 'Merchandise'],
+			  ['Phantom', 2070, 300, 500],
+			  ['Mama Mia!', 2170, 460, 250],
+			  ['Cats', 1660, 520, 300],
+			  ['Frozen', 2030, 690, 350],
+			  ['Wicked', 1050, 480, 350],
+			  ['Hairspray', 1090, 540, 350],
+			  ['Hamilton', 2500, 800, 350]
+			]);
+
+			var options = {
+			  chart: {
+				title: 'Total Revenue',
+				subtitle: 'Tickets, Uploaded Content, and Merch in dollars (USD)',
+			  },
+				colors: ['#003f5c', '#bc5090', '#ffa600']
+			};
+
+			var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+			chart.draw(data, google.charts.Bar.convertOptions(options));
+		  }
+		</script>
 	</head>
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:var(--accent);">
@@ -86,6 +115,7 @@
 		
 		<div class="main">
 			<div id="chart_div" style="width: 100%; height: 500px;"></div>
+			<div id="columnchart_material" style="width: 90%; height: 500px;"></div>
 		</div>
 	  
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
