@@ -134,7 +134,7 @@ input[type="file"] {
 	background-color: #006dcc;
 }
 .streams {
-	
+
 }
 .streams h1 {
 	font-size: 20px;
@@ -195,7 +195,7 @@ input[type="file"] {
 	padding-right: 5px;
 }
 .social-form input.input-field, .social-form .select-field{
-	width: 50%;	
+	width: 50%;
 }
 .social-form input.input-field,
 .social-form .select-field {
@@ -206,7 +206,7 @@ input[type="file"] {
 	padding: 7px;
 	outline: none;
 }
-.social-form .input-field:focus,  
+.social-form .input-field:focus,
 .social-form .select-field:focus{
 	border: 1px solid #67B1FF;
 }
@@ -216,7 +216,7 @@ input[type="file"] {
 	width: 500px;
 	background-color: #ECEAEA;
 }
-.btn-group button { 
+.btn-group button {
   padding: 12px 25px;
 }
 .btn-group a {
