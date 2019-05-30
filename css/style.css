@@ -308,3 +308,68 @@ input[type="file"] {
 	height: 25px;
 	width: 25px;
 }
+
+.thermometer {
+font-size: 155%;
+}
+
+
+.thermometerBase {
+  width: 90%;
+  height: 40px;
+  background: #c7c7c7;
+  border-radius: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+#socialFill {
+  float: left;
+  width: 25%;
+  height: 40px;
+  background: #FF5D50;
+  z-index: 333;
+  //border-radius: 5px;
+}
+
+#merchFill {
+  float: left;
+  width: 44%;
+  height: 40px;
+  background: #FF5D50;
+  z-index: 333;
+  //border-radius: 5px;
+}
+
+#totalFill {
+  float: left;
+  width: 71%;
+  height: 40px;
+  background: #FF5D50;
+  z-index: 333;
+  //border-radius: 5px;
+}
+
+.overallThermometer {
+	margin-top: 10%;
+	font-size: 155%;
+
+}
+
+.overallBase {
+  width: 90%;
+  height: 180px;
+  background: #c7c7c7;
+  border-radius: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+#overallFill {
+  float: left;
+  width: 84%;
+  height: 180px;
+  background: #FF5D50;
+  z-index: 333;
+  //border-radius: 5px;
+}
