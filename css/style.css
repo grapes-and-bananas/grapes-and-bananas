@@ -36,6 +36,9 @@ html, body {
 }
 .col {
 }
+.col-5 {
+	border: thin solid aqua;
+}
 .main {
 	height: 89%;
 	width: 100%;
@@ -329,7 +332,7 @@ font-size: 155%;
   height: 40px;
   background: #FF5D50;
   z-index: 333;
-  //border-radius: 5px;
+  border-radius: 5px;
 }
 
 #merchFill {
@@ -338,7 +341,7 @@ font-size: 155%;
   height: 40px;
   background: #FF5D50;
   z-index: 333;
-  //border-radius: 5px;
+  border-radius: 5px;
 }
 
 #totalFill {
@@ -347,11 +350,10 @@ font-size: 155%;
   height: 40px;
   background: #FF5D50;
   z-index: 333;
-  //border-radius: 5px;
+  border-radius: 5px;
 }
 
 .overallThermometer {
-	margin-top: 10%;
 	font-size: 155%;
 
 }
@@ -371,5 +373,5 @@ font-size: 155%;
   height: 180px;
   background: #FF5D50;
   z-index: 333;
-  //border-radius: 5px;
+  border-radius: 5px;
 }
