@@ -295,16 +295,21 @@ input[type="file"] {
 	padding: 15px 0px 15px 15px;
 	color: #F4F4F4;
 }
-.resources a {
-	font-size: 1.2em;
-	padding: 0 0 10 0;
-	color: #111;
-}
-.resource-container {
-	padding: 10px 0px 10px 10px;
-	color: #F4F4F4;
-}
 
+.resource-container {
+	color: #F4F4F4;
+	padding: 10px 0px 10px 10px;
+}
+.resource-container i {
+	color: #BC2225;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+.resource-container a, .resource-container a:hover {
+	color: black;
+	font-size: 16px;
+	text-decoration: none;
+}
 #script {
 	height: auto;
 	width: 98%;
