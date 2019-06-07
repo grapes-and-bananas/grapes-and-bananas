@@ -90,26 +90,35 @@
 		
 		<div class="main">
 			<div class="row">
-			<div class="col-9" style="background-color: #fff; box-shadow: 3px 6px 4px 1px #D4D4D4;">
+			<div class="col-9" style="background-color: #fff; border-right: thin solid #BFBFBF">
 				<div class="home row">
 					<div class="col-3">
 						<br>
 						<h1>Current Show</h1>
-						<a href="emma.html"><img src="../images/emma.jpg" style="border-radius: 10px;" alt="Emma poster"></a>
+						<a href="emma.html"><img src="../images/emma.jpg" style="border-radius: 10px;" alt="Emma poster" height="250px"></a>
 					</div>
 					<div class="col-8">
-						<div class="icon"><i class="fas fa-folder-open fa-9x"></i></div>
-						<div class="icon"><i class="fas fa-users fa-9x"></i></div>
+						<div class="contain">
+							<a href="/emma.html"><div class="icon"><i class="fas fa-folder-open fa-9x" ></i></div></a>
+							<div class="middle">
+						    	<a href="/emma.html"><div class="text">Resources</div></a>
+							</div>
+  						</div>
+						<div class="contain">
+							<a href="/social.html"><div class="icon"><i class="fas fa-users fa-9x"></i></div></a>
+							<div class="middle">
+						    	<a href="/emma.html"><div class="text">Social</div></a>
+							</div>
+  						</div>
+						
 					</div>
 				</div>
 				<br>
 				<div class="home row">
-
 					<div id="chart_div"></div>
 				</div>
 			</div>
-				&nbsp;&nbsp;
-			<div class="col" style="background-color: #fff;  box-shadow: 3px 6px 4px 1px #D4D4D4;">
+			<div class="col" style="background-color: #fff;">
 				<br>
 				<h1>Notifications</h1>
 				<div id="notifications">
@@ -122,8 +131,8 @@
 						<div class="notiftext">Payment overdue. Resolve now!</div>
 						
 					</div>
-					<div class="alert alert-warning" role="alert">
-					 <i class="fas fa-bell fa-2x notificon" style="float: left;"></i>
+					<div class="notif alert alert-warning">
+					 	<i class="fas fa-bell fa-2x notificon" style="float: left;"></i>
 						<div class="notiftext">No ticket sales input for Emma. Click to resolve.</div>
 					</div>
 					<div class="notif alert alert-primary">
