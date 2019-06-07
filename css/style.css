@@ -29,13 +29,14 @@ html, body {
 .navbar {
 	height: 11%!important;
 	min-height: 100px;
+	font-size: 16px;
 }
 .home {
 	text-align: left;
 }
 
 .main {
-	width: 100%;
+	width: 99%;
 	padding: 0 0 0 50px;
 	background-color: #fff;
 }
@@ -145,8 +146,12 @@ html, body {
 }
 
 .banner {
-	width: 85%;
-	height: auto;
+	width: 100%;
+	color: white;
+	font-size: 35px;
+	padding-left: 20px;
+	background-color: #B76B8C;
+	font-family: 'Playfair Display', serif;
 }
 
 .upload {
