@@ -45,8 +45,12 @@ html, body {
 	color: var(--logo);
 }
 
+#chart_div {
+	padding-top: 5px;
+	padding-left: 15px;
+}
 
-/*Dashboard icons*/
+/*Start DASHBOARD ICONS*/
 .icon {
 	opacity: 1;
 	width: 250px;
@@ -95,17 +99,12 @@ html, body {
   padding: 15px 30px;
 	border-radius: 5px;
 }
+/*End DASHBOARD ICONS*/
 
 
 
 
-
-
-#chart_div {
-	padding-top: 5px;
-	padding-left: 15px;
-}
-
+/* Start DASHBOARD NOTIFICATIONS */
 #notifications {
 	height: 90%;
 	padding-right: 10px;
@@ -124,6 +123,11 @@ html, body {
 	padding-left: 10px;
 	display: inline-block;
 }
+/* End DASHBOARD NOTIFICATIONS */
+
+
+
+/* Start SOCIAL */ 
 .socialdiv {
 	color: #010131;
 	text-align: center;
@@ -143,65 +147,6 @@ html, body {
 	border-radius: 10px;
 }
 
-.banner {
-	width: 100%;
-	color: white;
-	font-size: 35px;
-	padding-left: 20px;
-	background-color: #B76B8C;
-	font-family: 'Playfair Display', serif;
-}
-
-.upload {
-	width: 100%;
-	height: 300px;
-	text-align: center;
-	border: thin dashed #111111;
-}
-input[type="file"] {
-    display: none;
-}
-.file-upload {
-	color: #fff;
-    border: none;
-    cursor: pointer;
-	font-weight: 500;
-    padding: 8px 15px;
-	border-radius: 10px;
-    display: inline-block;
-	background-color: #006dcc;
-}
-.streams {
-
-}
-.streams h1 {
-	font-size: 20px;
-	padding-bottom: 5px;
-	padding-left: 50px;
-}
-.streams h2 {
-	margin: 0;
-	padding: 6px 0 6px 0;
-	font-size: 16px;
-}
-.streams p {
-	margin: 0;
-	padding: 0 0 0 0px;
-}
-.streams .row {
-	width: 100%;
-	text-align: left;
-	margin-bottom: 25px;
-}
-.streams .col-3 {
-	width: 80%;
-	height: 150px;
-	border: thin solid #000;
-}
-.streams #thumbnail {
-	padding-right: 15px;
-}
-
 #btn-download, #btn-clear {
 	color: #fff;
 }
@@ -211,8 +156,8 @@ input[type="file"] {
 	background-color: #D4D4D4;
 }
 .social-form {
-	max-width: 500px;
-	padding: 20px 12px 10px 20px;
+	max-width: 900px;
+	padding: 20px 0px 10px 0px;
 }
 .social-form-heading{
 	font-weight: bold;
@@ -222,10 +167,9 @@ input[type="file"] {
 	padding-bottom: 3px;
 }
 .social-form label {
-	display: block;
-	margin: 0px 0px 15px 0px;
+	margin: 0px 0px 10px 0px;
 }
-.social-form label > span{
+.social-form label > span {
 	float: left;
 	width: 100px;
 	padding-top: 8px;
@@ -233,7 +177,7 @@ input[type="file"] {
 	padding-right: 5px;
 }
 .social-form input.input-field, .social-form .select-field{
-	width: 50%;
+	width: 60%;
 }
 .social-form input.input-field,
 .social-form .select-field {
@@ -277,11 +221,81 @@ input[type="file"] {
 .btn-group button:hover a {
 	color: white;
 }
+/* End SOCIAL */ 
 
+
+
+/* Start EMMA */
+.banner {
+	width: 100%;
+	color: white;
+	font-size: 35px;
+	padding-left: 20px;
+	background-color: #B76B8C;
+	font-family: 'Playfair Display', serif;
+}
+/* End EMMA */
+
+
+
+
+/* Start STREAMS */
+.upload {
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	border: thin dashed #111111;
+}
+input[type="file"] {
+    display: none;
+}
+.file-upload {
+	color: #fff;
+    border: none;
+    cursor: pointer;
+	font-weight: 500;
+    padding: 8px 15px;
+	border-radius: 10px;
+    display: inline-block;
+	background-color: #006dcc;
+}
+.streams h1 {
+	font-size: 20px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+}
+.streams h2 {
+	margin: 0;
+	padding: 6px 0 6px 0;
+	font-size: 16px;
+}
+.streams p {
+	margin: 0;
+	padding: 0 0 0 0px;
+}
+.streams .row {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 25px;
+}
+.streams .col-3 {
+	width: 80%;
+	height: 150px;
+	border: thin solid #000;
+}
+.streams #thumbnail {
+	padding-right: 15px;
+}
+/* End STREAMS */
+
+
+
+
+/* Start SHOW RESOURCES */
 .resources {
 	min-width: 450px;
 	padding: 0px 0px 0px 5px;
-	margin: 0px 0px 0px 20px;
+	margin: 0px 0px 0px 0px;
 }
 .resource-title {
 	width: 98%;
@@ -290,7 +304,6 @@ input[type="file"] {
 }
 .resource-title:hover {
 		cursor: pointer;
-
 }
 .resources h1 {
 	font-size: 1.5em;
@@ -336,7 +349,10 @@ input[type="file"] {
 	background-color: #EFEFEF;
 	display: none;
 }
+/* End SHOW RESOURCES */
 
+
+/* Start MY SHOWS */
 .showimage {
 	width: 200px;
 	height: 200px;
@@ -355,6 +371,9 @@ input[type="file"] {
 	height: 25px;
 	width: 25px;
 }
+/* End MY SHOWS */
+
+
 
 .progress {
 	margin-bottom: 10px;

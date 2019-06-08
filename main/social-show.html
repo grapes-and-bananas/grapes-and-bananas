@@ -64,35 +64,59 @@
 		<div class="main">
 				
 				<div class="row">
-					<div class="col-4">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default active"><a href="./social-show.html">Show Announcement</a></button>
-							<button type="button" class="btn btn-default"><a href="./social-tickets.html">Tickets on Sale Announcement</a></button>
-							<button type="button" class="btn btn-default"><a href="./social-merch.html">Merchandise Announcement</a></button>
-						</div>
+					<div class="col-5">
+					<h1>Social Media Dashboard</h1>
+					<br>
+					<h4>Create New Announcement</h4>
+					<br>
+					<div class="socialdiv">
+						<span>Show</span><br><a href="./social-show.html"><i class="socialicon fas fa-theater-masks fa-9x" style="background-color: #003f5c;"></i></a>
+					</div>
+					<div class="socialdiv">
+						<span>Tickets</span><br><a href="./social-tickets.html"><i class="socialicon fas fa-ticket-alt fa-9x" style="background-color: #bc5090;"></i></a>
+					</div>
+					<div class="socialdiv">
+						<span>Merch</span><br><a href="./social-merch.html"><i class="socialicon fas fa-tshirt fa-9x" style="background-color: #ffa600;"></i></a>
+					</div>
+					<br><br><br><br>
+					<h4>Recently Created</h4>
+					<img src="../images/emmapromo.jpg" height="300px" width="300px">
+						<br><br>
+				</div>
+					<div class="col" >
 						<div class="social-form">
 							<div class="social-form-heading">Show Announcement</div>
 								<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
-									<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
+									<div style="display: inline;">
+										<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
+									</div>
+									&nbsp;
+									<div style="display: inline;">
+										<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
+									</div>
+									<br>
+									<div style="display: inline;">
+										<label for="startdate"><span>Start Date</span><input type="text" class="input-field" name="startdate" value="" /></label>
+									</div>
+									&nbsp;
+									<div style="display: inline;">
+										<label for="enddate"><span>End Date</span><input type="text" class="input-field" name="enddate" value="" /></label>
+									</div>
+									<br>
+									<div style="display: inline;">
+										<label for="price"><span>Ticket Price</span><input type="text" class="input-field" name="price" value="" /></label>
+									</div>
+									&nbsp;
 
-									<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
-
-									<label for="startdate"><span>Start Date</span><input type="text" class="input-field" name="startdate" value="" /></label>
-
-									<label for="enddate"><span>End Date</span><input type="text" class="input-field" name="enddate" value="" /></label>
-
-									<label for="price"><span>Ticket Price</span><input type="text" class="input-field" name="price" value="" /></label>
-
-									<label for="streamdate"><span>Stream Available On</span><input type="text" class="input-field" name="streamdate" value="" /></label>
-
-
-									<label><span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
+									<div style="display: inline;">
+										<label for="streamdate"><span>Stream Available</span><input type="text" class="input-field" name="streamdate" value="" /></label>
+									</div>
+									<br>
+									<label><input type="submit" value="Preview" class="btn btn-default" id="preview">
 									<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
 									<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
 								</form>
 							</div>
-						</div>
-					<div class="col-6">
 						<div class="stuff">
 
 						<script>
@@ -100,9 +124,9 @@
 								var canvas = document.getElementById("myCanvas");
 								var ctx = canvas.getContext("2d");
 								ctx.clearRect(0, 0, canvas.width, canvas.height);
-                var background = new Image();
-                background.src = "../images/emma-background.jpg";
-                ctx.drawImage(background,0,0);
+								var background = new Image();
+								background.src = "../images/emma-background.jpg";
+								ctx.drawImage(background,0,0);
 								ctx.textAlign = "center";
 								ctx.font = "30px Arial";
 								ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
@@ -139,7 +163,7 @@
 							}
 
 						</script>
-						<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
 
 					</div>
 				</div>
