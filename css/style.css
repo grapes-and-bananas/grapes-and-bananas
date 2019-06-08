@@ -49,14 +49,12 @@ html, body {
 /*Dashboard icons*/
 .icon {
 	opacity: 1;
-	width: 210px;
-	height: 210px;
+	width: 250px;
+	height: 250px;
 	color: #fff;
-	padding-top: 40px;
-	margin-top: 80px;
+	padding-top: 50px;
+	margin-top: 57px;
 	text-align: center;
-	margin-left: 10px;
-	margin-right: 30px;
 	border-radius: 10px;
 	transition: .5s ease;
 	display: inline-block;
@@ -64,7 +62,7 @@ html, body {
 	backface-visibility: hidden;
 }
 .contain {
-	width: 240px;
+	width: 250px;
 	position: relative;
 	display: inline-block;
 }
