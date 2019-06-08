@@ -290,6 +290,10 @@ input[type="file"] {
 	height: auto;
 	background-color: #006699;
 }
+.resource-title:hover {
+		cursor: pointer;
+
+}
 .resources h1 {
 	font-size: 1.5em;
 	padding: 15px 0px 15px 15px;
@@ -366,7 +370,11 @@ input[type="file"] {
 .progress-bar {
 	font-size: 15px;
 }
+.bartitle {
+	font-size: 18px;
+	color: #393939;
 
+}
 .graphtitle {
 	color: #454545;
 	font-size: 19px;
