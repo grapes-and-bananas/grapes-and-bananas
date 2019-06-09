@@ -17,12 +17,7 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-		<script>
-			function writePost() {
-				document.getElementByID('textpost').innerHTML = 
-					document.getElementByID('price').value;
-			}
-		</script>
+		
 	
 	</head>
 	<body>
@@ -128,8 +123,7 @@
 										<label for="streamdate"><span>On sale</span><input type="text" class="input-field" name="streamdate" value="" /></label>
 									</div>
 									<br>
-									<label><input type="submit" value="Preview" class="btn btn-default" id="preview">
-									<button class="btn btn-primary" onClick="writePost()"><i class="fas fa-trash fa-1x"></i></button>
+									<label><input type="submit" value="Preview" class="btn btn-default" id="preview" onClick="writePost()">
 									<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
 									<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
 								</form>
@@ -140,6 +134,7 @@
 							
 							
 							function runSocialForm(){
+								
 								var canvas = document.getElementById("myCanvas");
 								var ctx = canvas.getContext("2d");
 								ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -190,7 +185,8 @@
 
 						</script>
 						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
-						<p><span id="textpost" style="height: 100px; width: 100px; border: thick solid black;"></span></p>
+							<br>
+						<textarea id="textpost" style="height: 100px; width: 100px; border: thick solid black;">rr</textarea>
 
 					</div>
 				</div>
