@@ -45,10 +45,6 @@ html, body {
 	color: var(--logo);
 }
 
-#chart_div {
-	padding-top: 5px;
-	padding-left: 15px;
-}
 
 /*Start DASHBOARD ICONS*/
 .icon {
@@ -374,7 +370,7 @@ input[type="file"] {
 /* End MY SHOWS */
 
 
-
+/* Start PROGESS BARS */
 .progress {
 	margin-bottom: 10px;
 }
@@ -392,6 +388,11 @@ input[type="file"] {
 	color: #393939;
 
 }
+/* End PROGESS BARS */
+
+
+
+/* Start GRAPHS */
 .graphtitle {
 	color: #454545;
 	font-size: 19px;
@@ -400,3 +401,4 @@ input[type="file"] {
 	color: #7A7A7A;
 	font-size: 14px;
 }
+/* End GRAPHS */
