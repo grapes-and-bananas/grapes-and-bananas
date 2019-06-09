@@ -17,6 +17,13 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<script>
+			function writePost() {
+				document.getElementByID('textpost').innerHTML = 
+					document.getElementByID('price').value;
+			}
+		</script>
+	
 	</head>
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:var(--accent);">
@@ -118,10 +125,11 @@
 									&nbsp;
 
 									<div style="display: inline;">
-										<label for="streamdate"><span>Stream Available</span><input type="text" class="input-field" name="streamdate" value="" /></label>
+										<label for="streamdate"><span>On sale</span><input type="text" class="input-field" name="streamdate" value="" /></label>
 									</div>
 									<br>
 									<label><input type="submit" value="Preview" class="btn btn-default" id="preview">
+									<button class="btn btn-primary" onClick="writePost()"><i class="fas fa-trash fa-1x"></i></button>
 									<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
 									<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
 								</form>
@@ -129,6 +137,8 @@
 						<div class="stuff">
 
 						<script>
+							
+							
 							function runSocialForm(){
 								var canvas = document.getElementById("myCanvas");
 								var ctx = canvas.getContext("2d");
@@ -139,18 +149,25 @@
 								ctx.textAlign = "center";
 								ctx.font = "30px 'Playfair Display', serif";
 								ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
-								ctx.font = "15px 'Playfair Display', serif";
+								ctx.font = "18px 'Playfair Display', serif";
 								ctx.fillText("Presents", canvas.width/2, 100);
 								ctx.font = "100px 'Playfair Display SC', serif";
 								ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
-								ctx.font = "30px 'Playfair Display', serif";
-								ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 300);
-								ctx.fillText("to", canvas.width/2, 300);
-								ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 300);
-								ctx.fillText("Ticket Price", canvas.width/5, 350);
-								ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
-								ctx.fillText("Stream Available", canvas.width/4, 400);
-								ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/5 * 4, 400);
+								ctx.font = "bold 30px 'Playfair Display', serif";
+								ctx.fillText(document.forms["socialForm"]["startdate"].value, canvas.width/5, 280);
+								ctx.font = "24px 'Playfair Display', serif";
+								ctx.fillText("through", canvas.width/2, 280);
+								ctx.font = "bold 30px 'Playfair Display', serif";
+								ctx.fillText(document.forms["socialForm"]["enddate"].value, canvas.width/5 * 4, 280);
+								ctx.font = "28px 'Playfair Display', serif";
+								ctx.fillText("Tickets on sale:", canvas.width/3, 350);
+								ctx.font = "bold 30px 'Playfair Display', serif";
+								ctx.fillText(document.forms["socialForm"]["streamdate"].value, canvas.width/1.36, 349);
+								ctx.font = "28px 'Playfair Display', serif";
+								ctx.fillText("Ticket price: $", canvas.width/3, 390);
+								ctx.font = "bold 30px 'Playfair Display', serif";
+								ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/5 * 3, 390);
+								
 								return false;
 							}
 
@@ -173,10 +190,12 @@
 
 						</script>
 						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+						<p><span id="textpost" style="height: 100px; width: 100px; border: thick solid black;"></span></p>
 
 					</div>
 				</div>
 			</div>
+		</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
