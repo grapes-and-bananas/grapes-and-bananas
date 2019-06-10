@@ -13,6 +13,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Rambla:700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	</head>
@@ -94,15 +95,13 @@
 						<div class="social-form">
 							<div class="social-form-heading">Ticket Sale Announcement</div>
 							<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
-								<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
-
 								<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
 
 								<label for="price"><span>Ticket Price</span><input type="text" class="input-field" name="price" value="" /></label>
 								<br>
-								<label><span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
+								<span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
 								<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
-								<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
+								<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button>
 							</form>
 						</div>
 						
@@ -114,16 +113,21 @@
 									  var background = new Image();
 									  background.src = "../images/emma-background.jpg";
 									  ctx.drawImage(background,0,0);
+									var logo = new Image();
+									logo.src = "../images/uhs.png";
+									ctx.drawImage(logo, 50, 10, 300, 75);
 									ctx.textAlign = "center";
-									ctx.font = "30px Arial";
-									ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
-									ctx.font = "15px Arial";
-									ctx.fillText("Presents", canvas.width/2, 100);
-									ctx.font = "100px Arial";
-									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
-									ctx.font = "30px Arial";
-								ctx.fillText("Tickets are now on Sale!", canvas.width/2, 300);
-									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/2, 350);
+									ctx.fillStyle = "white";
+									ctx.font = "20px 'Playfair Display', serif";
+									ctx.fillText("Presents", canvas.width/2, 120);
+									ctx.font = "100px 'Playfair Display SC', serif";
+									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 220);
+									
+									ctx.font = "28px 'Playfair Display', serif";
+									ctx.fillText("Tickets are now on sale!", canvas.width/2, 300);
+									ctx.font = "bold 35px 'Playfair Display', serif";
+									ctx.fillText("$", canvas.width/2.15, 350);
+									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/1.85, 350);
 								return false;
 							}
 							function downloadCanvas(){
@@ -142,8 +146,7 @@
 							}
 						</script>
 						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
-						<br>
-						<textarea id="textpost" style="height: 100px; width: 100px; border: thick solid black;">rr</textarea>
+						
 				</div>
 			</div>
 		</div>
