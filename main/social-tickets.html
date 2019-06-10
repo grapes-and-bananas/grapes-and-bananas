@@ -65,31 +65,31 @@
 				
 				<div class="row">
 					<div class="col-5">
-					<h1>Social Media Dashboard</h1>
-					<br>
-					<h4>Create New Announcement</h4>
-					<br>
-					<div class="socialdiv">
-						<span style="color: #989898; font-weight: normal; font-size: 16px;">Show</span><br><a href="./social-show.html"><i class="socialicon fas fa-theater-masks fa-9x" style="background-color: #CCE7F4;"></i></a>
-						<!--light CCE7F4--->
-						<!--dark 006495--->
-					</div>
-					<div class="socialdiv">
-						<span >Tickets</span><br><a href="./social-tickets.html"><i class="socialicon fas fa-ticket-alt fa-9x" style="background-color: #bc5090;"></i></a>
-						<!--light F9CEE7--->
-						<!--dark bc5090--->
-					</div>
-					<div class="socialdiv">
-						<span  style="color: #989898; font-weight: normal; font-size: 16px;">Merch</span><br><a href="./social-merch.html"><i class="socialicon fas fa-tshirt fa-9x" style="background-color: #FFEAC4;"></i></a>
-						<!--light FFEAC4--->
-						<!--dark ffa600--->
+						<h1>Social Media Dashboard</h1>
+						<br>
+						<h4>Create New Announcement</h4>
+						<br>
+						<div class="socialdiv">
+							<span style="color: #989898; font-weight: normal; font-size: 16px;">Show</span><br><a href="./social-show.html"><i class="socialicon fas fa-theater-masks fa-9x" style="background-color: #CCE7F4;"></i></a>
+							<!--light CCE7F4--->
+							<!--dark 006495--->
+						</div>
+						<div class="socialdiv">
+							<span >Tickets</span><br><a href="./social-tickets.html"><i class="socialicon fas fa-ticket-alt fa-9x" style="background-color: #bc5090;"></i></a>
+							<!--light F9CEE7--->
+							<!--dark bc5090--->
+						</div>
+						<div class="socialdiv">
+							<span  style="color: #989898; font-weight: normal; font-size: 16px;">Merch</span><br><a href="./social-merch.html"><i class="socialicon fas fa-tshirt fa-9x" style="background-color: #FFEAC4;"></i></a>
+							<!--light FFEAC4--->
+							<!--dark ffa600--->
 
+						</div>
+						<br><br><br><br>
+						<h4>Recently Created</h4>
+						<img src="../images/emmapromo.jpg" height="300px" width="300px">
+							<br><br>
 					</div>
-					<br><br><br><br>
-					<h4>Recently Created</h4>
-					<img src="../images/emmapromo.jpg" height="300px" width="300px">
-						<br><br>
-				</div>
 					<div class="col-4">
 						<div class="social-form">
 							<div class="social-form-heading">Ticket Sale Announcement</div>
@@ -106,17 +106,14 @@
 							</form>
 						</div>
 						
-						
-						
-						
 						<script>
 							function runSocialForm(){
 								var canvas = document.getElementById("myCanvas");
 									var ctx = canvas.getContext("2d");
 									ctx.clearRect(0, 0, canvas.width, canvas.height);
-                  var background = new Image();
-                  background.src = "../images/emma-background.jpg";
-                  ctx.drawImage(background,0,0);
+									  var background = new Image();
+									  background.src = "../images/emma-background.jpg";
+									  ctx.drawImage(background,0,0);
 									ctx.textAlign = "center";
 									ctx.font = "30px Arial";
 									ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
