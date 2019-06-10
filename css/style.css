@@ -256,14 +256,14 @@ input[type="file"] {
 	background-color: #006dcc;
 }
 .streams h1 {
-	font-size: 20px;
+	font-size: 25px;
 	padding-bottom: 5px;
 	padding-left: 50px;
 }
 .streams h2 {
 	margin: 0;
 	padding: 6px 0 6px 0;
-	font-size: 16px;
+	font-size: 18px;
 }
 .streams p {
 	margin: 0;
@@ -276,11 +276,27 @@ input[type="file"] {
 }
 .streams .col-3 {
 	width: 80%;
-	height: 150px;
-	border: thin solid #000;
+	height: 170px;
+	border: thin solid #C5C5C5;
+	border-radius: 5px;
 }
 .streams #thumbnail {
 	padding-right: 15px;
+}
+.thumbnail {
+	width: 177px;
+	text-align: center;
+	position: relative;
+	
+}
+.centered {
+	top: 50%;
+	left: 50%;
+	color: white;
+	position: absolute;
+	transform: translate(-50%, 100%);
+	
+  text-shadow: 3px 3px 3px #000;
 }
 /* End STREAMS */
 
