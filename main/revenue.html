@@ -16,58 +16,193 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		var charts = [];
+		var chart;
+
+		$('.carousel').carousel({
+		  interval: 8000
+		});
+
+		$('.carousel').on('slide.bs.carousel', function(e) {
+		 $(".carousel-inner").height(parseFloat(charts[e.to].container.style.height)); 
+		});
+
+		$('.carousel').on('slid.bs.carousel', function(e) {
+		  charts[e.to].render();
+		});
+
+		var chart1 = new CanvasJS.Chart("chartContainer1",
+		{
+			theme: "light2",
+			animationEnabled: true,
+			  title:{
+			  	text: "Breakdown of revenue by show",
+			  	fontFamily: "arial",
+				fontColor: "#525252"
+			  },
+				axisY:{
+					title:"Total Revenue (USD)",
+					valueFormatString: "$#0",
+					 interval:500,
+				},
+				data: [
+				  {
+					type: "stackedColumn",
+					legendText: "Ticket Sales",
+					showInLegend: "true",
+					dataPoints: [
+					{  y: 1800 , label: "Cats"},
+					{  y: 1380, label: "Shrek the Musical" },
+					{  y: 2168, label: "Emma" },
+					{  y: 1493, label: "Phantom" },
+					{  y: 1589, label: "Wicked"}
+
+					]
+				  },  {
+					type: "stackedColumn",
+					legendText: "Online Streams",
+					showInLegend: "true",
+					 dataPoints: [
+					{  y: 680, label: "Cats"},
+					{  y: 247, label: "Shrek the Musical" },
+					{  y: 648, label: "Emma" },
+					{  y: 348, label: "Phantom" },
+					{  y: 245, label: "Wicked"}
+
+					]
+				  },  {
+					type: "stackedColumn",
+					legendText: "Merchandise",
+					showInLegend: "true",
+					 dataPoints: [
+					{  y: 180, label: "Cats"},
+					{  y: 547, label: "Shrek the Musical" },
+					{  y: 248, label: "Emma" },
+					{  y: 148, label: "Phantom" },
+					{  y: 45, label: "Wicked"}
+
+					]
+				  }
+			  ]
+			});
+		chart1.render();
+		charts.push(chart1);
+
 		
-		<!---Total Ticket Sales by Day-->
-		<script type="text/javascript">
-		  google.charts.load('current', {'packages':['corechart']});
-		  google.charts.setOnLoadCallback(drawVisualization);
-
-		  function drawVisualization() {
-			var data = google.visualization.arrayToDataTable([
-			  ['Day', 'Mama Mia!', 'Cats', 'Frozen', 'Shrek', 'Emma', 'Average'],
-			  ['Day 1',  665,      938,         522,             900,             998,    600],
-			  ['Day 2',  735,      1120,        599,             1330,             1268,     682],
-			  ['Day 3',  457,      1167,        587,             1070,             807,    623],
-			  ['Day 4',  839,      1110,        615,             980,             0,      600],
-			  ['Day 5',  536,      691,         629,             870,             0,      560]
-			]);
-
-			var options = {
-				height: 400,
-				seriesType: 'bars',
-				series: {5: {type: 'line'}},
-				colors: ['#003f5c', '#444e86', '#955196', '#dd5182', '#ff6e54', 'black']
-			};
-			var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-			chart.draw(data, options);
-		  }
-		</script>
 		
-		<!---Total Revenue by Show-->
-		<script type="text/javascript">
-		  google.charts.load('current', {'packages':['bar']});
-		  google.charts.setOnLoadCallback(drawChart);
+		var chart2 = new CanvasJS.Chart("chartContainer2",
+		{	
+			theme: "light2",
+			animationEnabled: true,
+			title:{
+			  	text: "Revenue vs Goal",
+			  	fontFamily: "arial",
+				fontColor: "#525252"
+			  },
+			axisY:{
+					title:"Total Revenue (USD)",
+					valueFormatString: "$#0",
+					interval:500,
+				},
+		  	data: [
+			  {               
+				type: "column",
+				name: "Revenue",
+				legendText: "Revenue",
+				showInLegend: true, 
+				dataPoints:[
+					{ label: "Cats", y: 1800 },
+					{ label: "Shrek", y: 1380 },
+					{ label: "Emma", y: 2168 },
+					{ label: "Phantom", y: 1493 },
+					{ label: "Wicked", y: 1589 }
+				]},
+			  {
+				type: "column",	
+				name: "Goal",
+				legendText: "Goal",
+				axisYType: "secondary",
+				showInLegend: true,
+				dataPoints:[
+					{ label: "Cats", y: 1400 },
+					{ label: "Shrek", y: 1880 },
+					{ label: "Emma", y: 2068 },
+					{ label: "Phantom", y: 1093 },
+					{ label: "Wicked", y: 1189 }
+				]
+			}
+		  ]
+		});
+		charts.push(chart2);
 
-		  function drawChart() {
-			var data = google.visualization.arrayToDataTable([
-			  ['Show', 'Tickets', 'Uploaded Content', 'Merchandise'],
-			  ['Mama Mia!', 2170, 460, 250],
-			  ['Cats', 1660, 520, 300],
-			  ['Frozen', 2030, 690, 350],
-			  ['Shrek', 1090, 540, 350],
-				['Emma', 1700, 124, 245],
-			]);
-			
-			var options = {
-				height: 400,
-				colors: ['#003f5c', '#bc5090', '#ffa600']
-			};
+		
+		
+		var chart3 = new CanvasJS.Chart("chartContainer3",
+		{
+			theme: "light2",
+			animationEnabled: true,
+			title:{
+			  	text: "Revenue vs Goal",
+			  	fontFamily: "arial",
+				fontColor: "#525252"
+			  },
+			axisY:{
+					title:"Day",
+					valueFormatString: "#0"
+			},
+		  	data: [{
+				type: "bar",
+				showInLegend: true,
+				name: "Gold",
+				dataPoints: [
+					{ y: 243, label: "Italy" },
+					{ y: 236, label: "China" },
+					{ y: 243, label: "France" },
+					{ y: 273, label: "Great Britain" },
+					{ y: 269, label: "Germany" },
+					{ y: 196, label: "Russia" },
+					{ y: 1118, label: "USA" }
+				]
+			},
+			{
+				type: "bar",
+				showInLegend: true,
+				name: "Silver",
+				dataPoints: [
+					{ y: 212, label: "Italy" },
+					{ y: 186, label: "China" },
+					{ y: 272, label: "France" },
+					{ y: 299, label: "Great Britain" },
+					{ y: 270, label: "Germany" },
+					{ y: 165, label: "Russia" },
+					{ y: 896, label: "USA" }
+				]
+			},
+			{
+				type: "bar",
+				showInLegend: true,
+				name: "Bronze",
+				dataPoints: [
+					{ y: 236, label: "Italy" },
+					{ y: 172, label: "China" },
+					{ y: 309, label: "France" },
+					{ y: 302, label: "Great Britain" },
+					{ y: 285, label: "Germany" },
+					{ y: 188, label: "Russia" },
+					{ y: 788, label: "USA" }
+				]
+			}]
+		});
+		charts.push(chart3);
+	}
+	
+	</script>
 
-			var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-			chart.draw(data, google.charts.Bar.convertOptions(options));
-		  }
-		</script>
+		
+		
 	</head>
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:var(--accent);">
@@ -161,35 +296,35 @@
 			
 			<div class="row">
 				<div class="col">
-					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 80%;">
-						<div class="carousel-inner" style="border: thin dotted aqua; text-align: center;">
-							<div class="carousel-item active">
-								<h4 class="graphtitle">Total Revenue By Show</h4>
-								<h5 class="graphsubtitle">Ticket Sales, Online Streams, and Merch (amount in USD)</h5>
-								<div id="columnchart_material" style="width: 80%;"></div>
+
+ 
+  					<div id="chart-carousel" class="carousel slide" data-ride="carousel" style="width: 80%;">
+ 
+						<div class="carousel-inner" style="border: thin solid aqua; ">
+							<div class="carousel-item active">  
+								<div id="chartContainer1" class="chart" style="width:80%; height:400px; margin: auto;"></div>
 							</div>
-							<div class="carousel-item ">
-								<h4 class="graphtitle">Total Ticket Sales by Day</h4>
-								<h5 class="graphsubtitle">Amount in USD</h5>
-								<div id="chart_div" style="width: 80%;"></div>
+							<div class="carousel-item">
+								<div id="chartContainer2" class="chart" style="width:100%; height:400px;"></div>
 							</div>
-							
+							<div class="carousel-item">
+								<div id="chartContainer3" class="chart" style="width:100%; height:400px;"></div>
+							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
-							<span class="carousel-control-prev-icon" aria-hidden="true" style="color: #606060;"></span>
-							<span class="sr-only">Previous</span>
+
+						<a class="carousel-control-prev" href="#chart-carousel" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
 						</a>
-						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
+						<a class="carousel-control-next" href="#chart-carousel" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
