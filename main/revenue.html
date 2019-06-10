@@ -39,7 +39,7 @@
 			theme: "light2",
 			animationEnabled: true,
 			  title:{
-			  	text: "Breakdown of revenue by show",
+			  	text: "Breakdown of Revenue by Show",
 			  	fontFamily: "arial",
 				fontColor: "#313131"
 			  },
@@ -159,12 +159,14 @@
 				title: "Ticket Sales (USD)"
 			},
 			data: [{        
-				type: "line",       
+				type: "line",	
+				lineThickness: 5,
+   				markerSize: 12,
 				dataPoints: [
 					{ y: 1577 },
 					{ y: 1314},
-					{ y: 1790, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
-					{ y: 1010 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+					{ y: 1790,  markerColor: "green", markerType: "square", markerSize: 15 },
+					{ y: 1010 , markerColor: "red", markerType: "cross", markerSize: 15  },
 					{ y: 1156 },
 					{ y: 1257 },
 					{ y: 1346 }
