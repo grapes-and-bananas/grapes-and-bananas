@@ -99,10 +99,6 @@
 							<div class="social-form-heading">Show Announcement</div>
 								<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
 									<div style="display: inline;">
-										<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
-									</div>
-									&nbsp;
-									<div style="display: inline;">
 										<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
 									</div>
 									<br>
@@ -145,8 +141,7 @@
 								logo.src = "../images/uhs.png";
 								ctx.drawImage(logo, 50, 10, 300, 75);
 								ctx.textAlign = "center";
-								ctx.font = "30px 'Playfair Display', serif";
-								ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
+								ctx.fillStyle = "white";
 								ctx.font = "18px 'Playfair Display', serif";
 								ctx.fillText("presents", canvas.width/2, 110);
 								ctx.font = "100px 'Playfair Display SC', serif";
@@ -188,8 +183,6 @@
 
 						</script>
 						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
-							<br>
-						<textarea id="textpost" style="height: 100px; width: 100px; border: thick solid black;">rr</textarea>
 
 					</div>
 				</div>
