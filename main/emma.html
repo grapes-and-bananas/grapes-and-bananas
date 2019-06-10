@@ -25,39 +25,6 @@
 				  i.style.display = 'block';
 			}
 		</script>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-			google.charts.load('current', {'packages':['line']});
-			google.charts.setOnLoadCallback(drawChart);
-			function drawChart() {
-				var data = new google.visualization.DataTable();
-				data.addColumn('number', 'Day');
-				data.addColumn('number', 'Tickets');
-				data.addColumn('number', 'Uploaded Content');
-				data.addColumn('number', 'Merchandise');
-
-				data.addRows([
-				[1, 1000, 20, 300],
-				[2, 800, 160, 100],
-				[3, 850, 180, 90],
-				[4, 950, 120, 120],
-				[5, 900, 220, 100]
-				]);
-
-				var options = {
-				chart: {
-				subtitle: 'in dollars (USD)'
-				},
-				width: 600,
-				height: 300,
-				colors: ['#003f5c', '#bc5090', '#ffa600']
-				};
-
-				var chart = new google.charts.Line(document.getElementById('chart_div'));
-
-				chart.draw(data, google.charts.Line.convertOptions(options));
-			}
-		</script>
 	</head>
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:var(--accent);">
@@ -113,7 +80,7 @@
 
 			<br><br>
 			<div class="row">
-				<div class="col-2">
+				<div class="col-3">
 					<img src="../images/emma-poster.jpg">
 				</div>
 				<div class="col-4" style="padding-left: 25px; margin-right: 25px;">
@@ -144,7 +111,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-3">
 					<div class="title" style="font-size: 25px; font-weight: 600;">SHOW RESOURCES</div>
 					<hr>
 					<div class="resources">
