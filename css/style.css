@@ -383,6 +383,29 @@ input[type="file"] {
 	height: 25px;
 	width: 25px;
 }
+.title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.show-about p {
+	font-size: 16px;
+}
+.show-about h4 {
+	font-size: 18px;
+	font-style: italic;
+}
+.apply-now {
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px 0 10px 0;
+	background-color: #4F84E1;
+}
+
 /* End MY SHOWS */
 
 
