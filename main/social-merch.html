@@ -96,15 +96,13 @@
 						<div class="social-form">
 							<div class="social-form-heading">Merchanise Announcement</div>
 							<form action="" method="post" class="form" name="socialForm" onSubmit="return runSocialForm()" id="form">
-								<label for="producer"><span>Producer</span><input type="text" class="input-field" name="producer" value="" /></label>
-
 								<label for="title"><span>Show Title</span><input type="text" class="input-field" name="title" value="" /></label>
 
-								<label for="price"><span>Price</span><input type="text" class="input-field" name="price" value="" /></label>
+								<label for="price"><span>Staring Price</span><input type="text" class="input-field" name="price" value="" /></label>
 								<br>
-								<label><span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
+								<span></span><input type="submit" value="Preview" class="btn btn-default" id="preview">
 								<button class="btn btn-danger" id="btn-clear" onClick="clearCanvas()" ><i class="fas fa-trash fa-1x"></i></button>
-								<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button></label>
+								<button class="btn btn-primary" id="btn-download" download="social.png" onClick="downloadCanvas()"><i class="fas fa-download fa-1x"></i></button>
 							</form>
 						</div>
 
@@ -117,20 +115,22 @@
 									  var background = new Image();
 									  background.src = "../images/emma-background.jpg";
 									  ctx.drawImage(background,0,0);
+									var logo = new Image();
+									logo.src = "../images/uhs.png";
+									ctx.drawImage(logo, 50, 10, 300, 75);
 									ctx.textAlign = "center";
-									ctx.font = "30px 'Playfair Display', serif";
-									ctx.fillText(document.forms["socialForm"]["producer"].value, canvas.width/2, 50);
-									ctx.font = "18px 'Playfair Display', serif";
-									ctx.fillText("Presents", canvas.width/2, 100);
+									ctx.fillStyle = "white";
+									ctx.font = "20px 'Playfair Display', serif";
+									ctx.fillText("Presents", canvas.width/2, 120);
 									ctx.font = "100px 'Playfair Display SC', serif";
-									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 200);
-									ctx.font = "bold 28px 'Playfair Display', serif";
-									ctx.fillText("Merchandise Available", canvas.width/2, 280);
-									ctx.font = "28px 'Playfair Display', serif";
-									ctx.fillText("Starting at: $  ", canvas.width/2.1, 325);
+									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 220);
 
-									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/1.45, 323);
-									return false;
+									ctx.font = "28px 'Playfair Display', serif";
+									ctx.fillText("Show merch available now!", canvas.width/2, 300);
+									ctx.font = "bold 30px 'Playfair Display', serif";
+									ctx.fillText("Starting at $", canvas.width/2.2, 350);
+									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/1.45, 350);
+								return false;
 								}
 								function downloadCanvas(){
 									var canvas = document.getElementById('myCanvas');
@@ -147,6 +147,7 @@
 									ctx.clearRect(0, 0, canvas.width, canvas.height);
 								}
 							</script>
+							<br>
 							<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
 
 						</div>

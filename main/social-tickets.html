@@ -108,26 +108,26 @@
 						<script>
 							function runSocialForm(){
 								var canvas = document.getElementById("myCanvas");
-									var ctx = canvas.getContext("2d");
-									ctx.clearRect(0, 0, canvas.width, canvas.height);
-									  var background = new Image();
-									  background.src = "../images/emma-background.jpg";
-									  ctx.drawImage(background,0,0);
-									var logo = new Image();
-									logo.src = "../images/uhs.png";
-									ctx.drawImage(logo, 50, 10, 300, 75);
-									ctx.textAlign = "center";
-									ctx.fillStyle = "white";
-									ctx.font = "20px 'Playfair Display', serif";
-									ctx.fillText("Presents", canvas.width/2, 120);
-									ctx.font = "100px 'Playfair Display SC', serif";
-									ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 220);
-									
-									ctx.font = "28px 'Playfair Display', serif";
-									ctx.fillText("Tickets are now on sale!", canvas.width/2, 300);
-									ctx.font = "bold 35px 'Playfair Display', serif";
-									ctx.fillText("$", canvas.width/2.15, 350);
-									ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/1.85, 350);
+								var ctx = canvas.getContext("2d");
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+								  var background = new Image();
+								  background.src = "../images/emma-background.jpg";
+								  ctx.drawImage(background,0,0);
+								var logo = new Image();
+								logo.src = "../images/uhs.png";
+								ctx.drawImage(logo, 50, 10, 300, 75);
+								ctx.textAlign = "center";
+								ctx.fillStyle = "white";
+								ctx.font = "20px 'Playfair Display', serif";
+								ctx.fillText("Presents", canvas.width/2, 120);
+								ctx.font = "100px 'Playfair Display SC', serif";
+								ctx.fillText(document.forms["socialForm"]["title"].value, canvas.width/2, 220);
+
+								ctx.font = "28px 'Playfair Display', serif";
+								ctx.fillText("Tickets are now on sale!", canvas.width/2, 300);
+								ctx.font = "bold 35px 'Playfair Display', serif";
+								ctx.fillText("$", canvas.width/2.15, 350);
+								ctx.fillText(document.forms["socialForm"]["price"].value, canvas.width/1.85, 350);
 								return false;
 							}
 							function downloadCanvas(){
@@ -145,6 +145,7 @@
 								ctx.clearRect(0, 0, canvas.width, canvas.height);
 							}
 						</script>
+						<br>
 						<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
 						
 				</div>
