@@ -15,169 +15,167 @@
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<script type="text/javascript">
-	window.onload = function () {
-		var charts = [];
-		var chart;
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function () {
+				var charts = [];
+				var chart;
 
-		$('.carousel').carousel({
-		  interval: 8000
-		});
+				$('.carousel').carousel({
+				  interval: 8000
+				});
 
-		$('.carousel').on('slide.bs.carousel', function(e) {
-		 $(".carousel-inner").height(parseFloat(charts[e.to].container.style.height)); 
-		});
+				$('.carousel').on('slide.bs.carousel', function(e) {
+				 $(".carousel-inner").height(parseFloat(charts[e.to].container.style.height)); 
+				});
 
-		$('.carousel').on('slid.bs.carousel', function(e) {
-		  charts[e.to].render();
-		});
+				$('.carousel').on('slid.bs.carousel', function(e) {
+				  charts[e.to].render();
+				});
 
-		var chart1 = new CanvasJS.Chart("chartContainer1",
-		{
-			theme: "light2",
-			animationEnabled: true,
-			  title:{
-			  	text: "Breakdown of Revenue by Show",
-			  	fontFamily: "arial",
-				fontColor: "#313131"
-			  },
-				axisY:{
-					title:"Total Revenue (USD)",
-					valueFormatString: "$#0",
-					 interval:500,
-				},
-				data: [
-				  {
-					type: "stackedColumn",
-					legendText: "Ticket Sales",
-					showInLegend: "true",
-					dataPoints: [
-					{  y: 1800 , label: "Cats"},
-					{  y: 1380, label: "Shrek the Musical" },
-					{  y: 2168, label: "Emma" },
-					{  y: 1493, label: "Phantom" },
-					{  y: 1589, label: "Wicked"}
+				var chart1 = new CanvasJS.Chart("chartContainer1",
+				{
+					theme: "light2",
+					animationEnabled: true,
+					  title:{
+						text: "Breakdown of Revenue by Show",
+						fontFamily: "arial",
+						fontColor: "#313131"
+					  },
+						axisY:{
+							title:"Total Revenue (USD)",
+							valueFormatString: "$#0",
+							 interval:500,
+						},
+						data: [
+						  {
+							type: "stackedColumn",
+							legendText: "Ticket Sales",
+							showInLegend: "true",
+							dataPoints: [
+							{  y: 1800 , label: "Cats"},
+							{  y: 1380, label: "Shrek the Musical" },
+							{  y: 2168, label: "Emma" },
+							{  y: 1493, label: "Phantom" },
+							{  y: 1589, label: "Wicked"}
 
-					]
-				  },  {
-					type: "stackedColumn",
-					legendText: "Online Streams",
-					showInLegend: "true",
-					 dataPoints: [
-					{  y: 680, label: "Cats"},
-					{  y: 247, label: "Shrek the Musical" },
-					{  y: 648, label: "Emma" },
-					{  y: 348, label: "Phantom" },
-					{  y: 245, label: "Wicked"}
+							]
+						  },  {
+							type: "stackedColumn",
+							legendText: "Online Streams",
+							showInLegend: "true",
+							 dataPoints: [
+							{  y: 680, label: "Cats"},
+							{  y: 247, label: "Shrek the Musical" },
+							{  y: 648, label: "Emma" },
+							{  y: 348, label: "Phantom" },
+							{  y: 245, label: "Wicked"}
 
-					]
-				  },  {
-					type: "stackedColumn",
-					legendText: "Merchandise",
-					showInLegend: "true",
-					 dataPoints: [
-					{  y: 180, label: "Cats"},
-					{  y: 547, label: "Shrek the Musical" },
-					{  y: 248, label: "Emma" },
-					{  y: 148, label: "Phantom" },
-					{  y: 45, label: "Wicked"}
+							]
+						  },  {
+							type: "stackedColumn",
+							legendText: "Merchandise",
+							showInLegend: "true",
+							 dataPoints: [
+							{  y: 180, label: "Cats"},
+							{  y: 547, label: "Shrek the Musical" },
+							{  y: 248, label: "Emma" },
+							{  y: 148, label: "Phantom" },
+							{  y: 45, label: "Wicked"}
 
-					]
-				  }
-			  ]
-			});
-		chart1.render();
-		charts.push(chart1);
+							]
+						  }
+					  ]
+					});
+				chart1.render();
+				charts.push(chart1);
 
-		
-		
-		var chart2 = new CanvasJS.Chart("chartContainer2",
-		{	
-			theme: "light2",
-			animationEnabled: true,
-			title:{
-			  	text: "Revenue vs Goal",
-			  	fontFamily: "arial",
-				fontColor: "#313131"
-			  },
-			axisY:{
-					title:"Total Revenue (USD)",
-					valueFormatString: "$#0",
-					interval:500,
-				},
-		  	data: [
-			  {               
-				type: "column",
-				name: "Revenue",
-				legendText: "Revenue",
-				showInLegend: true, 
-				dataPoints:[
-					{ label: "Cats", y: 1800 },
-					{ label: "Shrek", y: 1380 },
-					{ label: "Emma", y: 2168 },
-					{ label: "Phantom", y: 1493 },
-					{ label: "Wicked", y: 1589 }
-				]},
-			  {
-				type: "column",	
-				name: "Goal",
-				legendText: "Goal",
-				axisYType: "secondary",
-				showInLegend: true,
-				dataPoints:[
-					{ label: "Cats", y: 1400 },
-					{ label: "Shrek", y: 1880 },
-					{ label: "Emma", y: 2068 },
-					{ label: "Phantom", y: 1093 },
-					{ label: "Wicked", y: 1189 }
-				]
+
+
+				var chart2 = new CanvasJS.Chart("chartContainer2",
+				{	
+					theme: "light2",
+					animationEnabled: true,
+					title:{
+						text: "Revenue vs Goal",
+						fontFamily: "arial",
+						fontColor: "#313131"
+					  },
+					axisY:{
+							title:"Total Revenue (USD)",
+							valueFormatString: "$#0",
+							interval:500,
+						},
+					data: [
+					  {               
+						type: "column",
+						name: "Revenue",
+						legendText: "Revenue",
+						showInLegend: true, 
+						dataPoints:[
+							{ label: "Cats", y: 1800 },
+							{ label: "Shrek", y: 1380 },
+							{ label: "Emma", y: 2168 },
+							{ label: "Phantom", y: 1493 },
+							{ label: "Wicked", y: 1589 }
+						]},
+					  {
+						type: "column",	
+						name: "Goal",
+						legendText: "Goal",
+						axisYType: "secondary",
+						showInLegend: true,
+						dataPoints:[
+							{ label: "Cats", y: 1400 },
+							{ label: "Shrek", y: 1880 },
+							{ label: "Emma", y: 2068 },
+							{ label: "Phantom", y: 1093 },
+							{ label: "Wicked", y: 1189 }
+						]
+					}
+				  ]
+				});
+				charts.push(chart2);
+
+
+
+				var chart3 = new CanvasJS.Chart("chartContainer3",
+				{
+					animationEnabled: true,
+					theme: "light2",
+					title:{
+						text: "Average Ticket Sales by Day",
+						fontFamily: "arial",
+						fontColor: "#313131"
+					},
+					axisX:{
+						interval: 1,
+						valueFormatString: "Day #0",
+
+					},
+					axisY: {
+						includeZero: false,
+						valueFormatString: "$#0",
+						title: "Ticket Sales (USD)"
+					},
+					data: [{        
+						type: "line",	
+						lineThickness: 5,
+						markerSize: 12,
+						dataPoints: [
+							{ y: 1577 },
+							{ y: 1314},
+							{ y: 1790,  markerColor: "green", markerType: "square", markerSize: 15 },
+							{ y: 1010 , markerColor: "red", markerType: "cross", markerSize: 15  },
+							{ y: 1156 },
+							{ y: 1257 },
+							{ y: 1346 }
+						]
+					}]
+				});
+				charts.push(chart3);
 			}
-		  ]
-		});
-		charts.push(chart2);
-
-		
-		
-		var chart3 = new CanvasJS.Chart("chartContainer3",
-		{
-			animationEnabled: true,
-			theme: "light2",
-			title:{
-				text: "Average Ticket Sales by Day",
-			  	fontFamily: "arial",
-				fontColor: "#313131"
-			},
-			axisX:{
-				interval: 1,
-				valueFormatString: "Day #0",
-				
-			},
-			axisY: {
-				includeZero: false,
-				valueFormatString: "$#0",
-				title: "Ticket Sales (USD)"
-			},
-			data: [{        
-				type: "line",	
-				lineThickness: 5,
-   				markerSize: 12,
-				dataPoints: [
-					{ y: 1577 },
-					{ y: 1314},
-					{ y: 1790,  markerColor: "green", markerType: "square", markerSize: 15 },
-					{ y: 1010 , markerColor: "red", markerType: "cross", markerSize: 15  },
-					{ y: 1156 },
-					{ y: 1257 },
-					{ y: 1346 }
-				]
-			}]
-		});
-		charts.push(chart3);
-	}
-	
-	</script>
+		</script>
 
 		
 		
